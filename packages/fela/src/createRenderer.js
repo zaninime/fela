@@ -53,13 +53,18 @@ export default function createRenderer(
     // apply media rules in an explicit order to ensure
     // correct media query execution order
     mediaRules: applyMediaRulesInOrder(config.mediaQueryOrder || []),
+    filterClassName: config.filterClassName,
+
     uniqueRuleIdentifier: 0,
     uniqueKeyframeIdentifier: 0,
     // use a flat cache object with pure string references
     // to achieve maximal lookup performance and memoization speed
     cache: {},
     styleNodes: {},
-    filterClassName: config.filterClassName,
+
+    getNextRuleIdentifier() {
+      return ++renderer.uniqueRuleIdentifier
+    },
 
     renderRule(rule: Function, props: Object = {}): string {
       const processedStyle = processStyleWithPlugins(
@@ -252,8 +257,7 @@ export default function createRenderer(
             const className =
               renderer.selectorPrefix +
               generateClassName(
-                ++renderer.uniqueRuleIdentifier,
-                void 0,
+                renderer.getNextRuleIdentifier,
                 renderer.filterClassName
               )
 

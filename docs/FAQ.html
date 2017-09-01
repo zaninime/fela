@@ -844,31 +844,36 @@
                                 
                                 <h1 id="faq">FAQ</h1>
 <h2 id="table-of-contents">Table of contents</h2>
-<h4 id="general">General</h4>
 <ul>
 <li><a href="#can-i-use-it-together-with-css-files">Can I use it together with CSS files?</a></li>
 <li><a href="#can-i-use-it-together-with-inline-styles">Can I use it together with inline styles?</a></li>
+<li><a href="#can-i-use-it-without-react">Can I use it without React?</a></li>
+<li><a href="#can-i-use-it-with-react-native">Can I use it with React Native?</a></li>
+<li><a href="#can-i-use-template-strings">Can I use template strings?</a></li>
+<li><a href="#can-i-use-objects-instead-of-functions">Can I use objects instead of functions?</a></li>
 <li><a href="#is-fela-production-ready">Is Fela production-ready?</a></li>
 <li><a href="#where-does-the-name-fela-come-from">Where does the name &quot;Fela&quot; come from?</a></li>
 </ul>
-<h4 id="convenience">Convenience</h4>
-<ul>
-<li><a href="#can-i-write-my-styles-as-css">Can I write my styles as CSS?</a></li>
-</ul>
-<h2 id="general">General</h2>
+<hr>
 <h4 id="can-i-use-it-together-with-css-files">Can I use it together with CSS Files?</h4>
 <p><strong>Yes</strong>. Fela is encapsulated and can be integrated into any kind of application and therefore can also be used together with other CSS files/classes.<br>
 Just remember that you might again get into specificity problems if you mix different CSS classes from different sources.</p>
 <h4 id="can-i-use-it-together-with-inline-styles">Can I use it together with inline styles?</h4>
 <p><strong>Yes</strong>. You can always use inline styles together with Fela. It can be useful to overwrite single values for specific cases. Also state-depending styles might better fit as inline styles e.g. a progress bar which updates the inner width according to the progress. This might else lead to &gt;100 rendered Fela classes.</p>
+<h4 id="can-i-use-it-without-react">Can I use it without React?</h4>
+<p><strong>Yes</strong>. Fela is framework-agnostic by design, but works especially well with React and React-like view libraries. Checkout the official React bindings <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">react-fela</a> as well as <a href="guides/UsageWithReact.html">Usage with React</a>.<br>
+It also works great with <a href="guides/UsageWithInferno.html">Inferno</a>, <a href="guides/UsageWithPreact.html">Preact</a>, <a href="https://github.com/dustin-h/vue-fela" _target="blank">Vue</a>, <a href="https://github.com/rofrischmann/fela/tree/master/packages/hyper-fela" _target="blank">Hyper</a> and <a href="guides/UsageWithCycle.md">Cycle</a>.</p>
+<h4 id="can-i-use-it-with-react-native">Can I use it with React Native?</h4>
+<p><strong>Yes</strong>. Next to React, Fela also supports React Native. It can also be used with <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">react-fela</a> and shares a similar API with <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela" _target="blank">fela</a> itself. You just have to replace your <code>createRenderer</code>-method with the one exported by <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-native" _target="blank">fela-native</a>. Check out <a href="guides/UsageWithReactNative.html">Usage with React Native</a> for more information.</p>
+<h4 id="can-i-use-template-strings">Can I use template strings?</h4>
+<p><strong>Yes</strong>. While you traditionally write your Fela styles in JavaScript object notation, there are several tools that allow styles written in pure CSS using <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/template_strings" _target="blank">ECMAScript 2015 template strings</a>. You may try <a href="https://github.com/halt-hammerzeit/react-styling" _target="blank">react-styling</a> for runtime transformation or even use <a href="https://github.com/jakecoxon/babel-plugin-css-to-js" _target="blank">babel-plugin-css-in-js</a> which was in particular written for Fela rules.</p>
+<h4 id="can-i-use-objects-instead-of-functions">Can I use objects instead of functions?</h4>
+<p><strong>No</strong>. Except for static styles rendered using  <a href="api/fela/Renderer.html#renderstaticstyle-selector"><code>renderer.renderStatic</code></a>, all style rules have to be pure functions of props. Read <a href="https://medium.com/@rofrischmann/styles-as-functions-of-state-1885627a63f7#.6k6i4kdch" _target="blank">Style as a Function of State</a> for more information.</p>
 <h4 id="is-fela-production-ready">Is Fela production-ready?</h4>
 <p><strong>Yes</strong>. As of version 1.0.0 Fela is production-ready and fully covered with tests. It is already used in many applications in production.</p>
 <h4 id="where-does-the-name-fela-come-from">Where does the name &quot;Fela&quot; come from?</h4>
 <p>Fela actually is the name of a character in one of the author&apos;s favorite fantasy novel called <a href="https://en.wikipedia.org/wiki/The_Kingkiller_Chronicle" _target="blank">&quot;Kingslayer Chronicles&quot;</a> by <a href="http://www.patrickrothfuss.com/content/index.asp" _target="blank">Patrick Rothfuss</a>. <a href="http://kingkiller.wikia.com/wiki/Fela" _target="blank">Fela</a> is a young, attractive and smart woman practicing sculpturing among others at the university of Imre. She&apos;s one of <a href="http://kingkiller.wikia.com/wiki/Kvothe" _target="blank">Kvothe</a>&apos;s (the main protagonist), best friends there.<br>
 There is no deep connection to JavaScript styling in general, except the fact that she does sculpturing which seems to be kind of similar to what component styling is lately.</p>
-<h2 id="convenience">Convenience</h2>
-<h4 id="can-i-write-my-styles-as-css">Can I write my styles as CSS?</h4>
-<p><strong>Yes</strong>. While you traditionally write your Fela styles in JavaScript object notation, there are several tools that allow styles written in pure CSS using <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/template_strings" _target="blank">ECMAScript 2015 template strings</a>. You may try <a href="https://github.com/halt-hammerzeit/react-styling" _target="blank">react-styling</a> for runtime transformation or even use <a href="https://github.com/jakecoxon/babel-plugin-css-to-js" _target="blank">babel-plugin-css-in-js</a> which was in particular written for Fela rules.</p>
 
                                 
                                 </section>
@@ -912,7 +917,7 @@ There is no deep connection to JavaScript styling in general, except the fact th
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. FAQ","level":"1.9","depth":1,"next":{"title":"9. Feedback","level":"1.10","depth":1,"path":"docs/Feedback.md","ref":"docs/Feedback.md","articles":[]},"previous":{"title":"7. Troubleshooting","level":"1.8","depth":1,"path":"docs/Troubleshooting.md","ref":"docs/Troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/FAQ.md","mtime":"2017-07-10T14:28:38.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-01T17:03:36.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8. FAQ","level":"1.9","depth":1,"next":{"title":"9. Feedback","level":"1.10","depth":1,"path":"docs/Feedback.md","ref":"docs/Feedback.md","articles":[]},"previous":{"title":"7. Troubleshooting","level":"1.8","depth":1,"path":"docs/Troubleshooting.md","ref":"docs/Troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/FAQ.md","mtime":"2017-09-01T17:55:11.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-09-01T17:55:26.119Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

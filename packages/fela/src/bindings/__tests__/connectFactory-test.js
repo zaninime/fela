@@ -16,17 +16,21 @@ describe('Connect Factory for bindings', () => {
       rule1: () => ({
         padding: 1
       }),
-      rule2: () => ({
-        color: 'red'
+      rule2: props => ({
+        color: props.color
       })
     }
 
-    const MyComponent = connect(rules)(({ styles }) =>
+    const MyComponent = connect(rules)(({ styles }) => (
       <div>
         <span className={styles.rule1} />
         <span className={styles.rule2} />
       </div>
-    )
+    ))
+
+    MyComponent.defaultProps = {
+      color: 'red'
+    }
 
     const renderer = createRenderer()
     const wrapper = mount(<MyComponent />, {

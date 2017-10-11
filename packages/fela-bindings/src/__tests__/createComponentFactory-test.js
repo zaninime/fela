@@ -233,7 +233,39 @@ describe('Creating Components from Fela rules', () => {
     ]).toMatchSnapshot()
   })
 
-  it('should extend the rule properties', () => {
+  it('should pass style, as, id, className and innerRef to composed components', () => {
+    const rule = () => ({
+      color: 'blue',
+      fontSize: '16px'
+    })
+
+    const anotherRule = props => ({
+      color: props.color,
+      lineHeight: 1.2
+    })
+
+    const Comp = createComponent(rule)
+    const ComposedComp = createComponent(anotherRule, Comp)
+
+    ComposedComp.defaultProps = {
+      color: 'green'
+    }
+
+    const renderer = createRenderer()
+
+    const wrapper = mount(<ComposedComp as="i" />, {
+      context: {
+        renderer
+      }
+    })
+
+    expect([
+      beautify(`<style>${renderToString(renderer)}</style>`),
+      toJson(wrapper)
+    ]).toMatchSnapshot()
+  })
+
+  it('should extend the rule properties with an object', () => {
     const rule = () => ({
       color: 'blue',
       fontSize: '16px'
@@ -257,6 +289,32 @@ describe('Creating Components from Fela rules', () => {
         }
       }
     )
+
+    expect([
+      beautify(`<style>${renderToString(renderer)}</style>`),
+      toJson(wrapper)
+    ]).toMatchSnapshot()
+  })
+
+  it('should extend the rule properties with a function', () => {
+    const rule = () => ({
+      color: 'blue',
+      fontSize: '16px'
+    })
+
+    const Comp = createComponent(rule)
+    const renderer = createRenderer()
+
+    const extendRule = props => ({
+      fontSize: '14px',
+      backgroundColor: props.bgColor
+    })
+
+    const wrapper = mount(<Comp extend={extendRule} bgColor="red" />, {
+      context: {
+        renderer
+      }
+    })
 
     expect([
       beautify(`<style>${renderToString(renderer)}</style>`),

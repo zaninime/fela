@@ -5,6 +5,20 @@ If you're searching for older version-based release notes please check out the o
 
 > Dates follow the `dd/mm/yy` notation.
 
+## 14/11/17
+| Package | Version | Changes |
+| ---- | --- | --- |
+| fela-plugin-embedded | 5.2.0 | [(#462)](https://github.com/rofrischmann/fela/pull/462) The `fontFace` property now accepts an array of font face definitions. Duplicate font families will only be listed once. |
+| fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela | 1.1.0<br>6.1.0<br>6.1.0<br>6.1.0 | [(#461)](https://github.com/rofrischmann/fela/pull/461) `connect` now also accepts a function that resolves to an object of rules<br>[(#466)](https://github.com/rofrischmann/fela/pull/466) `createComponentFactory` now accepts an array of props that are always passed down  |
+
+This release also adds some TypeScript definitions.
+
+## 02/11/17
+| Package | Version | Changes |
+| ---- | --- | --- |
+| fela-preset-dev<br>fela-preset-web | 5.0.13<br>7.0.2 | [(#447)](https://github.com/rofrischmann/fela/pull/447) both presets are now fully configurable by accepting an object with the plugin names as keys |
+
+
 ## 01/11/17
 | Package | Version | Changes |
 | ---- | --- | --- |

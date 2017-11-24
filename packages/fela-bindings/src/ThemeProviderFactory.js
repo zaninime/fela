@@ -1,8 +1,9 @@
 /* @flow */
-import shallowEqual from 'shallow-equal/objects'
-import { objectEach } from 'fela-utils'
+import isEqual from 'lodash/isEqual'
+import forEach from 'lodash/forEach'
 
 import createTheme from './createTheme'
+import { THEME_CHANNEL } from './themeChannel'
 
 export default function ThemeProviderFactory(
   BaseComponent: any,
@@ -15,19 +16,19 @@ export default function ThemeProviderFactory(
     constructor(props: Object, context: Object) {
       super(props, context)
 
-      const previousTheme = !props.overwrite && this.context.theme
+      const previousTheme = !props.overwrite && this.context[THEME_CHANNEL]
       this.theme = createTheme(props.theme, previousTheme)
     }
 
     componentWillReceiveProps(nextProps: Object): void {
-      if (!shallowEqual(this.props.theme, nextProps.theme)) {
+      if (!isEqual(this.props.theme, nextProps.theme)) {
         this.theme.update(nextProps.theme)
       }
     }
 
     getChildContext(): Object {
       return {
-        theme: this.theme
+        [THEME_CHANNEL]: this.theme,
       }
     }
 
@@ -37,7 +38,7 @@ export default function ThemeProviderFactory(
   }
 
   if (statics) {
-    objectEach(statics, (value, key) => {
+    forEach(statics, (value, key) => {
       ThemeProvider[key] = value
     })
   }

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>6.2.3. renderToSheetList · Fela</title>
+        <title>6.2.4. renderToSheetList · Fela</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -662,12 +662,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2.2" data-path="renderToMarkup.html">
+        <li class="chapter " data-level="1.7.2.2" data-path="rehydrate.md">
             
-                <a href="renderToMarkup.html">
+                <span>
             
                     
-                    6.2.2. renderToMarkup
+                    6.2.2. rehydrate
             
                 </a>
             
@@ -675,12 +675,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2.3" data-path="renderToSheetList.html">
+        <li class="chapter " data-level="1.7.2.3" data-path="renderToMarkup.html">
+            
+                <a href="renderToMarkup.html">
+            
+                    
+                    6.2.3. renderToMarkup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2.4" data-path="renderToSheetList.html">
             
                 <a href="renderToSheetList.html">
             
                     
-                    6.2.3. renderToSheetList
+                    6.2.4. renderToSheetList
             
                 </a>
             
@@ -743,12 +756,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../../Troubleshooting.md">
+        <li class="chapter " data-level="1.8" data-path="../../../MIGRATION.html">
+            
+                <a href="../../../MIGRATION.html">
+            
+                    
+                    7. Migration Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Troubleshooting.md">
             
                 <span>
             
                     
-                    7. Troubleshooting
+                    8. Troubleshooting
             
                 </a>
             
@@ -756,12 +782,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../../FAQ.html">
+        <li class="chapter " data-level="1.10" data-path="../../FAQ.html">
             
                 <a href="../../FAQ.html">
             
                     
-                    8. FAQ
+                    9. FAQ
             
                 </a>
             
@@ -769,12 +795,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../../Feedback.html">
+        <li class="chapter " data-level="1.11" data-path="../../Feedback.html">
             
                 <a href="../../Feedback.html">
             
                     
-                    9. Feedback
+                    10. Feedback
             
                 </a>
             
@@ -782,12 +808,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../../Thanks.html">
+        <li class="chapter " data-level="1.12" data-path="../../Thanks.html">
             
                 <a href="../../Thanks.html">
             
                     
-                    10. Thanks
+                    11. Thanks
             
                 </a>
             
@@ -825,7 +851,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >6.2.3. renderToSheetList</a>
+        <a href="../../.." >6.2.4. renderToSheetList</a>
     </h1>
 </div>
 
@@ -844,6 +870,9 @@
 <p>This advanced API is pretty similar to <a href="renderToMarkup.html"><code>renderToMarkup</code></a> as it also helps to render the renderer on the server.<br>
 Instead of returning a single string of HTML containing style elements, it returns a list of so called style sheets.
 Each style sheet contains everything we need to be able to render actual style elements on the server.</p>
+<blockquote>
+<p>Check the <a href="renderToMarkup.html"><code>renderToMarkup</code></a> output in order to correctly create custom <code>style</code> elements that can be rehydrated.</p>
+</blockquote>
 <h3 id="returns">Returns</h3>
 <p>(<em>Array</em>): List of style sheet objects</p>
 <h4 id="shape">Shape</h4>
@@ -851,7 +880,8 @@ Each style sheet contains everything we need to be able to render actual style e
 <pre class="language-"><code class="lang-javascript">type Sheet <span class="token operator">=</span> <span class="token punctuation">{</span>
   type<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
   css<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
-  media<span class="token operator">?</span><span class="token punctuation">:</span> string
+  media<span class="token operator">?</span><span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+  support<span class="token operator">?</span><span class="token punctuation">:</span> boolean
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="example">Example</h3>
@@ -863,6 +893,9 @@ Each style sheet contains everything we need to be able to render actual style e
 <span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> fontSize <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   fontSize<span class="token punctuation">:</span> fontSize<span class="token punctuation">,</span>
   color<span class="token punctuation">:</span> <span class="token string">&apos;blue&apos;</span><span class="token punctuation">,</span>
+  &apos;@supports <span class="token punctuation">(</span>display<span class="token punctuation">:</span> flex<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> <span class="token string">&apos;green&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token string">&apos;@media (min-width: 300px)&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
     color<span class="token punctuation">:</span> <span class="token string">&apos;red&apos;</span>
   <span class="token punctuation">}</span>
@@ -871,13 +904,15 @@ Each style sheet contains everything we need to be able to render actual style e
 renderer<span class="token punctuation">.</span><span class="token function">renderStatic</span><span class="token punctuation">(</span><span class="token string">&apos;html,body{box-sizing:border-box;margin:0}&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
 renderer<span class="token punctuation">.</span><span class="token function">renderRule</span><span class="token punctuation">(</span>rule<span class="token punctuation">,</span> <span class="token punctuation">{</span> fontSize<span class="token punctuation">:</span> <span class="token string">&apos;12px&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> markup <span class="token operator">=</span> <span class="token function">renderToSheetList</span><span class="token punctuation">(</span>renderer<span class="token punctuation">)</span>
-
-
-markup<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">// { type: &apos;STATIC&apos;, css: &apos;html,body{box-sizing:border-box;margin:0}&apos; }</span>
-<span class="token comment" spellcheck="true">// { type: &apos;RULE&apos;, css: &apos;.a{font-size:12px}.b{color:blue}&apos; }</span>
-<span class="token comment" spellcheck="true">// { type: &apos;RULE&apos;, css: &apos;.c{color:red}&apos;, media: &apos;(min-width: 300px)&apos; }</span>
+<span class="token keyword">const</span> sheetList <span class="token operator">=</span> <span class="token function">renderToSheetList</span><span class="token punctuation">(</span>renderer<span class="token punctuation">)</span>
+</code></pre>
+<p>The following list would be returned:</p>
+<pre class="language-"><code class="lang-javascript"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">&apos;STATIC&apos;</span><span class="token punctuation">,</span> css<span class="token punctuation">:</span> <span class="token string">&apos;html,body{box-sizing:border-box;margin:0}&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">&apos;RULE&apos;</span><span class="token punctuation">,</span> css<span class="token punctuation">:</span> <span class="token string">&apos;.a{font-size:12px}.b{color:blue}&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">&apos;RULE&apos;</span><span class="token punctuation">,</span> css<span class="token punctuation">:</span> <span class="token string">&apos;.c{color:green}&apos;</span><span class="token punctuation">,</span> support<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> type<span class="token punctuation">:</span> <span class="token string">&apos;RULE&apos;</span><span class="token punctuation">,</span> css<span class="token punctuation">:</span> <span class="token string">&apos;.d{color:red}&apos;</span><span class="token punctuation">,</span> media<span class="token punctuation">:</span> <span class="token string">&apos;(min-width: 300px)&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
 </code></pre>
 
                                 
@@ -906,7 +941,7 @@ markup<span class="token punctuation">.</span><span class="token function">forEa
 
             
                 
-                <a href="renderToMarkup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 6.2.2. renderToMarkup">
+                <a href="renderToMarkup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 6.2.3. renderToMarkup">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -918,7 +953,7 @@ markup<span class="token punctuation">.</span><span class="token function">forEa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.2.3. renderToSheetList","level":"1.7.2.3","depth":3,"next":{"title":"6.3. fela-native","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"6.3.1. createRenderer","level":"1.7.3.1","depth":3,"path":"docs/api/fela-native/createRenderer.md","ref":"docs/api/fela-native/createRenderer.md","articles":[]},{"title":"6.3.2. Renderer","level":"1.7.3.2","depth":3,"path":"docs/api/fela-native/Renderer.md","ref":"docs/api/fela-native/Renderer.md","articles":[]}]},"previous":{"title":"6.2.2. renderToMarkup","level":"1.7.2.2","depth":3,"path":"docs/api/fela-dom/renderToMarkup.md","ref":"docs/api/fela-dom/renderToMarkup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/fela-dom/renderToSheetList.md","mtime":"2017-06-14T19:59:53.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-11-14T21:06:02.019Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.2.4. renderToSheetList","level":"1.7.2.4","depth":3,"next":{"title":"6.3. fela-native","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"6.3.1. createRenderer","level":"1.7.3.1","depth":3,"path":"docs/api/fela-native/createRenderer.md","ref":"docs/api/fela-native/createRenderer.md","articles":[]},{"title":"6.3.2. Renderer","level":"1.7.3.2","depth":3,"path":"docs/api/fela-native/Renderer.md","ref":"docs/api/fela-native/Renderer.md","articles":[]}]},"previous":{"title":"6.2.3. renderToMarkup","level":"1.7.2.3","depth":3,"path":"docs/api/fela-dom/renderToMarkup.md","ref":"docs/api/fela-dom/renderToMarkup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/fela-dom/renderToSheetList.md","mtime":"2017-11-24T19:33:30.073Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2017-11-24T19:50:48.031Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

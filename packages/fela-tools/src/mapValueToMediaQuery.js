@@ -1,16 +1,16 @@
 /* @flow */
-import { objectReduce } from 'fela-utils'
+import reduce from 'lodash/reduce'
 
 export default function mapValueToMediaQuery(
   queryValueMap: Object = {},
   mapper: Function | string
 ): Object {
-  return objectReduce(
+  return reduce(
     queryValueMap,
     (style, value, query) => {
       if (typeof mapper === 'string') {
         style[query] = {
-          [mapper]: value
+          [mapper]: value,
         }
       } else {
         style[query] = mapper(value)

@@ -1,5 +1,6 @@
 /* @flow */
-import { isObject, arrayReduce, objectReduce } from 'fela-utils'
+import reduce from 'lodash/reduce'
+import isPlainObject from 'lodash/isPlainObject'
 
 import arrayifyValue from './arrayifyValue'
 
@@ -7,11 +8,11 @@ export default function createMergeArrayStyle(mergeProps?: Array<string>) {
   return function mergeArrayStyle(
     base: Object,
     ...extendingStyles: Array<Object>
-  ) {
-    return arrayReduce(
+  ): Object {
+    return reduce(
       extendingStyles,
       (mergedStyle, style) =>
-        objectReduce(
+        reduce(
           style,
           (merged, value, property) => {
             const baseValue = merged[property]
@@ -22,9 +23,9 @@ export default function createMergeArrayStyle(mergeProps?: Array<string>) {
             ) {
               merged[property] = [
                 ...arrayifyValue(baseValue),
-                ...arrayifyValue(value)
+                ...arrayifyValue(value),
               ]
-            } else if (isObject(baseValue) && isObject(value)) {
+            } else if (isPlainObject(baseValue) && isPlainObject(value)) {
               merged[property] = mergeArrayStyle({}, baseValue, value)
             } else {
               merged[property] = value

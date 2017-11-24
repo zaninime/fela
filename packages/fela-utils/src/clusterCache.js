@@ -1,22 +1,43 @@
 /* @flow */
-import applyMediaRulesInOrder from './applyMediaRulesInOrder'
+import reduce from 'lodash/reduce'
+
+import applyKeysInOrder from './applyKeysInOrder'
 import generateCSSRule from './generateCSSRule'
-import objectReduce from './objectReduce'
 
 import { RULE_TYPE, KEYFRAME_TYPE, FONT_TYPE, STATIC_TYPE } from './styleTypes'
 
 const handlers = {
   [RULE_TYPE]: (cluster, { selector, declaration, support, media }) => {
-    const cssRule = generateCSSRule(selector, declaration, support)
+    const cssRule = generateCSSRule(selector, declaration)
 
-    if (media) {
-      if (!cluster.mediaRules[media]) {
-        cluster.mediaRules[media] = ''
+    if (support) {
+      if (media) {
+        if (!cluster.supportMediaRules[media]) {
+          cluster.supportMediaRules[media] = {}
+        }
+
+        if (!cluster.supportMediaRules[media][support]) {
+          cluster.supportMediaRules[media][support] = ''
+        }
+
+        cluster.supportMediaRules[media][support] += cssRule
+      } else {
+        if (!cluster.supportRules[support]) {
+          cluster.supportRules[support] = ''
+        }
+
+        cluster.supportRules[support] += cssRule
       }
-
-      cluster.mediaRules[media] += cssRule
     } else {
-      cluster.rules += cssRule
+      if (media) {
+        if (!cluster.mediaRules[media]) {
+          cluster.mediaRules[media] = ''
+        }
+
+        cluster.mediaRules[media] += cssRule
+      } else {
+        cluster.rules += cssRule
+      }
     }
   },
   [FONT_TYPE]: (cluster, { fontFace }) => {
@@ -31,16 +52,27 @@ const handlers = {
     } else {
       cluster.statics += css
     }
-  }
+  },
 }
 
 export default function clusterCache(
   cache: Object,
-  mediaQueryOrder: Array<string> = []
+  mediaQueryOrder: Array<string> = [],
+  supportQueryOrder: Array<string> = []
 ) {
-  const mediaRules = applyMediaRulesInOrder(mediaQueryOrder)
+  const mediaRules = applyKeysInOrder(mediaQueryOrder)
+  const supportRules = applyKeysInOrder(supportQueryOrder)
 
-  return objectReduce(
+  const supportMediaRules = reduce(
+    mediaQueryOrder,
+    (supportRules, media) => {
+      supportRules[media] = applyKeysInOrder(supportQueryOrder)
+      return supportRules
+    },
+    applyKeysInOrder(mediaQueryOrder, {})
+  )
+
+  return reduce(
     cache,
     (cluster, entry, key) => {
       const handler = handlers[entry.type]
@@ -53,10 +85,12 @@ export default function clusterCache(
     },
     {
       mediaRules,
+      supportRules,
+      supportMediaRules,
       fontFaces: '',
       statics: '',
       keyframes: '',
-      rules: ''
+      rules: '',
     }
   )
 }

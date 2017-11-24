@@ -3,19 +3,19 @@ declare module "fela" {
   import { CSSProperties } from 'react';
 
   type TRuleProps = {};
-  type TRule = (props: TRuleProps) => IStyle;
+  type TRule<T = TRuleProps> = (props: T) => IStyle
   type TKeyFrame = TRule;
   type TRendererCreator = (config?: IConfig) => IRenderer;
   type TPlugin = (style: IStyle) => IStyle; //http://fela.js.org/docs/advanced/Plugins.html
   type TEnhancer = (renderer: IRenderer) => IRenderer; //http://fela.js.org/docs/advanced/Enhancers.html
 
   const enum TSubscribeMessageType {
-    rule = 1,
-    staticObject = 1,
-    keyframes = 2,
-    fontFace = 3,
-    staticString = 4,
-    clear = 5
+    rule = 'RULE',
+    staticObject = 'RULE',
+    keyframes = 'KEYFRAME',
+    fontFace = 'FONT',
+    staticString = 'STATIC',
+    clear = 'CLEAR'
   }
   interface ISubscribeMessage {
     type: TSubscribeMessageType;
@@ -27,7 +27,7 @@ declare module "fela" {
   interface ISubscribeClearMessage extends ISubscribeMessage { }
 
   interface IRenderer {
-    renderRule(rule: TRule, props: TRuleProps): string;
+    renderRule<T = TRuleProps>(rule: TRule<T>, props: T): string
     renderKeyframe(keyFrame: TKeyFrame, props: TRuleProps): string;
     renderFont(family: string, files: Array<string>, props: TRuleProps): void;
     renderStatic(style: string, selector?: string): void;
@@ -51,13 +51,22 @@ declare module "fela" {
   }
 
   function createRenderer(config?: IConfig): IRenderer;
-  function combineRules(...rules: Array<TRule>): TRule;
+  function combineRules<A, B>(a: TRule<A>, b: TRule<B>): TRule<A & B>
+  function combineRules<A, B, C>(
+    a: TRule<A>,
+    b: TRule<B>,
+    c: TRule<C>,
+  ): TRule<A & B & C>
+  function combineRules(...rules: Array<TRule>): TRule
   function enhance(...enhancers: Array<TEnhancer>): (rendererCreator: TRendererCreator) => TRendererCreator;
 }
 
 declare module "fela-dom" {
   import { IRenderer } from 'fela';
-  function render(renderer: IRenderer, node: HTMLElement): any;
+  function render(renderer: IRenderer): void;
+  function rehydrate(renderer: IRenderer): void;
+  function renderToMarkup(renderer: IRenderer): any;
+  function renderToSheetList(renderer: IRenderer): any;
 }
 
 /**

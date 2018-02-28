@@ -32,18 +32,16 @@ yarn add fela
 ```
 You may alternatively use `npm i --save fela`.
 
-## Features
-* Dynamic styling
-* High performance
-* Scoped atomic CSS
-* Dead code elimination
-* Framework-agnostic
-* Universal rendering
-* Many CSS features
-* Huge ecosystem
-* Vendor prefixing
-* Component theming
-* Local namespace
+## Benefits
+* High Predictablity
+* Dynamic Styling
+* Scoped Atomic CSS
+* Dead-Code Elimination
+* Framework-Agnostic
+* Huge Ecosystem
+* Component-Based Styling
+* Universal Rendering
+* Many CSS Features
 
 ## The Gist
 Fela's core principle is to consider [style as a function of state](https://medium.com/@rofrischmann/styles-as-functions-of-state-1885627a63f7#.6k6i4kdch).<br>
@@ -147,7 +145,6 @@ render(
 * [Recipes](http://fela.js.org/docs/Recipes.html)
 * [API Reference](http://fela.js.org/docs/API.html)
 * [Migration Guide](http://fela.js.org/docs/MigrationGuide.html)
-* [Troubleshooting](http://fela.js.org/docs/Troubleshooting.html)
 * [FAQ](http://fela.js.org/docs/FAQ.html)
 * [Feedback](http://fela.js.org/docs/Feedback.html)
 * [Thanks](http://fela.js.org/docs/Thanks.html)
@@ -185,6 +182,7 @@ Apart from all the packages managed within this repository, there are many commu
 * [fela-react-prop](https://github.com/codepunkt/fela-react-prop) - Generate class names for fela style rule and apply them as property on a wrapped component
 * [fela-styles-connector](https://github.com/dustin-H/fela-styles-connector) - Simplified react-fela `connect` with auto-bound styles
 * [frejya](https://github.com/benoneal/freyja): Pass styles as props to components
+* [gatsby-plugin-fela](https://github.com/mmintel/gatsby-plugin-fela) - Integrates fela with [Gatsby](http://gatsbyjs.org)
 * [hyper-fela](https://github.com/ahdinosaur/hyper-fela) - HyperScript bindings for Fela
 * [htz-frontend](https://github.com/Haaretz/htz-frontend) - Source for Haaretz frontend app(s)
 * [kilvin](https://github.com/rofrischmann/kilvin) - Primitive React Layout Components with Fela
@@ -197,6 +195,7 @@ Apart from all the packages managed within this repository, there are many commu
 * [vashet](https://github.com/derHowie/vashet) - ClojureScript wrapper for Fela
 * [veel](https://github.com/queckezz/veel) - Base react styling components using fela with a design system
 * [vue-fela](https://github.com/dustin-H/vue-fela) - Vue bindings for Fela
+* [black-box](https://github.com/rocketstation/black-box) - combines behavior, presentation, structure in one place & creates all-in-one components using only JS syntax
 
 ## Support
 Got a question? Come and join us on [Gitter](https://gitter.im/rofrischmann/fela)! <br>
@@ -219,6 +218,7 @@ We'd love to help out. We also highly appreciate any feedback.
 - [N26](https://n26.com)
 - [NinjaConcept](https://www.ninjaconcept.com)
 - [Optisure](https://www.optisure.de)
+- [Rocket Station](http://rstation.io)
 - [V2](https://www.v2.com)
 
 
@@ -234,5 +234,3 @@ Also, please read our [code of conduct](.github/CODE_OF_CONDUCT.md).
 Fela is licensed under the [MIT License](http://opensource.org/licenses/MIT).<br>
 Documentation is licensed under [Creative Common License](http://creativecommons.org/licenses/by/4.0/).<br>
 Created with ♥ by [@rofrischmann](http://rofrischmann.de) and all the great contributors.
-
-<a href="https://app.codesponsor.io/link/pCQU3wY7qzomx7oGR27YYg5s/rofrischmann/fela" rel="nofollow" target="_blank"><img src="https://app.codesponsor.io/embed/pCQU3wY7qzomx7oGR27YYg5s/rofrischmann/fela.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>

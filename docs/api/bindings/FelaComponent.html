@@ -1011,6 +1011,12 @@
 <td>Either a valid style object or a function of <code>theme</code></td>
 </tr>
 <tr>
+<td>rule</td>
+<td><em>Function</em></td>
+<td></td>
+<td>A function of <code>theme</code> and props</td>
+</tr>
+<tr>
 <td>render</td>
 <td><em>string?</em><br><em>Function</em></td>
 <td><code>div</code></td>
@@ -1085,6 +1091,27 @@
   <span class="token punctuation">)</span><span class="token punctuation">}</span>
 <span class="token operator">/</span><span class="token operator">&gt;</span>
 </code></pre>
+<h4 id="style-rule-as-a-function-of-props-and-theme">Style Rule as a Function of Props and Theme</h4>
+<p>Sometimes it is desirable to style a component as a function of both theme and
+props. The <code>rule</code> prop takes a callback, and passes it an object with <code>theme</code>
+and all props passed to FelaComponent except &quot;style&quot;, &quot;render&quot; and &quot;rule&quot;.</p>
+<p>This provides an API that is both compatible with createComponent, and allows
+using an externally defined function in such use cases. Hopefully, this can
+be help performance in hot paths by not requiring a function to be created on
+every render.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> ruleFunction <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> theme<span class="token punctuation">,</span> bgc <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">:</span> bgc <span class="token operator">||</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">,</span>
+  color<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>bgPrimary<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>FelaComponent
+  bgc<span class="token operator">=</span><span class="token string">&apos;blue&apos;</span><span class="token punctuation">,</span>
+  rule<span class="token operator">=</span><span class="token punctuation">{</span>ruleFunction<span class="token punctuation">}</span>
+  render<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> className<span class="token punctuation">,</span> theme <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>className<span class="token punctuation">}</span><span class="token operator">&gt;</span>I am <span class="token punctuation">{</span>theme<span class="token punctuation">.</span>bgPrimary<span class="token punctuation">}</span> on <span class="token punctuation">{</span>bgc <span class="token operator">||</span> <span class="token string">&apos;red&apos;</span><span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">&gt;</span>
+</code></pre>
 <h4 id="shorthand-primitives">Shorthand Primitives</h4>
 <p>Instead of a render function, we can also specify a primitive element to render into.<br>
 Children will automatically be passed down. If not specified at all, it will render into a <code>div</code>.</p>
@@ -1141,7 +1168,7 @@ Children will automatically be passed down. If not specified at all, it will ren
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.4.4 FelaComponent","level":"1.7.4.4","depth":3,"next":{"title":"6.4.5 FelaTheme","level":"1.7.4.5","depth":3,"path":"docs/api/bindings/FelaTheme.md","ref":"docs/api/bindings/FelaTheme.md","articles":[]},"previous":{"title":"6.4.3 createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/FelaComponent.md","mtime":"2018-02-15T23:55:45.000Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-02-28T10:44:22.053Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.4.4 FelaComponent","level":"1.7.4.4","depth":3,"next":{"title":"6.4.5 FelaTheme","level":"1.7.4.5","depth":3,"path":"docs/api/bindings/FelaTheme.md","ref":"docs/api/bindings/FelaTheme.md","articles":[]},"previous":{"title":"6.4.3 createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/FelaComponent.md","mtime":"2018-03-13T17:55:38.318Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-03-13T19:00:47.438Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

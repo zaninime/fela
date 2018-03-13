@@ -1,11 +1,9 @@
 /* @flow */
+import isPlainObject from 'isobject'
+
 import type { StyleType } from '../../../flowtypes/StyleType'
 import type { DOMRenderer } from '../../../flowtypes/DOMRenderer'
 import type { NativeRenderer } from '../../../flowtypes/NativeRenderer'
-
-function isPlainObject(obj: any): boolean {
-  return typeof obj === 'object' && !Array.isArray(obj)
-}
 
 function resolveCustomProperty(
   style: Object,
@@ -24,7 +22,7 @@ function resolveCustomProperty(
       }
     }
 
-    if (isPlainObject(value)) {
+    if (style.hasOwnProperty(property) && isPlainObject(value)) {
       style[property] = resolveCustomProperty(value, properties, renderer)
     }
   }

@@ -271,6 +271,7 @@ declare module "fela-plugin-validator" {
   interface Configs {
     logInvalid?: boolean;
     deleteInvalid?: boolean;
+    useCSSLint?: boolean | object;
   }
 
   export default function(configs?: Configs): TPlugin;
@@ -369,12 +370,18 @@ declare module "react-fela" {
       : React.ComponentType<Props & FelaWithStylesInjectedProps<Props, Styles, Theme>>
   }
 
+  export type ConnectConfig = {
+    pure?: boolean
+  }
+
   /**
    *
    * @param {TMultiRule} rules  - rules that will be injected in the Component.
+   * @param {ConnectConfig} config  - settings to configure Wrapper Component.
    */
   export function connect<Props, Styles, Theme = any>(
-    rules: TMultiRule<Props & FelaWithThemeProps<Theme>, Styles>
+    rules: TMultiRule<Props & FelaWithThemeProps<Theme>, Styles>,
+    config?: ConnectConfig,
   ): WithRules<Props, Styles, Theme>
 
   /**

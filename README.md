@@ -55,6 +55,7 @@ import { createRenderer } from 'fela'
 
 // a simple style rule is a pure function of state
 // that returns an object of style declarations
+
 const rule = state => ({
   textAlign: 'center',
   padding: '5px 10px',

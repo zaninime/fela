@@ -1,22 +1,21 @@
 /* @flow */
-import connect from './connect'
-import createComponent from './createComponent'
-import createComponentWithProxy from './createComponentWithProxy'
-import FelaComponent from './FelaComponent'
-import FelaTheme from './FelaTheme'
-import Provider from './Provider'
-import ThemeProvider from './ThemeProvider'
-import withTheme from './withTheme'
-import fe from './fe'
+import { createElement, createContext, Component } from 'react'
+import { themeContext, rendererContext, feFactory } from 'fela-bindings'
+
+const fe = feFactory(createElement, FelaComponent)
+const { Theme, ThemeProvider } = themeContext(createElement, createContext)
+const { RendererProvider, FelaComponent, FelaConnect } = rendererContext(
+  createElement,
+  Component,
+  createContext,
+  Theme
+)
 
 export {
-  connect,
-  createComponent,
-  createComponentWithProxy,
+  RendererProvider,
   FelaComponent,
-  FelaTheme,
-  Provider,
+  FelaConnect,
   ThemeProvider,
-  withTheme,
+  Theme,
   fe,
 }

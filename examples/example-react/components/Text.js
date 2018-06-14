@@ -1,10 +1,11 @@
-import { createComponent } from 'react-fela'
+import React from 'react'
+import { FelaComponent } from 'react-fela'
 
-const info = () => ({
+const style = {
   padding: 5,
   fontSize: '20px',
   color: 'gray',
-  flexDirection: 'column'
-})
+  flexDirection: 'column',
+}
 
-export default createComponent(info)
+export default props => <FelaComponent style={style} {...props} />

@@ -2,6 +2,7 @@ import React from 'react'
 import Wrapper from './components/Wrapper'
 import Text from './components/Text'
 import Header from './components/Header'
+import Test from './components/Test'
 import Input from './containers/Input'
 
 export default () => (
@@ -9,5 +10,6 @@ export default () => (
     <Header title="Welcome to Fela." />
     <Text>This is the basic example with React.</Text>
     <Input />
+    <Test />
   </Wrapper>
 )

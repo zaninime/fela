@@ -3,24 +3,14 @@ import embedded from 'fela-plugin-embedded'
 import prefixer from 'fela-plugin-prefixer'
 import fallbackValue from 'fela-plugin-fallback-value'
 import unit from 'fela-plugin-unit'
-import lvha from 'fela-plugin-lvha'
 import validator from 'fela-plugin-validator'
-import logger from 'fela-plugin-logger'
 import perf from 'fela-perf'
 import beautifier from 'fela-beautifier'
 import layoutDebugger from 'fela-layout-debugger'
 
 export default () => {
   const renderer = createRenderer({
-    plugins: [
-      embedded(),
-      prefixer(),
-      fallbackValue(),
-      unit(),
-      lvha(),
-      validator(),
-      logger(),
-    ],
+    plugins: [embedded(), prefixer(), fallbackValue(), unit(), validator()],
     enhancers: [perf(), beautifier()],
   })
 

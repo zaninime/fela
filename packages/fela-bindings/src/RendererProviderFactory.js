@@ -17,6 +17,11 @@ export default function ProviderFactory(
   Provider: any
 ): any {
   return class RendererProvider extends BaseComponent {
+    static defaultProps = {
+      renderToDOM: true,
+      rehydrate: true,
+    }
+
     constructor(props: Object, context: Object) {
       super(props, context)
 

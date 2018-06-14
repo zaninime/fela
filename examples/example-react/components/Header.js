@@ -1,21 +1,23 @@
 import React from 'react'
-import { createComponentWithProxy } from 'react-fela'
+import { FelaComponent } from 'react-fela'
 
-const Header = ({ title, className }) => <div className={className}>{title}</div>
+export default ({ title }) => (
+  <FelaComponent style={style}>{title}</FelaComponent>
+)
 
-const rule = () => ({
+const style = {
   color: 'rgb(50, 50, 50)',
   fontSize: 100,
   padding: 50,
   ':hover': { animationDuration: '500ms' },
   '@supports (-webkit-flex:1)': {
-    color: 'blue'
+    color: 'blue',
   },
   '@media (max-width: 800px)': {
     fontSize: '40px',
     '@supports (-webkit-flex:1)': {
-      fontSize: 180
-    }
+      fontSize: 180,
+    },
   },
   animationDuration: '2s',
   animationIterationCount: 'infinite',
@@ -23,8 +25,6 @@ const rule = () => ({
     '0%': { color: 'green' },
     '50%': { color: 'blue' },
     '80%': { color: 'purple' },
-    '100%': { color: 'green' }
-  }
-})
-
-export default createComponentWithProxy(rule, Header)
+    '100%': { color: 'green' },
+  },
+}

@@ -28,7 +28,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
-    "babel-jest": "^23.0.1",
+    "babel-jest": "^20.0.1",
     "babel-plugin-inferno": "^5.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-dev-warning": "^0.1.1",
@@ -60,7 +60,8 @@
     "gzip-size": "^4.1.0",
     "inferno": "^5.1.1",
     "inferno-create-element": "^5.1.1",
-    "jest": "^23.1.0",
+    "jest": "^19.0.2",
+    "jest-cli": "19.0.2",
     "lerna": "^2.11.0",
     "preact": "^8.2.9",
     "prettier": "^1.13.5",
@@ -70,6 +71,5 @@
     "react-test-renderer": "^16.4.1",
     "recompose": "^0.27.1",
     "rimraf": "^2.6.2"
-  },
-  "dependencies": {}
+  }
 }

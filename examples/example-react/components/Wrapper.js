@@ -1,4 +1,5 @@
-import { createComponent } from 'react-fela'
+import React from 'react'
+import { FelaComponent } from 'react-fela'
 
 const center = props => ({
   padding: 10,
@@ -10,9 +11,9 @@ const center = props => ({
   fontFace: {
     fontFamily: 'Lato',
     src: [
-      'https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff'
-    ]
-  }
+      'https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff',
+    ],
+  },
 })
 
-export default createComponent(center)
+export default props => <FelaComponent rule={center} {...props} />

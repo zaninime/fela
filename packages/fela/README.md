@@ -55,6 +55,7 @@ import { createRenderer } from 'fela'
 
 // a simple style rule is a pure function of state
 // that returns an object of style declarations
+
 const rule = state => ({
   textAlign: 'center',
   padding: '5px 10px',
@@ -101,14 +102,14 @@ If you ever used [styled-components](https://www.styled-components.com), this wi
 import { createComponent, Provider } from 'react-fela'
 import { render } from 'react-dom'
 
-const rule = state => ({
+const rule = props => ({
   textAlign: 'center',
   padding: '5px 10px',
-  background: state.primary ? 'green' : 'blue',
+  background: props.primary ? 'green' : 'blue',
   fontSize: '18pt',
   borderRadius: 5,
   ':hover': {
-    background: state.primary ? 'chartreuse' : 'dodgerblue',
+    background: props.primary ? 'chartreuse' : 'dodgerblue',
     boxShadow: '0 0 2px rgb(70, 70, 70)'
   }
 })

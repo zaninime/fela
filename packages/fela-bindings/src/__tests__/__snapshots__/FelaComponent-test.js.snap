@@ -1,205 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Using the FelaComponent component correctly concat "customClass" with className 1`] = `
+exports[`Using the FelaComponent component should correctly concat a custom class 1`] = `
 Array [
-  ".a {
-    color: red
-}",
-  <FelaComponent
-    customClass="custom-class"
-    render={[Function]}
-    style={
-        Object {
-            "color": "red",
-          }
-    }
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="custom-class a"
-        >
-            I am red and have a custom class.
-        </div>
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="button a b"
+  >
+    I'm a red button written in 12px.
+  </div>,
 ]
 `;
 
-exports[`Using the FelaComponent component correctly pass the theme and other props to the "rule" prop 1`] = `
+exports[`Using the FelaComponent component should correctly injects the theme to the style function 1`] = `
 Array [
-  ".a {
-    font-size: 15px
-}
-
-.b {
-    background-color: blue
-}",
-  <FelaComponent
-    bgc="blue"
-    render={[Function]}
-    rule={[Function]}
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="a b"
-        >
-            I am red and written in 
-            15px
-            .
-        </div>
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="a b"
+  >
+    I'm red written in 12px.
+  </div>,
 ]
 `;
 
-exports[`Using the FelaComponent component correctly pass the theme to the "style" prop 1`] = `
+exports[`Using the FelaComponent component should correctly pass children in primitive mode 1`] = `
 Array [
-  ".a {
-    font-size: 15px
-}
-
-.b {
-    color: red
-}",
-  <FelaComponent
-    render={[Function]}
-    style={[Function]}
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="a b"
-        >
-            I am red and written in 
-            15px
-            .
-        </div>
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="a b"
+  >
+    I'm red and written in 12px
+  </div>,
 ]
 `;
 
-exports[`Using the FelaComponent component correctly render a fela rule 1`] = `
+exports[`Using the FelaComponent component should correctly passes all props to the rule 1`] = `
 Array [
-  ".a {
-    font-size: 12px
-}
-
-.b {
-    color: red
-}",
-  <FelaComponent
-    render={[Function]}
-    style={
-        Object {
-            "color": "red",
-            "fontSize": "12px",
-          }
-    }
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="a b"
-        >
-            I am red and written in 12px.
-        </div>
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="a b"
+  >
+    I'm red written in 12px.
+  </div>,
 ]
 `;
 
-exports[`Using the FelaComponent component should accept a string primitive as render target 1`] = `
+exports[`Using the FelaComponent component should correctly render a fela rule 1`] = `
 Array [
-  ".a {
-    font-size: 12px
-}
-
-.b {
-    color: red
-}",
-  <FelaComponent
-    render="span"
-    style={
-        Object {
-            "color": "red",
-            "fontSize": "12px",
-          }
-    }
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <span
-            className="a b"
-        />
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="a b"
+  >
+    I am red and written in 12px.
+  </div>,
 ]
 `;
 
-exports[`Using the FelaComponent component should default to a div 1`] = `
+exports[`Using the FelaComponent component should correctly render to primitives 1`] = `
 Array [
-  ".a {
-    font-size: 12px
-}
-
-.b {
-    color: red
-}",
-  <FelaComponent
-    style={
-        Object {
-            "color": "red",
-            "fontSize": "12px",
-          }
-    }
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="a b"
-        />
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <span
+    className="a b"
+  />,
 ]
 `;
 
-exports[`Using the FelaComponent component should render children in default mode 1`] = `
+exports[`Using the FelaComponent component should correctly render using children as its render function 1`] = `
 Array [
-  ".a {
-    font-size: 12px
-}
-
-.b {
-    color: red
-}",
-  <FelaComponent
-    style={
-        Object {
-            "color": "red",
-            "fontSize": "12px",
-          }
-    }
->
-    <FelaTheme
-        render={[Function]}
-    >
-        <div
-            className="a b"
-        >
-            <span>
-                Hello World
-            </span>
-        </div>
-    </FelaTheme>
-</FelaComponent>,
+  ".a{font-size:12px}.b{color:red}",
+  <div
+    className="a b"
+  >
+    I am red and written in 12px.
+  </div>,
 ]
 `;

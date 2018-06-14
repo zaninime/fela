@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Using the FelaConnect component should correctly inject theme into the styles 1`] = `
+Array [
+  ".a{padding:10px}.b{background-color:blue}.c{font-size:17px}.d{color:red}",
+  <div
+    className="a b"
+  >
+    <h1
+      className="c d"
+    >
+      Hello World
+    </h1>
+  </div>,
+]
+`;
+
+exports[`Using the FelaConnect component should correctly render a fela rule 1`] = `
+Array [
+  ".a{padding:10px}.b{background-color:blue}.c{font-size:17px}.d{color:red}",
+  <div
+    className="a b"
+  >
+    <h1
+      className="c d"
+    >
+      Hello World
+    </h1>
+  </div>,
+]
+`;
+
+exports[`Using the FelaConnect component should correctly render using children as its render function 1`] = `
+Array [
+  ".a{padding:10px}.b{background-color:blue}.c{font-size:17px}.d{color:red}",
+  <div
+    className="a b"
+  >
+    <h1
+      className="c d"
+    >
+      Hello World
+    </h1>
+  </div>,
+]
+`;

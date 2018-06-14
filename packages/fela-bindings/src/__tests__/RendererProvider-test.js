@@ -1,8 +1,16 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { createRenderer } from 'fela'
-import { mount } from 'enzyme'
-import ProviderFactory from '../ProviderFactory'
+import React, { createElement, Component, createContext } from 'react'
+import TestRenderer from 'react-test-renderer'
+
+import themeContext from '../themeContext'
+import rendererContext from '../rendererContext'
+
+const { Theme } = themeContext(createElement, createContext)
+const { RendererProvider } = rendererContext(
+  createElement,
+  Component,
+  createContext,
+  Theme
+)
 
 const mockCallback = jest.fn()
 
@@ -22,11 +30,6 @@ describe('ProviderFactory', () => {
 
   it('should do the initial render before childrens componentDidMount hook', () => {
     const didMount = () => mockCallback('didMount')
-    const renderChildren = children => children
-    const renderer = createRenderer()
-    const Provider = ProviderFactory(Component, renderChildren, {
-      childContextTypes: { renderer: PropTypes.object },
-    })
 
     class Child extends Component {
       componentDidMount() {
@@ -37,10 +40,10 @@ describe('ProviderFactory', () => {
       }
     }
 
-    mount(
-      <Provider rehydrate renderToDOM renderer={renderer}>
+    TestRenderer.create(
+      <RendererProvider rehydrate renderToDOM renderer={{}}>
         <Child />
-      </Provider>
+      </RendererProvider>
     )
 
     expect(mockCallback.mock.calls.length).toBe(3)

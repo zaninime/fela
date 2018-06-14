@@ -1,33 +1,20 @@
-import React, { createElement, Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { createElement, Component, createContext } from 'react'
+import TestRenderer from 'react-test-renderer'
 
-import { mount } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import { css } from 'js-beautify'
-
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
-
-import FelaThemeFactory from '../FelaThemeFactory'
-import FelaComponentFactory from '../FelaComponentFactory'
-import ProviderFactory from '../ProviderFactory'
-import { THEME_CHANNEL } from '../themeChannel'
-
+import themeContext from '../themeContext'
+import rendererContext from '../rendererContext'
 import feFactory from '../feFactory'
 
-const FelaTheme = FelaThemeFactory(Component, {
-  [THEME_CHANNEL]: PropTypes.object,
-})
+import createRenderer from '../../../fela/src/createRenderer'
+import renderToString from '../../../fela-tools/src/renderToString'
 
-const FelaComponent = FelaComponentFactory(createElement, FelaTheme, {
-  [THEME_CHANNEL]: PropTypes.object,
-  renderer: PropTypes.object,
-})
-
-const Provider = ProviderFactory(Component, children => children, {
-  childContextTypes: { renderer: PropTypes.object },
-})
-
+const { Theme } = themeContext(createElement, createContext)
+const { RendererProvider, FelaComponent } = rendererContext(
+  createElement,
+  Component,
+  createContext,
+  Theme
+)
 const fe = feFactory(createElement, FelaComponent)
 
 describe('Using fe', () => {
@@ -48,13 +35,13 @@ describe('Using fe', () => {
         'Hello'
       )
 
-    const wrapper = mount(
-      <Provider renderer={renderer}>
+    const wrapper = TestRenderer.create(
+      <RendererProvider renderer={renderer}>
         <Comp />
-      </Provider>
+      </RendererProvider>
     )
 
-    expect([css(renderToString(renderer)), toJson(wrapper)]).toMatchSnapshot()
+    expect([renderToString(renderer), wrapper.toJSON()]).toMatchSnapshot()
   })
 
   it('should merge class names', () => {
@@ -75,12 +62,12 @@ describe('Using fe', () => {
         'Hello'
       )
 
-    const wrapper = mount(
-      <Provider renderer={renderer}>
+    const wrapper = TestRenderer.create(
+      <RendererProvider renderer={renderer}>
         <Comp />
-      </Provider>
+      </RendererProvider>
     )
 
-    expect([css(renderToString(renderer)), toJson(wrapper)]).toMatchSnapshot()
+    expect([renderToString(renderer), wrapper.toJSON()]).toMatchSnapshot()
   })
 })

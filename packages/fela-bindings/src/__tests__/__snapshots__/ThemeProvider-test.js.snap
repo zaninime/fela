@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Using the ThemeProvider should pass the theme via context 1`] = `
+<div>
+  {"color":"red"}
+</div>
+`;
+
+exports[`Using the ThemeProvider should update child nodes if the theme updates 1`] = `[Function]`;

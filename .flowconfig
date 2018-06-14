@@ -15,4 +15,4 @@
 module.name_mapper='(react-native)' -> 'empty/object'
 module.name_mapper='(preact)' -> 'empty/object'
 [version]
-^0.57.3
+^0.74.0

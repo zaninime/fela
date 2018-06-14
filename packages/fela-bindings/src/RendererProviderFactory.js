@@ -1,9 +1,9 @@
 /* @flow */
 import { render, rehydrate } from 'fela-dom'
-import objectEach from 'fast-loops/lib/objectEach'
 
 function hasDOM(renderer) {
   return (
+    renderer &&
     !renderer.isNativeRenderer &&
     typeof window !== 'undefined' &&
     window.document &&
@@ -12,11 +12,11 @@ function hasDOM(renderer) {
 }
 
 export default function ProviderFactory(
+  createElement: Function,
   BaseComponent: any,
-  renderChildren: Function,
-  statics?: Object
+  Provider: any
 ): any {
-  class Provider extends BaseComponent {
+  return class RendererProvider extends BaseComponent {
     constructor(props: Object, context: Object) {
       super(props, context)
 
@@ -31,22 +31,14 @@ export default function ProviderFactory(
       }
     }
 
-    getChildContext(): Object {
-      return {
-        renderer: this.props.renderer,
-      }
-    }
-
     render(): Object {
-      return renderChildren(this.props.children)
+      return createElement(
+        Provider,
+        {
+          value: this.props.renderer,
+        },
+        this.props.children
+      )
     }
   }
-
-  if (statics) {
-    objectEach(statics, (value, key) => {
-      Provider[key] = value
-    })
-  }
-
-  return Provider
 }

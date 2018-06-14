@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Using the Theme Component should merge themes 1`] = `
+<div>
+  {"color":"red","bgColor":"blue"}
+</div>
+`;
+
+exports[`Using the Theme Component should replace themes 1`] = `
+<div>
+  {"bgColor":"blue"}
+</div>
+`;
+
+exports[`Using the Theme Component should use children as its render method 1`] = `
+<div>
+  {"color":"red"}
+</div>
+`;
+
+exports[`Using the Theme Component should use render as its render method 1`] = `
+<div>
+  {"color":"red"}
+</div>
+`;

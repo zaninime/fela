@@ -5,6 +5,34 @@ If you're searching for older version-based release notes please check out the o
 
 > Dates follow the `dd/mm/yy` notation.
 
+## 15/08/18
+| Package | Version | Changes |
+| --- | --- | --- |
+| fela-enzyme | 1.0.0 | Initial version |
+| fela<br>fela-dom<br>fela-utils<br>fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela<br>fela-tools |  6.2.0<br>8.0.0<br>8.1.0<br>3.0.0<br>8.0.0<br>9.0.0<br>8.0.0<br>5.2.0 | [(#573)](https://github.com/rofrischmann/fela/pull/573) implemented consistent rule sorting |
+| fela-plugin-extend | 6.0.8 | [(#584)](https://github.com/rofrischmann/fela/pull/584) removed the deprecation warning for the  `fela-plugin-remove-undefined` package |
+| fela-plugin-lvha | 5.0.16 | deprecated package as consistent rule sorting already handles LVHA order correctly |
+
+
+## 05/07/18
+| Package | Version | Changes |
+| ---- | --- | --- |
+| fela-bindings | 2.3.1 | [(#572)](https://github.com/rofrischmann/fela/pull/572) fixed a bug in react-fela that caused issues in Safari<br>[(#577)](https://github.com/rofrischmann/fela/pull/577) added `getDerivedStateFromProps` to the list of hoisted statics |
+| fela-plugin-unit | 5.1.0 | [(#570)](https://github.com/rofrischmann/fela/pull/570) added the ability to use a custom `isUnitlessProperty` method |
+| fela | 6.1.9 | [(#581)](https://github.com/rofrischmann/fela/pull/581) added `selectorPrefix` validation to `createRenderer` |
+| babel-plugin-fela<br>fela-plugin-remove-undefined<br>fela-plugin-dynamic-prefixer | 1.0.15<br>5.0.21<br>5.0.10<br> | [(#574)](https://github.com/rofrischmann/fela/pull/574) [(#576)](https://github.com/rofrischmann/fela/pull/576) [(#575)](https://github.com/rofrischmann/fela/pull/575) deprecated these packages |
+
+## 23/05/18
+| Package | Version | Changes |
+| ---- | --- | --- |
+| fela<br>fela-plugin-extend<br>fela-plugin-fallback-value<br>fela-tools | 6.1.8<br>6.0.6<br>5.0.18<br>5.1.6 | [(#549)](https://github.com/rofrischmann/fela/pull/549) fix semVer range of `css-in-js-utils` dependency |
+| fela-plugin-validator | 5.2.0 | [(#554)](https://github.com/rofrischmann/fela/pull/554) allow custom `cssLint` configuration |
+| fela-dom<br>fela-monolithic | 7.0.8<br>5.0.22 | [(#559)](https://github.com/rofrischmann/fela/pull/559) fix regeneration of hydrated monolithic classes |
+| fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela<br> | 2.3.0<br>7.3.0<br>8.2.0<br>7.3.0 |[(#560)](https://github.com/rofrischmann/fela/pull/560) Concatenate `customClass` with generated classes in `felaComponent`<br>[(#564)](https://github.com/rofrischmann/fela/pull/564) add support for `fe` jsx pragma |
+| fela-plugin-important | 6.0.2 | [(#563)](https://github.com/rofrischmann/fela/pull/563) don't add `!important` to generated classes when using fela-monolithic |
+| fela-plugin-unit | 5.0.17 | [(#565)](https://github.com/rofrischmann/fela/pull/565) don't append unit to zero-values |
+| fela-dom | 7.0.8 | [(#566)](https://github.com/rofrischmann/fela/pull/566) fix rehydration id |
+
 ## 04/04/18
 | Package | Version | Changes |
 | ---- | --- | --- |

@@ -4,11 +4,16 @@ import objectEach from 'fast-loops/lib/objectEach'
 
 function hasDOM(renderer) {
   return (
+    renderer &&
     !renderer.isNativeRenderer &&
     typeof window !== 'undefined' &&
     window.document &&
     window.document.createElement
   )
+}
+
+function hasServerRenderedStyle() {
+  return window.document.querySelectorAll('[data-fela-type]').length > 0
 }
 
 export default function ProviderFactory(
@@ -21,13 +26,11 @@ export default function ProviderFactory(
       super(props, context)
 
       if (props.rehydrate && hasDOM(props.renderer)) {
-        rehydrate(props.renderer)
-      }
-    }
-
-    componentWillMount(): void {
-      if (this.props.renderToDOM && hasDOM(this.props.renderer)) {
-        render(this.props.renderer)
+        if (hasServerRenderedStyle()) {
+          rehydrate(props.renderer)
+        } else {
+          render(props.renderer)
+        }
       }
     }
 

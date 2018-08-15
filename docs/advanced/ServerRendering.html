@@ -1016,19 +1016,19 @@ That&apos;s it. No magic. No extra configuration.</p>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> createRenderer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fela&apos;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> renderToMarkup <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;fela-dom&apos;</span>
 
-<span class="token keyword">const</span> rule <span class="token operator">=</span> props <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">rule</span> <span class="token operator">=</span> props <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   color<span class="token punctuation">:</span> props<span class="token punctuation">.</span>color<span class="token punctuation">,</span>
   fontSize<span class="token punctuation">:</span> <span class="token string">&apos;15px&apos;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token comment" spellcheck="true">// simplified demo app</span>
-<span class="token keyword">const</span> App <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> renderer <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span>
+<span class="token comment">// simplified demo app</span>
+<span class="token keyword">const</span> <span class="token function-variable function">App</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> renderer <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
   <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>renderer<span class="token punctuation">.</span><span class="token function">renderRule</span><span class="token punctuation">(</span>rule<span class="token punctuation">,</span> <span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">&apos;blue&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
     Hello World
   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
 <span class="token punctuation">)</span>
 
-<span class="token comment" spellcheck="true">// Our initial html template</span>
+<span class="token comment">// Our initial html template</span>
 <span class="token keyword">const</span> appHTML <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -1046,7 +1046,7 @@ That&apos;s it. No magic. No extra configuration.</p>
 
 <span class="token keyword">const</span> server <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-server<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+server<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&apos;/&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
   renderer<span class="token punctuation">.</span><span class="token function">renderStatic</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1059,7 +1059,7 @@ server<span class="token punctuation">.</span><span class="token keyword">get</s
   <span class="token punctuation">)</span>
 
   <span class="token keyword">const</span> styleMarkup <span class="token operator">=</span> <span class="token function">renderToMarkup</span><span class="token punctuation">(</span>renderer<span class="token punctuation">)</span>
-  <span class="token comment" spellcheck="true">// inject the rendered html and css markup into the basic app html</span>
+  <span class="token comment">// inject the rendered html and css markup into the basic app html</span>
   res<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>
     appHTML
     <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">&apos;{{app}}&apos;</span><span class="token punctuation">,</span> htmlMarkup<span class="token punctuation">)</span>
@@ -1067,7 +1067,7 @@ server<span class="token punctuation">.</span><span class="token keyword">get</s
   <span class="token punctuation">)</span>
   res<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">// provide the content via localhost:8080</span>
+<span class="token comment">// provide the content via localhost:8080</span>
 server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">8080</span><span class="token punctuation">,</span> <span class="token string">&apos;localhost&apos;</span><span class="token punctuation">)</span>
 </code></pre>
 <h4 id="output-localhost8080">Output <em>(localhost:8080)</em></h4>
@@ -1095,9 +1095,9 @@ server<span class="token punctuation">.</span><span class="token function">liste
 <hr>
 <h3 id="related">Related</h3>
 <ul>
-<li><a href="../api/fela-dom/renderToMarkup">API Reference - <code>renderToMarkup</code></a></li>
-<li><a href="../api/fela-dom/renderToSheetList">API Reference - <code>renderToSheetList</code></a></li>
-<li><a href="../api/fela-dom/rehydrate">API Reference - <code>rehydrate</code></a></li>
+<li><a href="../api/fela-dom/renderToMarkup.html">API Reference - <code>renderToMarkup</code></a></li>
+<li><a href="../api/fela-dom/renderToSheetList.html">API Reference - <code>renderToSheetList</code></a></li>
+<li><a href="../api/fela-dom/rehydrate.html">API Reference - <code>rehydrate</code></a></li>
 </ul>
 
                                 
@@ -1142,7 +1142,7 @@ server<span class="token punctuation">.</span><span class="token function">liste
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"next":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"path":"docs/advanced/Plugins.md","ref":"docs/advanced/Plugins.md","articles":[]},"previous":{"title":"3.1. DOM Rendering","level":"1.4.1","depth":2,"path":"docs/advanced/DOMRendering.md","ref":"docs/advanced/DOMRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/ServerRendering.md","mtime":"2018-04-04T20:28:49.281Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-05-23T19:12:48.788Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"next":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"path":"docs/advanced/Plugins.md","ref":"docs/advanced/Plugins.md","articles":[]},"previous":{"title":"3.1. DOM Rendering","level":"1.4.1","depth":2,"path":"docs/advanced/DOMRendering.md","ref":"docs/advanced/DOMRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/ServerRendering.md","mtime":"2018-07-05T17:16:31.393Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-08-15T20:26:40.586Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

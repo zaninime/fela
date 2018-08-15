@@ -98,17 +98,18 @@ If you ever used [styled-components](https://www.styled-components.com), this wi
 > **Read**: [Usage with React](http://fela.js.org/docs/guides/UsageWithReact.html) for a full guide.
 
 ```javascript
+import { Fragment } from 'react';
 import { createComponent, Provider } from 'react-fela'
 import { render } from 'react-dom'
 
-const rule = state => ({
+const rule = props => ({
   textAlign: 'center',
   padding: '5px 10px',
-  background: state.primary ? 'green' : 'blue',
+  background: props.primary ? 'green' : 'blue',
   fontSize: '18pt',
   borderRadius: 5,
   ':hover': {
-    background: state.primary ? 'chartreuse' : 'dodgerblue',
+    background: props.primary ? 'chartreuse' : 'dodgerblue',
     boxShadow: '0 0 2px rgb(70, 70, 70)'
   }
 })
@@ -117,8 +118,10 @@ const Button = createComponent(rule, 'button')
 
 render(
   <Provider renderer={renderer}>
-    <Button primary>Primary</Button>
-    <Button>Default</Button>
+    <Fragment>
+      <Button primary>Primary</Button>
+      <Button>Default</Button>
+    </Fragment>
   </Provider>,
   document.body
 )

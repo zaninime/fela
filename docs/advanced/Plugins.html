@@ -1016,7 +1016,7 @@ Before the resolved style object gets cached and transformed to CSS, it is piped
 
 <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token punctuation">{</span>
   plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token comment" spellcheck="true">/* your plugins */</span>
+    <span class="token comment">/* your plugins */</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 
@@ -1037,12 +1037,10 @@ Right now there are two different presets available, a basic web preset <a href=
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-lvha" _target="blank">fela-plugin-lvha</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-placeholder-prefixer" _target="blank">fela-plugin-placeholder-prefixer</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-dynamic-prefixer" _target="blank">fela-plugin-dynamic-prefixer</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-fallback-value" _target="blank">fela-plugin-fallback-value</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-bidi" _target="blank">fela-plugin-bidi</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-rtl" _target="blank">fela-plugin-rtl</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-unit" _target="blank">fela-plugin-unit</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-remove-undefined" _target="blank">fela-plugin-remove-undefined</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-important" _target="blank">fela-plugin-important</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-isolation" _target="blank">fela-plugin-isolation</a></li>
 <li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-validator" _target="blank">fela-plugin-validator</a></li>
@@ -1051,7 +1049,7 @@ Right now there are two different presets available, a basic web preset <a href=
 <h2 id="custom-plugins">Custom Plugins</h2>
 <p>In order to learn how to write custom plugins, we first need to learn te exact API. A plugin is basically just a pure function that takes a style object and returns a (transformed) style object.</p>
 <p>In addition to the input style object, it also receives some extra information:</p>
-<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> plugin <span class="token operator">=</span> <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> processedStyle
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> <span class="token function-variable function">plugin</span> <span class="token operator">=</span> <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> processedStyle
 </code></pre>
 <h5 id="parameter">Parameter</h5>
 <ol>
@@ -1064,7 +1062,7 @@ Right now there are two different presets available, a basic web preset <a href=
 <p>(<em>Object</em>) a transformed style object</p>
 <h3 id="example">Example</h3>
 <p>Let&apos;s take a very simple example. Assume we want to add <code>display:none</code> to all rules that have the <code>hidden</code> prop.</p>
-<pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span> hiddenPlugin <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span> <span class="token function">hiddenPlugin</span> <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>props<span class="token punctuation">.</span>hidden<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">&apos;none&apos;</span>
   <span class="token punctuation">}</span>
@@ -1077,8 +1075,8 @@ Right now there are two different presets available, a basic web preset <a href=
 <p>Sometimes your plugin requires some configuration.<br>
 To achieve this, you may create a plugin factory.<br>
 Let&apos;s say we want to configure the prop that adds <code>display:none</code>.</p>
-<pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span> hiddenPluginFactory <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span> <span class="token function">hiddenPluginFactory</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>style<span class="token punctuation">,</span> type<span class="token punctuation">,</span> renderer<span class="token punctuation">,</span> props<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>props<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">&apos;none&apos;</span>
     <span class="token punctuation">}</span>
@@ -1141,7 +1139,7 @@ Let&apos;s say we want to configure the prop that adds <code>display:none</code>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"next":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"path":"docs/advanced/RendererConfiguration.md","ref":"docs/advanced/RendererConfiguration.md","articles":[]},"previous":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"path":"docs/advanced/ServerRendering.md","ref":"docs/advanced/ServerRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/Plugins.md","mtime":"2018-04-04T20:28:49.280Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-05-23T19:12:48.788Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"next":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"path":"docs/advanced/RendererConfiguration.md","ref":"docs/advanced/RendererConfiguration.md","articles":[]},"previous":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"path":"docs/advanced/ServerRendering.md","ref":"docs/advanced/ServerRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/Plugins.md","mtime":"2018-07-05T17:17:13.835Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-08-15T20:26:40.586Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

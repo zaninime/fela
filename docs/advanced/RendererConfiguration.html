@@ -1019,46 +1019,52 @@
 </thead>
 <tbody>
 <tr>
-<td><code>plugins</code></td>
-<td><code>function[]</code></td>
+<td>plugins</td>
+<td><em>(Array?)</em></td>
 <td></td>
 <td>A list of <a href="Plugins.html">plugins</a> to process styles before rendering</td>
 </tr>
 <tr>
-<td><code>keyframePrefixes</code></td>
-<td><code>string[]</code></td>
+<td>keyframePrefixes</td>
+<td><em>(Array?)</em></td>
 <td><code>[&apos;-webkit-&apos;,</code><br><code>&apos;-moz-&apos;]</code></td>
 <td>A list of which additional <code>@keyframes</code> prefixes are rendered</td>
 </tr>
 <tr>
-<td><code>enhancers</code></td>
-<td><code>function[]</code></td>
+<td>enhancers</td>
+<td><em>(Array?)</em></td>
 <td></td>
 <td>A list of <a href="Enhancers.html">enhancers</a> to enhance the renderer</td>
 </tr>
 <tr>
-<td><code>mediaQueryOrder</code></td>
-<td><code>string[]</code></td>
-<td><code>[]</code></td>
+<td>mediaQueryOrder</td>
+<td><em>(Array?)</em></td>
+<td></td>
 <td>An explicit order in which <code>@media</code> queries are rendered</td>
 </tr>
 <tr>
-<td><code>supportQueryOrder</code></td>
-<td><code>string[]</code></td>
-<td><code>[]</code></td>
+<td>supportQueryOrder</td>
+<td><em>(Array?)</em></td>
+<td></td>
 <td>An explicit order in which <code>@supports</code> queries are rendered</td>
 </tr>
 <tr>
-<td><code>selectorPrefix</code></td>
-<td><code>string</code></td>
-<td><code>&apos;&apos;</code></td>
-<td>Prepend a static prefix to every generated class and keyframe</td>
+<td>selectorPrefix</td>
+<td><em>(string?)</em></td>
+<td></td>
+<td>Prepend a static prefix to every generated class and keyframe. It must only consist of <code>a-zA-Z0-9-_</code> and start with <code>a-zA-Z_</code>.</td>
 </tr>
 <tr>
-<td><code>filterClassName</code></td>
-<td><code>function</code></td>
+<td>filterClassName</td>
+<td><em>(Function?)</em></td>
 <td><code>cls =&gt; cls.indexOf(&apos;ad&apos;) !== -1</code></td>
 <td>Filter-function to filter used class names</td>
+</tr>
+<tr>
+<td>devMode</td>
+<td><em>(Boolean?)</em></td>
+<td><code>false</code></td>
+<td>Enabling development mode for better developer experience. <strong>Make sure to disable devMode in production.</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1081,12 +1087,13 @@
     <span class="token string">&apos;(min-height: 300px)&apos;</span><span class="token punctuation">,</span>
     <span class="token string">&apos;(min-height: 500px)&apos;</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  selectorPrefix<span class="token punctuation">:</span> <span class="token string">&apos;fela_&apos;</span>
+  selectorPrefix<span class="token punctuation">:</span> <span class="token string">&apos;fela_&apos;</span><span class="token punctuation">,</span>
+  devMode<span class="token punctuation">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">&apos;production&apos;</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> keyframe <span class="token operator">=</span> props <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">keyframe</span> <span class="token operator">=</span> props <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token keyword">from</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
     width<span class="token punctuation">:</span> <span class="token string">&apos;calc(100% - 50px)&apos;</span><span class="token punctuation">,</span>
     height<span class="token punctuation">:</span> props<span class="token punctuation">.</span>height <span class="token operator">*</span>  <span class="token number">2</span>
@@ -1097,7 +1104,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> rule <span class="token operator">=</span> props <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">rule</span> <span class="token operator">=</span> props <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   color<span class="token punctuation">:</span> props<span class="token punctuation">.</span>color<span class="token punctuation">,</span>
   fontSize<span class="token punctuation">:</span> <span class="token number">12</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -1198,7 +1205,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"next":{"title":"3.5. Global & Third-Party Styles","level":"1.4.5","depth":2,"path":"docs/advanced/StaticStyle.md","ref":"docs/advanced/StaticStyle.md","articles":[]},"previous":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"path":"docs/advanced/Plugins.md","ref":"docs/advanced/Plugins.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/RendererConfiguration.md","mtime":"2018-04-04T20:28:49.280Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-05-23T19:12:48.788Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"next":{"title":"3.5. Global & Third-Party Styles","level":"1.4.5","depth":2,"path":"docs/advanced/StaticStyle.md","ref":"docs/advanced/StaticStyle.md","articles":[]},"previous":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"path":"docs/advanced/Plugins.md","ref":"docs/advanced/Plugins.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/RendererConfiguration.md","mtime":"2018-08-15T19:29:07.536Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-08-15T20:26:40.586Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

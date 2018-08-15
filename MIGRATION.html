@@ -1009,15 +1009,22 @@
 It is sorted by packages.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
+<li><a href="#babel-plugin-fela">babel-plugin-fela</a></li>
 <li><a href="#fela-dom">fela-dom</a></li>
+<li><a href="#fela-plugin-dynamic-prefixer">fela-plugin-dynamic-prefixer</a></li>
+<li><a href="#fela-plugin-remove-undefined">fela-plugin-remove-undefined</a></li>
 <li><a href="#inferno-fela">inferno-fela</a></li>
 </ul>
+<h2 id="babel-plugin-fela">babel-plugin-fela</h2>
+<h3 id="1015">1.0.15</h3>
+<p>This package has been deprecated and removed as it does not add the desired benefits.<br>
+One should remove it from their Babel config as it is no longer guaranteed to work as expected.</p>
 <h2 id="fela-dom">fela-dom</h2>
 <h3 id="700">7.0.0</h3>
 <p>If you&apos;re using <code>renderToSheetList</code> on the server-side, you probably have to update the rendered <code>style</code> elements to also contain the <code>data-fela-support</code> attribute.</p>
 <pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> sheetList <span class="token operator">=</span> <span class="token function">renderToSheetList</span><span class="token punctuation">(</span>renderer<span class="token punctuation">)</span>
 
-<span class="token keyword">const</span> elements <span class="token operator">=</span> sheetList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token punctuation">,</span> css<span class="token punctuation">,</span> media<span class="token punctuation">,</span> support <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span>
+<span class="token keyword">const</span> elements <span class="token operator">=</span> sheetList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token punctuation">,</span> css<span class="token punctuation">,</span> media<span class="token punctuation">,</span> support <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
   <span class="token operator">&lt;</span>style
     dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token punctuation">:</span> css <span class="token punctuation">}</span><span class="token punctuation">}</span>
     data<span class="token operator">-</span>fela<span class="token operator">-</span>type<span class="token operator">=</span><span class="token punctuation">{</span>type<span class="token punctuation">}</span>
@@ -1027,6 +1034,14 @@ It is sorted by packages.</p>
   <span class="token operator">/</span><span class="token operator">&gt;</span>
 <span class="token punctuation">)</span>
 </code></pre>
+<h2 id="fela-plugin-dynamic-prefixer">fela-plugin-dynamic-prefixer</h2>
+<h3 id="5010">5.0.10</h3>
+<p>This package has been deprecated and removed as the dynamic version of <a href="https://github.com/rofrischmann/inline-style-prefixer" _target="blank">inline-style-prefixer</a> will no longer be maintained.<br>
+Use <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a> instead. </p>
+<h2 id="fela-plugin-remove-undefined">fela-plugin-remove-undefined</h2>
+<h3 id="5021">5.0.21</h3>
+<p>This package has been deprecated and removed as Fela automatically removes <code>undefined</code> values.<br>
+One should remove it form their Fela config as it no longer required.</p>
 <h2 id="inferno-fela">inferno-fela</h2>
 <h3 id="800">8.0.0</h3>
 <p>In order to use inferno-fela &gt; 8.0.0, Inferno &gt; 4.0.0 is required.<br>
@@ -1074,7 +1089,7 @@ If you can&apos;t upgrade to Inferno 4.0.0 yet, consider using inferno-fela 7.0.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. FAQ","level":"1.9","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"6.4.9. withTheme","level":"1.7.4.9","depth":3,"path":"docs/api/bindings/withTheme.md","ref":"docs/api/bindings/withTheme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2018-04-04T20:28:49.274Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-05-23T19:12:48.788Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. FAQ","level":"1.9","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"6.4.9. withTheme","level":"1.7.4.9","depth":3,"path":"docs/api/bindings/withTheme.md","ref":"docs/api/bindings/withTheme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2018-08-15T20:23:31.990Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-08-15T20:26:40.586Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

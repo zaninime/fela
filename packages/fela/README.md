@@ -7,24 +7,10 @@ It generates atomic CSS and supports all common CSS features such as media queri
 
 Fela can be used with [React](https://github.com/rofrischmann/fela/tree/master/packages/react-fela) or with any other view library. It even supports [React Native](http://fela.js.org/docs/guides/UsageWithReactNative.html).
 
-<img alt="TravisCI" src="https://travis-ci.org/rofrischmann/fela.svg?branch=master"> <a href="https://codeclimate.com/github/rofrischmann/fela/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <img alt="gzipped size" src="https://img.shields.io/badge/gzipped-~3kb-brightgreen.svg"> <a href="https://gitter.im/rofrischmann/fela"><img alt="Gitter" src="https://img.shields.io/gitter/room/rofrischmann/fela.svg"></a> <a href="#backers"><img alt="Backers on Open Collective" src="https://opencollective.com/fela/backers/badge.svg"></a> <a href="#sponsors"><img alt="Sponsors on Open Collective" src="https://opencollective.com/fela/sponsors/badge.svg"></a>
+<img alt="TravisCI" src="https://travis-ci.org/rofrischmann/fela.svg?branch=master"> <a href="https://codeclimate.com/github/rofrischmann/fela/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <a href="https://bundlephobia.com/result?p=fela@latest"><img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/fela.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <a href="https://gitter.im/rofrischmann/fela"><img alt="Gitter" src="https://img.shields.io/gitter/room/rofrischmann/fela.svg"></a>
 
 ## Support Us
 Support Robin Frischmann's work on Fela and its ecosystem directly via [**Patreon**](https://www.patreon.com/rofrischmann).
-
-Or support us on [**Open Collective**](https://opencollective.com/fela) to fund community work.<br>
-Thank you to all our backers!
-
-<a href="https://opencollective.com/fela/backer/0/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/0/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/1/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/1/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/2/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/2/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/3/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/3/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/4/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/4/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/5/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/5/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/6/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/6/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/7/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/7/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/8/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/8/avatar.svg?requireActive=false"></a>
-<a href="https://opencollective.com/fela/backer/9/website?requireActive=false" target="_blank"><img src="https://opencollective.com/fela/backer/9/avatar.svg?requireActive=false"></a>
 
 ## Installation
 ```sh
@@ -33,18 +19,15 @@ yarn add fela
 You may alternatively use `npm i --save fela`.
 
 ## Benefits
-* High Predictablity
-* Dynamic Styling
+* Predictable Styling
 * Scoped Atomic CSS
-* Dead-Code Elimination
+* No Specificity Issues
+* No Naming Conflicts
 * Framework-Agnostic
 * Huge Ecosystem
-* Component-Based Styling
-* Universal Rendering
-* Many CSS Features
 
 ## The Gist
-Fela's core principle is to consider [style as a function of state](https://medium.com/@rofrischmann/styles-as-functions-of-state-1885627a63f7#.6k6i4kdch).<br>
+Fela's core principle is to consider [style as a function of state](http://fela.js.org/docs/introduction/Principles.html).<br>
 The whole API and all plugins and bindings are built on that idea.<br>
 It is reactive and auto-updates once registered to the DOM.<br>
 
@@ -59,12 +42,11 @@ const rule = state => ({
   textAlign: 'center',
   padding: '5px 10px',
   // directly use the state to compute style values
-  background: state.primary ? 'green' : 'blue',
-  fontSize: '18pt',
+  fontSize: state.fontSize + 'pt',
   borderRadius: 5,
   // deeply nest media queries and pseudo classes
   ':hover': {
-    background: state.primary ? 'chartreuse' : 'dodgerblue',
+    fontSize: state.fontSize + 2 + 'pt',
     boxShadow: '0 0 2px rgb(70, 70, 70)'
   }
 })
@@ -74,54 +56,56 @@ const renderer = createRenderer()
 
 // fela generates atomic CSS classes in order to achieve
 // maximal style reuse and minimal CSS output
-const className = renderer.renderRule(rule, { 
-  primary: true
-}) // =>  a b c d e f g
+const className = renderer.renderRule(rule, {
+  fontSize: 14
+}) // =>  a b c d e f
 ```
 
 The generated CSS output would look like this:
 ```CSS
 .a { text-align: center }
 .b { padding: 5px 10px }
-.c { background: green }
-.d { font-size: 18pt }
-.e { border-radius: 5px }
-.f:hover { background-color: chartreuse }
-.g:hover { box-shadow: 0 0 2px rgb(70, 70, 70) }
+.c { font-size: 14pt }
+.d { border-radius: 5px }
+.e:hover { font-size: 16pt }
+.f:hover { box-shadow: 0 0 2px rgb(70, 70, 70) }
 ```
 
 ### Primitive Components
 If you're using Fela, you're most likely also using React.<br>
 Using the [React bindings](packages/react-fela), you get powerful APIs to create primitive components.<br>
-If you ever used [styled-components](https://www.styled-components.com), this will look very familiar.
 
 > **Read**: [Usage with React](http://fela.js.org/docs/guides/UsageWithReact.html) for a full guide.
 
 ```javascript
-import { Fragment } from 'react';
-import { createComponent, Provider } from 'react-fela'
+import { FelaComponent, Provider } from 'react-fela'
 import { render } from 'react-dom'
 
-const rule = props => ({
+const rule = state => ({
   textAlign: 'center',
   padding: '5px 10px',
-  background: props.primary ? 'green' : 'blue',
-  fontSize: '18pt',
+  // directly use the state to compute style values
+  fontSize: state.fontSize + 'pt',
   borderRadius: 5,
+  // deeply nest media queries and pseudo classes
   ':hover': {
-    background: props.primary ? 'chartreuse' : 'dodgerblue',
+    fontSize: state.fontSize + 2 + 'pt',
     boxShadow: '0 0 2px rgb(70, 70, 70)'
   }
 })
 
-const Button = createComponent(rule, 'button')
+const Button = ({ fontSize = 14, children }) => (
+  <FelaComponent rule={rule} fontSize={fontSize}>
+    {children}
+  </FelaComponent>
+)
 
 render(
   <Provider renderer={renderer}>
-    <Fragment>
-      <Button primary>Primary</Button>
-      <Button>Default</Button>
-    </Fragment>
+    <>
+      <Button>Basic Button</Button>
+      <Button fontSize={18}>Big Button</Button>
+    </>
   </Provider>,
   document.body
 )
@@ -148,6 +132,7 @@ render(
 * [Recipes](http://fela.js.org/docs/Recipes.html)
 * [API Reference](http://fela.js.org/docs/API.html)
 * [Migration Guide](http://fela.js.org/docs/MigrationGuide.html)
+* [Changelog](http://fela.js.org/docs/Changelog.html)
 * [FAQ](http://fela.js.org/docs/FAQ.html)
 * [Feedback](http://fela.js.org/docs/Feedback.html)
 * [Thanks](http://fela.js.org/docs/Thanks.html)
@@ -155,13 +140,17 @@ render(
 ## Workshop
 If you are coming from CSS and want to learn JavaScript Styling with Fela, there is a full-feature [fela-workshop](https://github.com/tajo/fela-workshop) which demonstrates typical Fela use cases. It teaches all important parts, step by step with simple examples. If you already know other CSS in JS solutions and are just switching to Fela, you might not need to do the whole workshop, but it still provides useful information to get started quickly.
 
-## Posts & Talks
+## Talks
 * [**CSS in JS: The Good & Bad Parts**](https://www.youtube.com/watch?v=95M-2YzyTno) ([Slides](https://speakerdeck.com/rofrischmann/css-in-js-the-good-and-bad-parts))<br> - *by [Robin Frischmann](https://twitter.com/rofrischmann)*
+* [**CSS in JS: Patterns**](https://www.webexpo.net/prague2018/talk?id=css-in-js-patterns)<br> - *by [Vojtech Miksu](https://twitter.com/vmiksu)*
+
+## Posts
 * [**Style as a Function of State**](https://medium.com/@rofrischmann/styles-as-functions-of-state-1885627a63f7#.6k6i4kdch)<br> - *by [Robin Frischmann](https://twitter.com/rofrischmann)*
 * [**CSS in JS: The Argument Refined**](https://medium.com/@steida/css-in-js-the-argument-refined-471c7eb83955#.3otvkubq4)<br> - *by [Daniel Steigerwald](https://twitter.com/steida)*
 * [**What is Fela?**](https://davidsinclair.io/thoughts/what-is-fela)<br> - *by [David Sinclair](https://davidsinclair.io)*
 * [**Choosing a CSS in JS library**](https://gist.github.com/troch/c27c6a8cc47b76755d848c6d1204fdaf#file-choosing-a-css-in-js-library-md)<br> - *by [Thomas Roch](https://twitter.com/tcroch)*
-* [**Introducing Fela 6.0**](https://medium.com/@rofrischmann/introducing-fela-6-0-289c84b52dd5)<br> - *by [Robin Frischmann](https://twitter.com/rofrischmann)*
+* [**Introducing Fela 6.0**](https://medium.com/felajs/the-future-of-fela-d4dad2efad00)<br> - *by [Robin Frischmann](https://twitter.com/rofrischmann)*
+* [**The Future of Fela**](https://medium.com/@rofrischmann/introducing-fela-6-0-289c84b52dd5)<br> - *by [Robin Frischmann](https://twitter.com/rofrischmann)*
 
 ## Ecosystem
 There are tons of useful packages maintained within this repository including plugins, enhancers, bindings and tools that can be used together with Fela. Check the [Ecosystem](http://fela.js.org/docs/introduction/Ecosystem.html) documentation for a quick overview.
@@ -179,7 +168,6 @@ Apart from all the packages managed within this repository, there are many commu
 * [counter-component-with-react-mobx-fela](https://github.com/Mercateo/counter-component-with-react-mobx-fela) - Counter Component using Fela
 * [cycle-fela](https://github.com/wcastand/cycle-fela) - Cycle bindings for Fela
 * [dogstack](https://github.com/root-systems/dogstack) - A popular-choice grab-bag framework for teams working on production web apps
-* [este](https://github.com/este/este) - Starter kit for universal full–fledged React apps build with Fela
 * [fela-components](https://github.com/arturmuller/fela-components) - Styling library for React and Fela
 * [fela-react-helpers](https://github.com/vlad-zhukov/fela-react-helpers) - A set of useful helpers for Fela
 * [fela-react-prop](https://github.com/codepunkt/fela-react-prop) - Generate class names for fela style rule and apply them as property on a wrapped component
@@ -202,7 +190,8 @@ Apart from all the packages managed within this repository, there are many commu
 
 ## Support
 Got a question? Come and join us on [Gitter](https://gitter.im/rofrischmann/fela)! <br>
-We'd love to help out. We also highly appreciate any feedback.
+We'd love to help out. We also highly appreciate any feedback.<br>
+Don't want to miss any update? Follow us on [Twitter](https://twitter.com/felajs).
 
 ## Who's using Fela?
 
@@ -227,6 +216,7 @@ We'd love to help out. We also highly appreciate any feedback.
 - [Root Systems](https://www.rootsystems.nz)
 - [Space Between](https://www.spacebetween.co.uk/)
 - [V2](https://www.v2.com)
+- [Volvo Cars](https://www.volvocars.com)
 - [Zendesk](https://www.zendesk.com)
 
 

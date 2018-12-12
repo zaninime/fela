@@ -1,10 +1,5 @@
 {
-  "lerna": "2.8.0",
-  "version": "independent",
+  "version": "10.0.0",
   "npmClient": "yarn",
-  "packages": [
-    "packages/*",
-    "examples/*",
-    "benchmark"
-  ]
+  "useWorkspaces": true
 }

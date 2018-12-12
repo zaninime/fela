@@ -1050,47 +1050,33 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="migration">Migration</h1>
-<p>This guide should help with migration from lower major versions.<br>
-It is sorted by packages.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<blockquote>
+<p>With the new synced version release process, we no longer have package-based migration guides, but version-based. Therefore, we removed all old migration guides. Check <a href="https://github.com/rofrischmann/fela/blob/a08ea4fff080d8df1edf76909dea58ac49e9e536/MIGRATION.md" _target="blank">the old migration guide</a> for older guidelines.</p>
+</blockquote>
+<p>This guide should help migrating your Fela codebase to newer versions.</p>
+<h2 id="1000">10.0.0</h2>
+<p>With Version 10, we did some major changes to all the React-like bindings.<br>
+All older APIs should still work, but will now render a deprecation warning with instructions on how to migrate. We will do a code cleanup with Version 11.</p>
+<blockquote>
+<p><strong>Codemods</strong>: We also have Codemods to automate the migration process. They should catch at least 80% of all usages.</p>
+</blockquote>
+<h4 id="relevant-packages">Relevant Packages</h4>
 <ul>
-<li><a href="#babel-plugin-fela">babel-plugin-fela</a></li>
-<li><a href="#fela-dom">fela-dom</a></li>
-<li><a href="#fela-plugin-dynamic-prefixer">fela-plugin-dynamic-prefixer</a></li>
-<li><a href="#fela-plugin-remove-undefined">fela-plugin-remove-undefined</a></li>
-<li><a href="#inferno-fela">inferno-fela</a></li>
+<li>react-fela</li>
+<li>preact-fela</li>
+<li>inferno-fela</li>
 </ul>
-<h2 id="babel-plugin-fela">babel-plugin-fela</h2>
-<h3 id="1015">1.0.15</h3>
-<p>This package has been deprecated and removed as it does not add the desired benefits.<br>
-One should remove it from their Babel config as it is no longer guaranteed to work as expected.</p>
-<h2 id="fela-dom">fela-dom</h2>
-<h3 id="700">7.0.0</h3>
-<p>If you&apos;re using <code>renderToSheetList</code> on the server-side, you probably have to update the rendered <code>style</code> elements to also contain the <code>data-fela-support</code> attribute.</p>
-<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> sheetList <span class="token operator">=</span> <span class="token function">renderToSheetList</span><span class="token punctuation">(</span>renderer<span class="token punctuation">)</span>
-
-<span class="token keyword">const</span> elements <span class="token operator">=</span> sheetList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token punctuation">,</span> css<span class="token punctuation">,</span> media<span class="token punctuation">,</span> support <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
-  <span class="token operator">&lt;</span>style
-    dangerouslySetInnerHTML<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> __html<span class="token punctuation">:</span> css <span class="token punctuation">}</span><span class="token punctuation">}</span>
-    data<span class="token operator">-</span>fela<span class="token operator">-</span>type<span class="token operator">=</span><span class="token punctuation">{</span>type<span class="token punctuation">}</span>
-    data<span class="token operator">-</span>fela<span class="token operator">-</span>support<span class="token operator">=</span><span class="token punctuation">{</span>support<span class="token punctuation">}</span>
-    key<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>type<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>media<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">}</span>
-    media<span class="token operator">=</span><span class="token punctuation">{</span>media<span class="token punctuation">}</span>
-  <span class="token operator">/</span><span class="token operator">&gt;</span>
-<span class="token punctuation">)</span>
-</code></pre>
-<h2 id="fela-plugin-dynamic-prefixer">fela-plugin-dynamic-prefixer</h2>
-<h3 id="5010">5.0.10</h3>
-<p>This package has been deprecated and removed as the dynamic version of <a href="https://github.com/rofrischmann/inline-style-prefixer" _target="blank">inline-style-prefixer</a> will no longer be maintained.<br>
-Use <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a> instead. </p>
-<h2 id="fela-plugin-remove-undefined">fela-plugin-remove-undefined</h2>
-<h3 id="5021">5.0.21</h3>
-<p>This package has been deprecated and removed as Fela automatically removes <code>undefined</code> values.<br>
-One should remove it form their Fela config as it no longer required.</p>
-<h2 id="inferno-fela">inferno-fela</h2>
-<h3 id="800">8.0.0</h3>
-<p>In order to use inferno-fela &gt; 8.0.0, Inferno &gt; 4.0.0 is required.<br>
-If you can&apos;t upgrade to Inferno 4.0.0 yet, consider using inferno-fela 7.0.1.</p>
+<hr>
+<h3 id="felatheme">FelaTheme</h3>
+<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#felatheme" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/fela-theme" _target="blank">API Reference</a></p>
+<p>The FelaTheme component now no longer uses the special <code>render</code> prop to pass a render function, but uses <code>children</code> instead.<br></p>
+<h3 id="felacomponent">FelaComponent</h3>
+<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#felacomponent" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/fela-component" _target="blank">API Reference</a></p>
+<p>The same goes for FelaComponent. We now use <code>children</code> directly rather than <code>render</code>. In order to pass a primitive render type, one may now use the <code>as</code> prop.</p>
+<p>Instead of accepting both <code>style</code> and <code>rule</code> it now only accepts <code>style</code> but allows style objects, rule functions and even an array of both.</p>
+<h3 id="rendererprovider">RendererProvider</h3>
+<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#rendererprovider" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/renderer-provider" _target="blank">API Reference</a></p>
+<p>The old <code>Provider</code> component has been renamed to <code>RendererProvider</code> for more clarity and specificity. </p>
 
                                 
                                 </section>
@@ -1134,7 +1120,7 @@ If you can&apos;t upgrade to Inferno 4.0.0 yet, consider using inferno-fela 7.0.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. Changelog","level":"1.9","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"6.5.1. createSnapshot","level":"1.7.5.1","depth":3,"path":"docs/api/jest-bindings/createSnapshot.md","ref":"docs/api/jest-bindings/createSnapshot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2018-09-19T16:40:00.365Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-10-24T14:04:52.181Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. Changelog","level":"1.9","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"6.5.1. createSnapshot","level":"1.7.5.1","depth":3,"path":"docs/api/jest-bindings/createSnapshot.md","ref":"docs/api/jest-bindings/createSnapshot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2018-12-12T08:35:33.634Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-12-12T09:17:13.397Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

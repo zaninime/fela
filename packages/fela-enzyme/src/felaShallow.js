@@ -1,10 +1,12 @@
 import { shallow as enzymeShallow } from 'enzyme'
-import { renderToString } from 'fela-tools'
 import cssbeautify from 'cssbeautify'
 import toJson from 'enzyme-to-json'
-import mergeOptions from './mergeOptions'
+
 import { ThemeProvider } from 'react-fela' // eslint-disable-line behance/no-deprecated
+import { renderToString } from 'fela-tools'
 import { createRenderer as felaCreateRenderer } from 'fela'
+
+import mergeOptions from './mergeOptions'
 
 const isWithTheme = reactElement =>
   reactElement && reactElement.type && reactElement.type.name === 'WithTheme'
@@ -18,12 +20,12 @@ const isFelaComponent = reactElement =>
 const isNonDOMComponent = reactElement =>
   reactElement && reactElement.type && typeof reactElement.type !== 'string'
 
-const shallow = (
+export default function felaShallow(
   node,
   options = {},
   rootTheme = {},
   createRenderer = felaCreateRenderer
-) => {
+) {
   const rootRenderer = createRenderer()
 
   const wrapper = enzymeShallow(
@@ -113,5 +115,3 @@ const shallow = (
     felaDive,
   }
 }
-
-export default shallow

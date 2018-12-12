@@ -16,6 +16,7 @@ const blockedStatics = {
   childContextTypes: true,
   propTypes: true,
   getDerivedStateFromProps: true,
+  contextType: true,
 }
 
 export default function hoistStatics(target: any, source: any): any {
@@ -36,7 +37,9 @@ export default function hoistStatics(target: any, source: any): any {
         if (descriptor) {
           Object.defineProperty(target, property, descriptor)
         }
-      } catch (e) {}
+      } catch (e) {
+        // TODO: warning
+      }
     }
   })
 

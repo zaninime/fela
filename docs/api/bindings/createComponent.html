@@ -858,12 +858,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4.7" data-path="Provider.html">
+        <li class="chapter " data-level="1.7.4.7" data-path="FelaRenderer.html">
             
-                <a href="Provider.html">
+                <a href="FelaRenderer.html">
             
                     
-                    6.4.7. Provider
+                    6.4.7. FelaRenderer
             
                 </a>
             
@@ -871,12 +871,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4.8" data-path="ThemeProvider.html">
+        <li class="chapter " data-level="1.7.4.8" data-path="RendererProvider.html">
+            
+                <a href="RendererProvider.html">
+            
+                    
+                    6.4.8. RendererProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.9" data-path="ThemeProvider.html">
             
                 <a href="ThemeProvider.html">
             
                     
-                    6.4.8. ThemeProvider
+                    6.4.9. ThemeProvider
             
                 </a>
             
@@ -884,12 +897,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4.9" data-path="withTheme.html">
+        <li class="chapter " data-level="1.7.4.10" data-path="RendererContext.html">
+            
+                <a href="RendererContext.html">
+            
+                    
+                    6.4.10. RendererContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.11" data-path="ThemeContext.html">
+            
+                <a href="ThemeContext.html">
+            
+                    
+                    6.4.11. ThemeContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.12" data-path="withTheme.html">
             
                 <a href="withTheme.html">
             
                     
-                    6.4.9. withTheme
+                    6.4.12. withTheme
             
                 </a>
             
@@ -1065,9 +1104,9 @@
 <tbody>
 <tr>
 <td>rule</td>
-<td><em>Function</em></td>
+<td><em>Function</em><br><em>Object</em></td>
 <td></td>
-<td>A function which satisfies the <a href="../basics/Rules.md">rule</a> behavior. It <strong>must</strong> return a valid <a href="../basics/Rules.md#styleobject">style object</a></td>
+<td>Either a <a href="../basics/Rules.md#styleobject">style object</a> or rule function which satisfies the <a href="../basics/Rules.md">rule</a> behavior and returns a valid <a href="../basics/Rules.md#styleobject">style object</a>.</td>
 </tr>
 <tr>
 <td>type</td>
@@ -1128,7 +1167,7 @@
 
 <span class="token keyword">const</span> Title <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span>
 
-<span class="token operator">&lt;</span>Title onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span> passThrough<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span> <span class="token string">&apos;onClick&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token operator">&lt;</span>Title onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span> passThrough<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span> <span class="token string">&apos;onClick&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span>
 <span class="token comment">// =&gt; &lt;div className=&quot;a&quot; onclick=&quot;...&quot;&gt;Hello World&lt;/div&gt;</span>
 </code></pre>
 <h4 id="extending-styles">Extending Styles</h4>
@@ -1147,7 +1186,7 @@
   color<span class="token punctuation">:</span> props<span class="token punctuation">.</span>color
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token operator">&lt;</span>Title extend<span class="token operator">=</span><span class="token punctuation">{</span>extendTitle<span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token string">&quot;green&quot;</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token operator">&lt;</span>Title extend<span class="token operator">=</span><span class="token punctuation">{</span>extendTitle<span class="token punctuation">}</span> color<span class="token operator">=</span><span class="token string">&quot;green&quot;</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span>
 <span class="token comment">// =&gt; &lt;div className=&quot;a&quot;&gt;Hello World&lt;/div&gt;</span>
 <span class="token comment">// =&gt; .a { color: green }</span>
 </code></pre>
@@ -1159,8 +1198,20 @@
 
 <span class="token keyword">const</span> Title <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span>
 
-<span class="token operator">&lt;</span>Title <span class="token keyword">as</span><span class="token operator">=</span><span class="token string">&quot;h1&quot;</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+<span class="token operator">&lt;</span>Title <span class="token keyword">as</span><span class="token operator">=</span><span class="token string">&quot;h1&quot;</span><span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span>
 <span class="token comment">// =&gt; &lt;h1 className=&quot;a&quot;&gt;Hello World&lt;/h1&gt;</span>
+</code></pre>
+<h2 id="static-style-object">Static Style Object</h2>
+<p>Instead of rendering a props-depending rule, we can also use plain objects to render static style objects.</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token punctuation">{</span>
+  fontSize<span class="token punctuation">:</span> <span class="token string">&apos;15px&apos;</span><span class="token punctuation">,</span>
+  color<span class="token punctuation">:</span> <span class="token string">&apos;red&apos;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> Title <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>style<span class="token punctuation">,</span> <span class="token string">&apos;h1&apos;</span><span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>Title<span class="token operator">&gt;</span>Hello World<span class="token operator">&lt;</span><span class="token operator">/</span>Title<span class="token operator">&gt;</span>
+<span class="token comment">// =&gt; &lt;h1 className=&quot;a b&quot;&gt;Hello World&lt;/h1&gt;</span>
 </code></pre>
 <h2 id="related">Related</h2>
 <ul>
@@ -1210,7 +1261,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"next":{"title":"6.4.3. createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},"previous":{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"path":"docs/api/bindings/connect.md","ref":"docs/api/bindings/connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/createComponent.md","mtime":"2018-09-24T20:17:04.736Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-12-14T11:18:02.722Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"next":{"title":"6.4.3. createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},"previous":{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"path":"docs/api/bindings/connect.md","ref":"docs/api/bindings/connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/createComponent.md","mtime":"2018-12-21T12:03:42.962Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2018-12-21T13:02:00.498Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

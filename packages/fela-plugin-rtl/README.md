@@ -1,6 +1,6 @@
 # fela-plugin-rtl
 
-<img alt="npm version" src="https://badge.fury.io/js/fela-plugin-rtl.svg"> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela-plugin-rtl.svg"> <a href="https://bundlephobia.com/result?p=fela-plugin-ftl@latest"><img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/fela-plugin-ftl.svg"></a>
+<img alt="npm version" src="https://badge.fury.io/js/fela-plugin-rtl.svg"> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela-plugin-rtl.svg"> <a href="https://bundlephobia.com/result?p=fela-plugin-ftl@latest"><img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/fela-plugin-rtl.svg"></a>
 
 Uses [rtl-css-js](https://github.com/kentcdodds/rtl-css-js) to convert a style object to its right-to-left counterpart.
 
@@ -22,6 +22,14 @@ const renderer = createRenderer({
   plugins: [ rtl() ]
 })
 ```
+
+
+### Configuration
+##### Parameters
+| Parameter | Value | Default | Description |
+| --- | --- | --- | --- |
+| defaultDirection | *("rtl" \| "ltr")* | `rtl` | The default direction which can be useful if one is using the `theme.direction` option to dynamically toggle rtl transformation |
+
 
 ## Example
 

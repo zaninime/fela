@@ -9,50 +9,50 @@ div {
   display: flex
 }
 
-.a {
+.h {
   color: red
 }
 
 @supports (display:flex) {
-  .b {
+  .f {
     color: yellow
   }
 }
 
 @supports (display:grid) {
-  .c {
+  .g {
     color: brown
-  }
-}
-
-@media (min-height: 300px) {
-  .d {
-    color: blue
-  }
-
-  @supports (display:flex) {
-    .e {
-      color: green
-    }
-  }
-
-  @supports (display:grid) {
-    .f {
-      color: black
-    }
   }
 }
 
 @media (max-height: 300px) {
   @supports (display: flex) {
-    .g {
+    .a {
       color: purple
     }
   }
 }
 
+@media (min-height: 300px) {
+  .e {
+    color: blue
+  }
+
+  @supports (display:flex) {
+    .c {
+      color: green
+    }
+  }
+
+  @supports (display:grid) {
+    .d {
+      color: black
+    }
+  }
+}
+
 @media (max-width: 300px) {
-  .h {
+  .b {
     color: grey
   }
 }"

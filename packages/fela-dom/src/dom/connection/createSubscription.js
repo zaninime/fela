@@ -19,10 +19,7 @@ import type { DOMRenderer } from '../../../../../flowtypes/DOMRenderer'
 export default function createSubscription(renderer: DOMRenderer): Function {
   return change => {
     if (change.type === CLEAR_TYPE) {
-      objectEach(renderer.nodes, ({ node }) =>
-        node.parentNode.removeChild(node)
-      )
-
+      objectEach(renderer.nodes, ({ node }) => node.remove())
       renderer.nodes = {}
       return
     }

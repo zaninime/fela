@@ -35,19 +35,14 @@ exports[`Subscribing to the DOM should correctly recreate nodes after clean 1`] 
       }
     }
   </style>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\">
+  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" media=\\"(min-width: 300px) and (max-height: 500px)\\">
     .a {
-      color: blue
+      color: yellow
     }
   </style>
   <style data-fela-type=\\"RULE\\" type=\\"text/css\\" media=\\"(min-width: 300px)\\">
     .b {
       color: red
-    }
-  </style>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" media=\\"(min-width: 300px) and (max-height: 500px)\\">
-    .c {
-      color: yellow
     }
   </style>
 </head>"
@@ -91,38 +86,27 @@ exports[`Subscribing to the DOM should render keyframes to a DOM node 1`] = `
 
 exports[`Subscribing to the DOM should render media rules and support rules to single DOM nodes (devMode) 1`] = `
 "<head>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\">
-    .a {
-      color: blue
-    }
-  </style>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" data-fela-support=\\"true\\"></style>
+  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" data-fela-support=\\"true\\" media=\\"(min-width: 300px) and (max-height: 500px)\\"></style>
   <style data-fela-type=\\"RULE\\" type=\\"text/css\\" media=\\"(min-width: 300px)\\">
     .c {
       color: red
     }
   </style>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" media=\\"(min-width: 300px) and (max-height: 500px)\\">
-    .d {
-      color: yellow
-    }
-  </style>
-  <style data-fela-type=\\"RULE\\" type=\\"text/css\\" data-fela-support=\\"true\\" media=\\"(min-width: 300px) and (max-height: 500px)\\"></style>
 </head>"
 `;
 
 exports[`Subscribing to the DOM should render rules to a DOM node 1`] = `
 "<head>
   <style data-fela-type=\\"RULE\\" type=\\"text/css\\">
-    .a {
+    .b {
       background-color: red
     }
 
-    .b {
+    .c {
       color: blue
     }
 
-    .c:hover {
+    .a:hover {
       color: red
     }
   </style>
@@ -144,24 +128,48 @@ exports[`Subscribing to the DOM should render static styles to a DOM node 1`] = 
 exports[`Subscribing to the DOM should use insertRule in production 1`] = `
 Array [
   Object {
-    "_media": "",
-    "_support": false,
+    "_media": "(min-width: 300px) and (max-height: 500px)",
+    "_support": "true",
     "_type": "RULE",
     "style": Object {
-      "0_.a": Object {
+      "(display: flex)": Object {
+        "0_.d": Object {
+          "display": "flex",
+        },
+      },
+      "(display: grid)": Object {
+        "0_.a": Object {
+          "display": "grid",
+        },
+      },
+      "1_.b": Object {
+        "color": "yellow",
+      },
+      "3_.e": Object {
         "color": "blue",
       },
     },
   },
   Object {
-    "_media": "",
+    "_media": "(min-width: 300px) and (max-height: 500px)",
     "_support": "true",
     "_type": "RULE",
     "style": Object {
       "(display: flex)": Object {
-        "0_.b": Object {
+        "0_.d": Object {
           "display": "flex",
         },
+      },
+      "(display: grid)": Object {
+        "0_.a": Object {
+          "display": "grid",
+        },
+      },
+      "1_.b": Object {
+        "color": "yellow",
+      },
+      "3_.e": Object {
+        "color": "blue",
       },
     },
   },
@@ -177,11 +185,24 @@ Array [
   },
   Object {
     "_media": "(min-width: 300px) and (max-height: 500px)",
-    "_support": false,
+    "_support": "true",
     "_type": "RULE",
     "style": Object {
-      "0_.d": Object {
+      "(display: flex)": Object {
+        "0_.d": Object {
+          "display": "flex",
+        },
+      },
+      "(display: grid)": Object {
+        "0_.a": Object {
+          "display": "grid",
+        },
+      },
+      "1_.b": Object {
         "color": "yellow",
+      },
+      "3_.e": Object {
+        "color": "blue",
       },
     },
   },
@@ -190,10 +211,21 @@ Array [
     "_support": "true",
     "_type": "RULE",
     "style": Object {
+      "(display: flex)": Object {
+        "0_.d": Object {
+          "display": "flex",
+        },
+      },
       "(display: grid)": Object {
-        "0_.e": Object {
+        "0_.a": Object {
           "display": "grid",
         },
+      },
+      "1_.b": Object {
+        "color": "yellow",
+      },
+      "3_.e": Object {
+        "color": "blue",
       },
     },
   },

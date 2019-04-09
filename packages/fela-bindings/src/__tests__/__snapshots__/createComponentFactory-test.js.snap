@@ -116,15 +116,15 @@ exports[`Creating Components from Fela rules should extend the rule properties w
 Array [
   "<style>
     .a {
-        color: blue
+        background-color: red
     }
 
     .b {
-        font-size: 14px
+        color: blue
     }
 
     .c {
-        background-color: red
+        font-size: 14px
     }
 </style>",
   <rule
@@ -148,15 +148,15 @@ exports[`Creating Components from Fela rules should extend the rule properties w
 Array [
   "<style>
     .a {
-        color: blue
+        background-color: red
     }
 
     .b {
-        font-size: 14px
+        color: blue
     }
 
     .c {
-        background-color: red
+        font-size: 14px
     }
 </style>",
   <rule

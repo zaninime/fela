@@ -16,17 +16,17 @@ exports[`Renderer Rendering rules should remove undefined values 1`] = `"a"`;
 
 exports[`Renderer Rendering rules should remove undefined values 2`] = `".a{font-size:15px}"`;
 
-exports[`Renderer Rendering rules should render any nested selector with the &-prefix 1`] = `".a{color:red}.b~#foo{color:blue}.c .bar{color:green}"`;
+exports[`Renderer Rendering rules should render any nested selector with the &-prefix 1`] = `".a .bar{color:green}.b~#foo{color:blue}.c{color:red}"`;
 
-exports[`Renderer Rendering rules should render attribute selectors 1`] = `".a{color:red}.b[bool=true]{color:blue}"`;
+exports[`Renderer Rendering rules should render attribute selectors 1`] = `".a[bool=true]{color:blue}.b{color:red}"`;
 
-exports[`Renderer Rendering rules should render child selectors 1`] = `".a{color:red}.b>div{color:blue}"`;
+exports[`Renderer Rendering rules should render child selectors 1`] = `".a>div{color:blue}.b{color:red}"`;
 
-exports[`Renderer Rendering rules should render media queries 1`] = `".a{color:red}@media (min-height:300px){.b{color:blue}}"`;
+exports[`Renderer Rendering rules should render media queries 1`] = `".b{color:red}@media (min-height:300px){.a{color:blue}}"`;
 
-exports[`Renderer Rendering rules should render pseudo class selectors 1`] = `".a{color:red}.b:hover{color:blue}"`;
+exports[`Renderer Rendering rules should render pseudo class selectors 1`] = `".b{color:red}.a:hover{color:blue}"`;
 
-exports[`Renderer Rendering rules should render pseudo classes 1`] = `".a{color:red}.b:hover{color:blue}"`;
+exports[`Renderer Rendering rules should render pseudo classes 1`] = `".b{color:red}.a:hover{color:blue}"`;
 
 exports[`Renderer Rendering rules should reuse cached classNames 1`] = `"a b"`;
 
@@ -40,8 +40,8 @@ exports[`Renderer Subscribing to the Renderer should call the callback with a ch
 Array [
   Object {
     "className": "a",
-    "declaration": "color:red",
-    "media": "",
+    "declaration": "color:blue",
+    "media": "(min-height: 300px)",
     "pseudo": "",
     "selector": ".a",
     "support": "",
@@ -49,8 +49,8 @@ Array [
   },
   Object {
     "className": "b",
-    "declaration": "color:blue",
-    "media": "(min-height: 300px)",
+    "declaration": "color:red",
+    "media": "",
     "pseudo": "",
     "selector": ".b",
     "support": "",

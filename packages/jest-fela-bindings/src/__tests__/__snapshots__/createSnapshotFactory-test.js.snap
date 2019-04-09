@@ -2,10 +2,10 @@
 
 exports[`Creating Snapshots with Fela should always use a clean setup 1`] = `
 ".a {
-  color: red;
+  background-color: blue;
 }
 .b {
-  background-color: blue;
+  color: red;
 }
 
 
@@ -15,10 +15,10 @@ exports[`Creating Snapshots with Fela should always use a clean setup 1`] = `
 
 exports[`Creating Snapshots with Fela should always use a clean setup 2`] = `
 ".a {
-  color: red;
+  background-color: green;
 }
 .b {
-  background-color: green;
+  color: red;
 }
 
 
@@ -40,20 +40,20 @@ exports[`Creating Snapshots with Fela should inject the theme 1`] = `
 `;
 
 exports[`Creating Snapshots with Fela should return formatted html and css 1`] = `
-".a {
+".d {
   display: flex;
 }
-.b {
+.e {
   flex: 1 0 auto;
 }
-.c:hover {
+.a:hover {
   color: blue;
 }
 @media (min-width: 300px) {
-  .d {
+  .c {
     background-color: black;
   }
-  .e:hover {
+  .b:hover {
     color: green;
   }
 }
@@ -65,12 +65,12 @@ exports[`Creating Snapshots with Fela should return formatted html and css 1`] =
 
 exports[`Creating Snapshots with Fela should use a custom renderer 1`] = `
 ".a {
+  font-size: 12px;
+}
+.b {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-.b {
-  font-size: 12px;
 }
 
 

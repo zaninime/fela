@@ -57,7 +57,7 @@ Object {
                     size="15"
                 >
                     <div
-                        className="d e c"
+                        className="a d e"
                     >
                         text
                     </div>
@@ -99,7 +99,7 @@ Object {
 </boxRules>,
   "styles": "
 .a {
-  width: 10px
+  color: #9BCA3E
 }
 
 .b {
@@ -107,15 +107,15 @@ Object {
 }
 
 .c {
-  color: #9BCA3E
+  width: 10px
 }
 
 .d {
-  width: 15px
+  height: 15px
 }
 
 .e {
-  height: 15px
+  width: 15px
 }
 ",
 }

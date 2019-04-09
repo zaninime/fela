@@ -74,23 +74,23 @@ Object {
 </div>,
   "styles": "
 .a {
-  width: 10px
-}
-
-.b {
-  height: 10px
-}
-
-.c {
-  color: #9BCA3E
-}
-
-.d {
   background-color: #000
 }
 
-.e {
+.b {
+  color: #9BCA3E
+}
+
+.c {
   font-size: 15px
+}
+
+.d {
+  height: 10px
+}
+
+.e {
+  width: 10px
 }
 ",
 }
@@ -107,23 +107,23 @@ Object {
 </div>,
   "styles": "
 .a {
-  width: 10px
-}
-
-.b {
-  height: 10px
-}
-
-.c {
-  color: #9BCA3E
-}
-
-.d {
   background-color: #000
 }
 
-.e {
+.b {
+  color: #9BCA3E
+}
+
+.c {
   font-size: 10
+}
+
+.d {
+  height: 10px
+}
+
+.e {
+  width: 10px
 }
 ",
 }
@@ -160,7 +160,7 @@ Array [
 </div>,
     "styles": "
 .a {
-  width: 15px
+  color: #9BCA3E
 }
 
 .b {
@@ -168,7 +168,7 @@ Array [
 }
 
 .c {
-  color: #9BCA3E
+  width: 15px
 }
 ",
   },
@@ -180,7 +180,7 @@ Array [
 </div>,
     "styles": "
 .a {
-  width: 10px
+  color: #9BCA3E
 }
 
 .b {
@@ -188,7 +188,7 @@ Array [
 }
 
 .c {
-  color: #9BCA3E
+  width: 10px
 }
 ",
   },
@@ -211,7 +211,7 @@ Object {
 </div>,
   "styles": "
 .a {
-  width: 10px
+  color: #9BCA3E
 }
 
 .b {
@@ -219,7 +219,7 @@ Object {
 }
 
 .c {
-  color: #9BCA3E
+  width: 10px
 }
 ",
 }

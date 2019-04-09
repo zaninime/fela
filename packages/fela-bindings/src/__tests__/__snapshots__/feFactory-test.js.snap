@@ -2,11 +2,11 @@
 
 exports[`Using fe should merge class names 1`] = `
 Array [
-  ".a {
+  ".b {
     color: red
 }
 
-.b:hover {
+.a:hover {
     color: blue
 }",
   <Provider
@@ -17,20 +17,20 @@ Array [
             "_renderStyleToClassNames": [Function],
             "cache": Object {
               ":hovercolorblue": Object {
-                "className": "b",
+                "className": "a",
                 "declaration": "color:blue",
                 "media": "",
                 "pseudo": ":hover",
-                "selector": ".b:hover",
+                "selector": ".a:hover",
                 "support": "",
                 "type": "RULE",
               },
               "colorred": Object {
-                "className": "a",
+                "className": "b",
                 "declaration": "color:red",
                 "media": "",
                 "pseudo": "",
-                "selector": ".a",
+                "selector": ".b",
                 "support": "",
                 "type": "RULE",
               },
@@ -98,11 +98,11 @@ Array [
 
 exports[`Using fe should render inline style as CSS 1`] = `
 Array [
-  ".a {
+  ".b {
     color: red
 }
 
-.b:hover {
+.a:hover {
     color: blue
 }",
   <Provider
@@ -113,20 +113,20 @@ Array [
             "_renderStyleToClassNames": [Function],
             "cache": Object {
               ":hovercolorblue": Object {
-                "className": "b",
+                "className": "a",
                 "declaration": "color:blue",
                 "media": "",
                 "pseudo": ":hover",
-                "selector": ".b:hover",
+                "selector": ".a:hover",
                 "support": "",
                 "type": "RULE",
               },
               "colorred": Object {
-                "className": "a",
+                "className": "b",
                 "declaration": "color:red",
                 "media": "",
                 "pseudo": "",
-                "selector": ".a",
+                "selector": ".b",
                 "support": "",
                 "type": "RULE",
               },

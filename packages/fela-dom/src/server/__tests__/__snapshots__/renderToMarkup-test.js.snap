@@ -2,7 +2,7 @@
 
 exports[`Rendering to HTML markup should correctly sort rules 1`] = `
 "<style type=\\"text/css\\" data-fela-rehydration=\\"3\\" data-fela-type=\\"RULE\\">
-    .a:hover {
+    .b:hover {
         color: red
     }
 
@@ -10,7 +10,7 @@ exports[`Rendering to HTML markup should correctly sort rules 1`] = `
         color: #000
     }
 
-    .b:active {
+    .a:active {
         color: #fff
     }
 </style>"
@@ -27,37 +27,37 @@ exports[`Rendering to HTML markup should return a single HTML markup string 1`] 
     }
 </style>
 <style type=\\"text/css\\" data-fela-rehydration=\\"6\\" data-fela-type=\\"RULE\\">
-    .a {
+    .f {
         color: red
     }
 </style>
 <style type=\\"text/css\\" data-fela-rehydration=\\"6\\" data-fela-type=\\"RULE\\" data-fela-support=\\"true\\">
     @supports (display:flex) {
-        .b {
+        .d {
             color: yellow
         }
     }
 
     @supports (display:grid) {
-        .c {
+        .e {
             color: brown
         }
     }
 </style>
 <style type=\\"text/css\\" data-fela-rehydration=\\"6\\" data-fela-type=\\"RULE\\" media=\\"(min-height: 300px)\\">
-    .d {
+    .c {
         color: blue
     }
 </style>
 <style type=\\"text/css\\" data-fela-rehydration=\\"6\\" data-fela-type=\\"RULE\\" data-fela-support=\\"true\\" media=\\"(min-height: 300px)\\">
     @supports (display:flex) {
-        .e {
+        .a {
             color: green
         }
     }
 
     @supports (display:grid) {
-        .f {
+        .b {
             color: black
         }
     }

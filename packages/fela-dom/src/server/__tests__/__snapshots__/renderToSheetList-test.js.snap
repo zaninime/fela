@@ -8,24 +8,24 @@ Array [
     "type": "STATIC",
   },
   Object {
-    "css": ".a{color:red}",
+    "css": ".f{color:red}",
     "rehydration": 6,
     "type": "RULE",
   },
   Object {
-    "css": "@supports (display:flex){.b{color:yellow}}@supports (display:grid){.c{color:brown}}",
+    "css": "@supports (display:flex){.d{color:yellow}}@supports (display:grid){.e{color:brown}}",
     "rehydration": 6,
     "support": true,
     "type": "RULE",
   },
   Object {
-    "css": ".d{color:blue}",
+    "css": ".c{color:blue}",
     "media": "(min-height: 300px)",
     "rehydration": 6,
     "type": "RULE",
   },
   Object {
-    "css": "@supports (display:flex){.e{color:green}}@supports (display:grid){.f{color:black}}",
+    "css": "@supports (display:flex){.a{color:green}}@supports (display:grid){.b{color:black}}",
     "media": "(min-height: 300px)",
     "rehydration": 6,
     "support": true,

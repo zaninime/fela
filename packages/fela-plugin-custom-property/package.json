@@ -1,6 +1,6 @@
 {
   "name": "fela-plugin-custom-property",
-  "version": "10.2.2",
+  "version": "10.3.0",
   "description": "Fela plugin to use custom properties",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -28,5 +28,6 @@
   },
   "peerDependencies": {
     "fela": "^10.0.0"
-  }
+  },
+  "gitHead": "4edeeffc5be2e05473a52c24523dbebcd9e0ef0d"
 }

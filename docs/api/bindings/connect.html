@@ -1113,7 +1113,7 @@
 <tbody>
 <tr>
 <td>rules</td>
-<td><em>Object</em><br><em>Function</em></td>
+<td><em>Object</em> or <em>Function</em></td>
 <td>An object containing named rules or a function that produces such an object based on the props of a component.</td>
 </tr>
 <tr>
@@ -1143,7 +1143,34 @@
 </tbody>
 </table>
 <h2 id="returns">Returns</h2>
-<p>(<em>Function</em>): Component connector that passes the <code>styles</code> object to a component.</p>
+<p>(<em>Function</em>): Component connector that passes the <code>styles</code>, <code>riles</code> and <code>theme</code> props to a component.</p>
+<h2 id="provided-properties">Provided properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>styles</td>
+<td><em>Object</em></td>
+<td>An object containing class names by keys.</td>
+</tr>
+<tr>
+<td>rules</td>
+<td><em>Object</em></td>
+<td>An object containing style rules by keys (used for extend inner components).</td>
+</tr>
+<tr>
+<td>theme</td>
+<td><em>Object</em></td>
+<td>An object containing the style theme, if provided.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="imports">Imports</h2>
 <pre class="language-"><code class="lang-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react-fela&apos;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;preact-fela&apos;</span>
@@ -1380,7 +1407,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"next":{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"path":"docs/api/bindings/createComponent.md","ref":"docs/api/bindings/createComponent.md","articles":[]},"previous":{"title":"6.4. react/preact/inferno","level":"1.7.4","depth":2,"ref":"","articles":[{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"path":"docs/api/bindings/connect.md","ref":"docs/api/bindings/connect.md","articles":[]},{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"path":"docs/api/bindings/createComponent.md","ref":"docs/api/bindings/createComponent.md","articles":[]},{"title":"6.4.3. createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},{"title":"6.4.4. fe","level":"1.7.4.4","depth":3,"path":"docs/api/bindings/fe.md","ref":"docs/api/bindings/fe.md","articles":[]},{"title":"6.4.5. FelaComponent","level":"1.7.4.5","depth":3,"path":"docs/api/bindings/FelaComponent.md","ref":"docs/api/bindings/FelaComponent.md","articles":[]},{"title":"6.4.6. FelaTheme","level":"1.7.4.6","depth":3,"path":"docs/api/bindings/FelaTheme.md","ref":"docs/api/bindings/FelaTheme.md","articles":[]},{"title":"6.4.7. FelaRenderer","level":"1.7.4.7","depth":3,"path":"docs/api/bindings/FelaRenderer.md","ref":"docs/api/bindings/FelaRenderer.md","articles":[]},{"title":"6.4.8. RendererProvider","level":"1.7.4.8","depth":3,"path":"docs/api/bindings/RendererProvider.md","ref":"docs/api/bindings/RendererProvider.md","articles":[]},{"title":"6.4.9. ThemeProvider","level":"1.7.4.9","depth":3,"path":"docs/api/bindings/ThemeProvider.md","ref":"docs/api/bindings/ThemeProvider.md","articles":[]},{"title":"6.4.10. RendererContext","level":"1.7.4.10","depth":3,"path":"docs/api/bindings/RendererContext.md","ref":"docs/api/bindings/RendererContext.md","articles":[]},{"title":"6.4.11. ThemeContext","level":"1.7.4.11","depth":3,"path":"docs/api/bindings/ThemeContext.md","ref":"docs/api/bindings/ThemeContext.md","articles":[]},{"title":"6.4.12. useFela","level":"1.7.4.12","depth":3,"path":"docs/api/bindings/useFela.md","ref":"docs/api/bindings/useFela.md","articles":[]},{"title":"6.4.13. withTheme","level":"1.7.4.13","depth":3,"path":"docs/api/bindings/withTheme.md","ref":"docs/api/bindings/withTheme.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/connect.md","mtime":"2018-12-12T09:22:58.801Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-03-13T18:04:03.538Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"next":{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"path":"docs/api/bindings/createComponent.md","ref":"docs/api/bindings/createComponent.md","articles":[]},"previous":{"title":"6.4. react/preact/inferno","level":"1.7.4","depth":2,"ref":"","articles":[{"title":"6.4.1. connect","level":"1.7.4.1","depth":3,"path":"docs/api/bindings/connect.md","ref":"docs/api/bindings/connect.md","articles":[]},{"title":"6.4.2. createComponent","level":"1.7.4.2","depth":3,"path":"docs/api/bindings/createComponent.md","ref":"docs/api/bindings/createComponent.md","articles":[]},{"title":"6.4.3. createComponentWithProxy","level":"1.7.4.3","depth":3,"path":"docs/api/bindings/createComponentWithProxy.md","ref":"docs/api/bindings/createComponentWithProxy.md","articles":[]},{"title":"6.4.4. fe","level":"1.7.4.4","depth":3,"path":"docs/api/bindings/fe.md","ref":"docs/api/bindings/fe.md","articles":[]},{"title":"6.4.5. FelaComponent","level":"1.7.4.5","depth":3,"path":"docs/api/bindings/FelaComponent.md","ref":"docs/api/bindings/FelaComponent.md","articles":[]},{"title":"6.4.6. FelaTheme","level":"1.7.4.6","depth":3,"path":"docs/api/bindings/FelaTheme.md","ref":"docs/api/bindings/FelaTheme.md","articles":[]},{"title":"6.4.7. FelaRenderer","level":"1.7.4.7","depth":3,"path":"docs/api/bindings/FelaRenderer.md","ref":"docs/api/bindings/FelaRenderer.md","articles":[]},{"title":"6.4.8. RendererProvider","level":"1.7.4.8","depth":3,"path":"docs/api/bindings/RendererProvider.md","ref":"docs/api/bindings/RendererProvider.md","articles":[]},{"title":"6.4.9. ThemeProvider","level":"1.7.4.9","depth":3,"path":"docs/api/bindings/ThemeProvider.md","ref":"docs/api/bindings/ThemeProvider.md","articles":[]},{"title":"6.4.10. RendererContext","level":"1.7.4.10","depth":3,"path":"docs/api/bindings/RendererContext.md","ref":"docs/api/bindings/RendererContext.md","articles":[]},{"title":"6.4.11. ThemeContext","level":"1.7.4.11","depth":3,"path":"docs/api/bindings/ThemeContext.md","ref":"docs/api/bindings/ThemeContext.md","articles":[]},{"title":"6.4.12. useFela","level":"1.7.4.12","depth":3,"path":"docs/api/bindings/useFela.md","ref":"docs/api/bindings/useFela.md","articles":[]},{"title":"6.4.13. withTheme","level":"1.7.4.13","depth":3,"path":"docs/api/bindings/withTheme.md","ref":"docs/api/bindings/withTheme.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/api/bindings/connect.md","mtime":"2019-04-09T14:44:35.116Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-05-08T10:17:44.955Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

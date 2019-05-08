@@ -1,16 +1,15 @@
-declare module "react-fela" {
-  import * as React from "react";
-  import {
-    IRenderer,
-    TRule,
-    IStyle
-  } from "fela";
-  import {
-    TMultiRuleObject,
-    TMultiRule,
-    TPartialMultiRule,
-  } from "fela-tools";
+import * as React from "react";
+import {
+  IRenderer,
+  TRule,
+  IStyle
+} from "fela";
+import {
+  TMultiRule,
+  TPartialMultiRule,
+} from "fela-tools";
 
+declare module "react-fela" {
   interface ThemeProviderProps {
     theme: object;
     overwrite?: boolean;
@@ -36,12 +35,6 @@ declare module "react-fela" {
   }
 
   interface FelaWithThemeProps<Theme> {
-    /**
-     * ref to underlying component
-     *
-     * @see {@link https://github.com/rofrischmann/fela/blob/master/modules/bindings/createComponentFactory.js#L68}
-     */
-    innerRef?: (instance: any) => void,
     theme: Theme,
   }
   /**
@@ -64,24 +57,35 @@ declare module "react-fela" {
 
   type PassThroughProps<Props> = Array<string> | PassThroughFunction<Props>;
 
-  export type Rules<Props, Styles> = TMultiRuleObject<Props, Styles>
+  export type Rules<Props, Styles, Theme = any> = TMultiRule<Props & FelaWithThemeProps<Theme>, Styles>
 
   export interface FelaWithStylesProps<Props, Styles, Theme = any> {
     styles: {[key in keyof Styles]: string},
-    rules: {[key in keyof Styles]: TRule<Props & Partial<FelaWithThemeProps<Theme>>>},
+    rules: {[key in keyof Styles]: (props: Props & Partial<FelaWithThemeProps<Theme>>) => IStyle},
+    theme: Theme,
   }
 
   interface FelaWithStylesInjectedProps<Props, Styles, Theme = any> {
     extend?: TPartialMultiRule<Props & FelaWithThemeProps<Theme>, Styles>
   }
 
-  /**
-   *
-   * @param {React.ComponentType} Component  - component to inject styles theme into.
-   */
-  interface WithRules<Props, Styles, Theme = any>{
-    (Component: React.ComponentType<FelaWithStylesProps<Props, Styles, Theme> & Props>)
-      : React.ComponentType<Props & FelaWithStylesInjectedProps<Props, Styles, Theme>>
+  interface WithRules<Props, Styles, Theme>{
+    <C extends React.ComponentType<any>>(Component: C):
+      // extract component props
+      C extends React.ComponentType<infer InferProps>
+        // if component props contains styles and rules
+        ? InferProps extends FelaWithStylesProps<Props, Styles, Theme>
+          // inject styles and rules and return new component with extend prop
+          ? React.ComponentType<Props & FelaWithStylesInjectedProps<Props, Styles, Theme>>
+          // else if component props already contains extend prop
+          : InferProps extends FelaWithStylesInjectedProps<InferProps, infer InferStyles, Theme>
+            // and if all style keys contains in inferred style keys
+            ? Exclude<keyof Styles, keyof InferStyles> extends never
+              // it was reconnect, return component as is
+              ? C
+              : never
+            : never
+          : never
   }
 
   export type ConnectConfig = {
@@ -90,13 +94,13 @@ declare module "react-fela" {
 
   /**
    *
-   * @param {TMultiRule} rules  - rules that will be injected in the Component.
+   * @param {Rules} rules  - rules that will be injected in the Component.
    * @param {ConnectConfig} config  - settings to configure Wrapper Component.
    */
   export function connect<Props, Styles, Theme = any>(
-    rules: TMultiRule<Props & FelaWithThemeProps<Theme>, Styles>,
+    rules: Rules<Props, Styles, Theme>,
     config?: ConnectConfig,
-  ): WithRules<Props, Styles, Theme>
+  ): WithRules<Pick<Props, Exclude<keyof Props, 'theme'>>, Styles, Theme>
 
   /**
    * Fela injects theme props.
@@ -531,6 +535,11 @@ declare module "react-fela" {
     export function createComponentWithProxy<Props, Theme = any>(style: Style<Props>, base: "use", passThroughProps?: PassThroughProps<Props>): FelaSvgComponent<Props, SVGElement, Theme>;
     export function createComponentWithProxy<Props, Theme = any>(style: Style<Props>, base: "view", passThroughProps?: PassThroughProps<Props>): FelaSvgComponent<Props, SVGElement, Theme>;
 
+    /**
+     * Fela Renderer
+     */
+    export class FelaRenderer extends React.Component<React.ConsumerProps<IRenderer>> {}
+
     export const RendererContext: React.Context<IRenderer>
 
     interface RenderProps<T> {
@@ -561,17 +570,15 @@ declare module "react-fela" {
     export class FelaComponent<T, P = {}> extends React.Component<FelaComponentProps<T, P> & P> {
     }
 
+    export type CssFelaStyle<T, P> = IStyle | StyleFunction<T, P>
 
-    /**
-     * Fela Renderer
-     */
-    export class FelaRenderer extends React.ComponentType<React.ConsumerProps<IRenderer>> {}
+    export type CssFunction<T, P> = (...style: CssFelaStyle<T, P>[]) => string
 
-    export interface FelaHookProps<Theme> {
-      css: (style: IStyle) => string,
-      theme: Theme,
+    export interface FelaHookProps<T, P> {
+      css: CssFunction<T, P>,
+      theme: T,
       renderer: IRenderer,
     }
 
-    export function useFela<Theme = {}>(): FelaHookProps<Theme>
+    export function useFela<T = {}, P = {}>(props?: P): FelaHookProps<T, P>
 }

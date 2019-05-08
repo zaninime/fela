@@ -3,9 +3,14 @@ declare module "fela" {
   import { TRuleType, TKeyframeType, TFontType, TStaticType, TClearType } from 'fela-utils';
 
   export type TRuleProps = {};
-  export type TRule<T = TRuleProps> = (props: T) => IStyle
+  export type TRule<T = TRuleProps> = (props: T, renderer: IRenderer) => IStyle
+  export type TKeyFrame<T = TRuleProps> = (props: T, renderer: IRenderer) => {
+    from?: IStyle,
+    to?: IStyle,
 
-  type TKeyFrame = TRule;
+    [persent: string]: IStyle | undefined;
+  };
+
   type TRendererCreator = (config?: IConfig) => IRenderer;
   type TPlugin = (style: IStyle) => IStyle; //http://fela.js.org/docs/advanced/Plugins.html
   type TEnhancer = (renderer: IRenderer) => IRenderer; //http://fela.js.org/docs/advanced/Enhancers.html
@@ -23,7 +28,7 @@ declare module "fela" {
 
   interface IRenderer {
     renderRule<T = TRuleProps>(rule: TRule<T>, props: T): string
-    renderKeyframe<T = TRuleProps>(keyFrame: TKeyFrame, props: T): string;
+    renderKeyframe<T = TRuleProps>(keyFrame: TKeyFrame<T>, props: T): string;
     renderFont<T = TRuleProps>(family: string, files: Array<string>, props: T): void;
     renderStatic(style: string, selector?: string): void;
     renderStatic(style: IStyle, selector: string): void;
@@ -45,7 +50,7 @@ declare module "fela" {
   }
 
   export interface IStyle extends CSS.Properties<string | number> {
-    //TODO: add properties, missing in React.CSSProperties
+    // for selectors and pseudo classes use fela-plugin-typescript
   }
 
   function createRenderer(config?: IConfig): IRenderer;
@@ -79,12 +84,14 @@ declare module "fela-tools" {
   import { TRule, TRuleProps, IStyle, IRenderer } from "fela";
 
   export type TMultiRuleObject<Props = TRuleProps, Styles = {}> = {[key in keyof Styles]: TRule<Props> | IStyle}
-  type TMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props) => TMultiRuleObject<Props, Styles>
+  export type TMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props, renderer: IRenderer) => TMultiRuleObject<Props, Styles>
   export type TMultiRule<Props = TRuleProps, Styles = {}> = TMultiRuleObject<Props, Styles> | TMultiRuleFunction<Props, Styles>
-  type TPartialMultiRuleObject<Props = TRuleProps, Styles = {}> = Partial<TMultiRuleObject<Props, Styles>>
-  type TPartialMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props) => TPartialMultiRuleObject<Props, Styles>
+
+  export type TPartialMultiRuleObject<Props = TRuleProps, Styles = {}> = Partial<TMultiRuleObject<Props, Styles>>
+  export type TPartialMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props, renderer: IRenderer) => TPartialMultiRuleObject<Props, Styles>
   export type TPartialMultiRule<Props = TRuleProps, Styles = {}> = TPartialMultiRuleObject<Props, Styles> | TPartialMultiRuleFunction<Props, Styles>
-  export type TNormalizedMultiRule<Props = TRuleProps, Styles = {}> = (props: Props) => {[key in keyof Styles]: TRule<Props>}
+
+  export type TNormalizedMultiRule<Props = TRuleProps, Styles = {}> = (props: Props, renderer: IRenderer) => {[key in keyof Styles]: TRule<Props>}
 
   function combineMultiRules<A, SA, B, SB>(
     a: TMultiRule<A, SA>,

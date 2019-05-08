@@ -1105,6 +1105,48 @@
 <p>With version 10, we introduced synced package versions, which means the Changelog no longer needs to sorted by dates but rather versions again.<br>
 If you&apos;re searching for older logs, please check the <a href="https://github.com/rofrischmann/fela/blob/8b61fc1845dba982956df0ed4d28eaa39b3c5d1c/CHANGELOG.md" _target="blank">old changelog</a>.</p>
 <h2 id="100">10.0</h2>
+<h3 id="1030">10.3.0</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fela<br>fela-utils<br>fela-dom</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/707" _target="blank">#707</a>) Fixed a bug that caused rehydration mismatches when using dash-cased CSS property names.</td>
+</tr>
+<tr>
+<td>fela-plugin-typescript</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/701" _target="blank">#701</a>) Introducing the new TypeScript plugin that adds type-safety for CSS properties and provides auto-completion.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1023">10.2.3</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>react-fela</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/697" _target="blank">#697</a>) Improved TypeScript typins for the <code>useFela</code> hook API.<br>(<a href="https://github.com/rofrischmann/fela/pull/692" _target="blank">#692</a>) Improved TypeScript typings for the <code>FelaRenderer</code> component.</td>
+</tr>
+<tr>
+<td>react-fela<br>preact-fela<br>inferno-fela<br>fela-bindings</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/695" _target="blank">#695</a>) Improved TypeScript typins for the <code>connect</code> API.</td>
+</tr>
+<tr>
+<td>fela-codemods</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/691" _target="blank">#691</a>) Fix <code>render</code> -&gt; <code>as</code> conversion edge cases. Don&apos;t convert args of callbacks <em>inside</em> an inline <code>style</code> function, only the args to the <code>style</code> callback itself.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="1022">10.2.2</h3>
 <table>
 <thead>
@@ -1124,12 +1166,14 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 </tr>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/683" _target="blank">#683</a>) Added TypeScript typings for the new <code>useFela</code> hook API.<br></td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/683" _target="blank">#683</a>) Added TypeScript typings for the new <code>useFela</code> hook API.<br>(<a href="https://github.com/rofrischmann/fela/pull/677" _target="blank">#677</a>) Added TypeScript typings for the <code>FelaRenderer</code> component.<br>(<a href="https://github.com/rofrischmann/fela/pull/678" _target="blank">#678</a>) Added a warning when <code>FelaComponent</code> is used without passing the <code>style</code> prop.</td>
+</tr>
+<tr>
+<td>all</td>
+<td>(<a href="https://github.com/rofrischmann/fela/pull/680" _target="blank">#680</a>) Added sideEffects property to all packages in order to support Tree-Shaking in Webpack.</td>
 </tr>
 </tbody>
 </table>
-<p>(<a href="https://github.com/rofrischmann/fela/pull/677" _target="blank">#677</a>) Added TypeScript typings for the <code>FelaRenderer</code> component.<br>(<a href="https://github.com/rofrischmann/fela/pull/678" _target="blank">#678</a>) Added a warning when <code>FelaComponent</code> is used without passing the <code>style</code> prop. |
-| all | (<a href="https://github.com/rofrischmann/fela/pull/680" _target="blank">#680</a>) Added sideEffects property to all packages in order to support Tree-Shaking in Webpack. |</p>
 <h3 id="1021">10.2.1</h3>
 <table>
 <thead>
@@ -1348,7 +1392,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. Changelog","level":"1.9","depth":1,"next":{"title":"9. FAQ","level":"1.10","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"7. Migration Guide","level":"1.8","depth":1,"path":"MIGRATION.md","ref":"MIGRATION.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"CHANGELOG.md","mtime":"2019-03-13T17:55:07.658Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-03-13T18:04:03.538Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8. Changelog","level":"1.9","depth":1,"next":{"title":"9. FAQ","level":"1.10","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"7. Migration Guide","level":"1.8","depth":1,"path":"MIGRATION.md","ref":"MIGRATION.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"CHANGELOG.md","mtime":"2019-05-08T09:09:39.011Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-05-08T10:17:44.955Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

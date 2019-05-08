@@ -1,6 +1,6 @@
 {
   "name": "fela-perf",
-  "version": "10.2.2",
+  "version": "10.3.0",
   "description": "Fela enhancer to log performance information",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,5 +23,6 @@
     "performance"
   ],
   "author": "Robin Frischmann",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "4edeeffc5be2e05473a52c24523dbebcd9e0ef0d"
 }

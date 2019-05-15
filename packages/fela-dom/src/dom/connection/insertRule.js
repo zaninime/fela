@@ -28,6 +28,8 @@ export default function insertRule(
 
     let index = cssRules.length
 
+    // This heavily optimises the amount of rule iterations we need
+    // due to most rules having a score=0 anyways
     if (score === 0) {
       if (renderer.scoreIndex[nodeReference] === undefined) {
         index = 0
@@ -36,7 +38,7 @@ export default function insertRule(
       }
     } else {
       // we start iterating from the last score=0 entry
-      // to corretly inject pseudo classes etc.
+      // to correctly inject pseudo classes etc.
       const startIndex = renderer.scoreIndex[nodeReference] || 0
 
       for (let i = startIndex, len = cssRules.length; i < len; ++i) {

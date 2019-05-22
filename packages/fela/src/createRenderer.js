@@ -55,8 +55,6 @@ export default function createRenderer(
       /^:focus/,
       /^:active/,
     ],
-
-    rendererId: validateSelectorPrefix(config.rendererId),
     selectorPrefix: validateSelectorPrefix(config.selectorPrefix),
     filterClassName: config.filterClassName || isSafeClassName,
     devMode: config.devMode || false,
@@ -80,20 +78,19 @@ export default function createRenderer(
 
     renderKeyframe(keyframe: Function, props: Object = {}): string {
       const resolvedKeyframe = keyframe(props, renderer)
-      const keyframeReference = JSON.stringify(resolvedKeyframe)
+      const processedKeyframe = processStyleWithPlugins(
+        renderer,
+        resolvedKeyframe,
+        KEYFRAME_TYPE,
+        props
+      )
+
+      const keyframeReference = JSON.stringify(processedKeyframe)
 
       if (!renderer.cache.hasOwnProperty(keyframeReference)) {
         // use another unique identifier to ensure minimal css markup
         const animationName = generateAnimationName(
-          ++renderer.uniqueKeyframeIdentifier,
-          renderer.rendererId
-        )
-
-        const processedKeyframe = processStyleWithPlugins(
-          renderer,
-          resolvedKeyframe,
-          KEYFRAME_TYPE,
-          props
+          ++renderer.uniqueKeyframeIdentifier
         )
 
         const cssKeyframe = cssifyKeyframe(

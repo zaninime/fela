@@ -1,6 +1,6 @@
 {
   "name": "fela-plugin-embedded",
-  "version": "10.5.0",
+  "version": "10.6.0",
   "description": "Fela plugin that resolves embedded keyframes and font faces",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,16 +21,13 @@
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
-  "peerDependencies": {
-    "fela": "^10.0.0"
-  },
   "dependencies": {
     "fast-loops": "^1.0.0",
     "isobject": "^3.0.1"
   },
   "devDependencies": {
-    "fela": "^10.5.0",
-    "fela-tools": "^10.5.0"
+    "fela": "^10.6.0",
+    "fela-tools": "^10.6.0"
   },
   "gitHead": "4edeeffc5be2e05473a52c24523dbebcd9e0ef0d"
 }

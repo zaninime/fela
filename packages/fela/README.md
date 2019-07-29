@@ -7,7 +7,7 @@ It generates atomic CSS and supports all common CSS features such as media queri
 
 Fela can be used with [React](https://github.com/rofrischmann/fela/tree/master/packages/react-fela) or with any other view library. It even supports [React Native](http://fela.js.org/docs/guides/UsageWithReactNative.html).
 
-<img alt="TravisCI" src="https://travis-ci.org/rofrischmann/fela.svg?branch=master"> <a href="https://codeclimate.com/github/rofrischmann/fela/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <a href="https://bundlephobia.com/result?p=fela@latest"><img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/fela.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <a href="https://gitter.im/rofrischmann/fela"><img alt="Gitter" src="https://img.shields.io/gitter/room/rofrischmann/fela.svg"></a>
+<img alt="TravisCI" src="https://travis-ci.org/robinweser/fela.svg?branch=master"> <a href="https://codeclimate.com/github/robinweser/fela/coverage"><img alt="Test Coverage" src="https://codeclimate.com/github/rofrischmann/fela/badges/coverage.svg"></a> <a href="https://bundlephobia.com/result?p=fela@latest"><img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/fela.svg"></a> <img alt="npm downloads" src="https://img.shields.io/npm/dm/fela.svg"> <a href="https://spectrum.chat/fela?tab=posts"><img alt="Spectrum" src="https://img.shields.io/badge/support-spectrum-brightgreen.svg"></a>
 
 ## Support Us
 Support Robin Frischmann's work on Fela and its ecosystem directly via [**Patreon**](https://www.patreon.com/rofrischmann).
@@ -211,6 +211,7 @@ Don't want to miss any update? Follow us on [Twitter](https://twitter.com/felajs
 - [Kilix](http://kilix.fr)
 - [Lusk](https://lusk.io)
 - [MediaFire](https://m.mediafire.com)
+- [Microsoft](https://microsoft.com)
 - [N26](https://n26.com)
 - [Net-A-Porter](https://www.net-a-porter.com/gb/en/porter)
 - [NinjaConcept](https://www.ninjaconcept.com)

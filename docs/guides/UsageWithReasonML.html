@@ -1115,8 +1115,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="usage-with-reasonml">Usage with ReasonML</h1>
-<p>The Reason bindings ship with some core Fela APIs, React hooks and all plugins, enhancers and presets.<br>
-It also provides an <a href="https://github.com/astrada/bs-css-core" _target="blank">Css</a> module which was forked from <a href="https://github.com/SentiaAnalytics/bs-css" _target="blank">bs-css</a> for a more convenient style editing experience.</p>
+<p>The Reason bindings ship with some core Fela APIs, React hooks and all plugins, enhancers and presets.</p>
 <blockquote>
 <p><strong>Note</strong>: If you want to use older APIs such as <code>createComponent</code> or <code>connect</code>, we recommend using <a href="https://github.com/astrada/bs-react-fela" _target="blank">bs-react-fela</a> instead.</p>
 </blockquote>
@@ -1167,9 +1166,6 @@ We can also optionally pass a theme down here, which is useful for dynamic themi
 <p>Now that our app is aware of the renderer, we can use the provided hooks in any component. The hooks are similar to react-fela&apos;s <a href="http://fela.js.org/docs/api/bindings/useFela.html" _target="blank">useFela</a>, but split into 3 different hooks for convenience.</p>
 <pre class="language-"><code class="lang-reason"><span class="token keyword">open</span> <span class="token constructor variable">ReactFela</span><span class="token punctuation">;</span>
 
-<span class="token comment">/* we also open the Css module for convenience */</span>
-<span class="token keyword">open</span> <span class="token class-name">Fela</span><span class="token punctuation">.</span><span class="token constructor variable">Css</span><span class="token punctuation">;</span>
-
 <span class="token punctuation">[</span>@react<span class="token punctuation">.</span>component<span class="token punctuation">]</span>
 <span class="token keyword">let</span> make <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">~</span>children<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> css <span class="token operator">=</span> useFela<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1177,12 +1173,34 @@ We can also optionally pass a theme down here, which is useful for dynamic themi
   <span class="token keyword">let</span> renderer <span class="token operator">=</span> useRenderer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token comment">/* we can also do stuff we the renderer */</span>
-  renderer<span class="token operator">#</span><span class="token operator">#</span>renderStatic<span class="token punctuation">(</span>style<span class="token punctuation">(</span><span class="token punctuation">[</span>backgroundColor<span class="token punctuation">(</span>black<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">)</span>
+  renderer<span class="token operator">#</span><span class="token operator">#</span>renderStatic<span class="token punctuation">(</span><span class="token class-name">Fela</span><span class="token punctuation">.</span>style<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;backgroundColor&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>css<span class="token punctuation">(</span>style<span class="token punctuation">(</span><span class="token punctuation">[</span>fontSize<span class="token punctuation">(</span>pt<span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token punctuation">(</span>theme<span class="token operator">#</span><span class="token operator">#</span>colors<span class="token operator">#</span><span class="token operator">#</span>primary<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
-    <span class="token punctuation">{</span><span class="token string">&quot;I&apos;m red&quot;</span> <span class="token operator">|</span><span class="token operator">&gt;</span> <span class="token class-name">React</span><span class="token punctuation">.</span>string<span class="token punctuation">}</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-<span class="token punctuation">}</span>
+  <span class="token operator">&lt;</span>div
+    className<span class="token operator">=</span><span class="token punctuation">{</span>css<span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token class-name">Fela</span><span class="token punctuation">.</span>style<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;fontSize&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;18pt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;color&quot;</span><span class="token punctuation">:</span> theme<span class="token operator">#</span><span class="token operator">#</span>colors<span class="token operator">#</span><span class="token operator">#</span>primary<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token string">&quot;I&apos;m red&quot;</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token class-name">React</span><span class="token punctuation">.</span>string
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="convenience-hooks">Convenience Hooks</h3>
+<p>ReactFela also includes two convenience hooks <code>useFela1</code> and <code>useFela2</code> that take just 1 or 2 parameters respectively instead of passing a list.</p>
+<pre class="language-"><code class="lang-reason"><span class="token keyword">open</span> <span class="token constructor variable">ReactFela</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>@react<span class="token punctuation">.</span>component<span class="token punctuation">]</span>
+<span class="token keyword">let</span> make <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">~</span>children<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> css1 <span class="token operator">=</span> useFela1<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> css2 <span class="token operator">=</span> useFela2<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token punctuation">{</span>css1<span class="token punctuation">(</span><span class="token class-name">Fela</span><span class="token punctuation">.</span>style<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;color&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div
+      className<span class="token operator">=</span><span class="token punctuation">{</span>css2<span class="token punctuation">(</span>
+        <span class="token class-name">Fela</span><span class="token punctuation">.</span>style<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;color&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token class-name">Fela</span><span class="token punctuation">.</span>style<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;color&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;red&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token operator">/</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 id="server-side-rendering">Server-side Rendering</h2>
 <p>If we&apos;re running a universal app, we also want to make sure that styles are correctly rendered and rehydrated when doing server-side rendering.<br>
@@ -1195,6 +1213,40 @@ Therefore, reason-fela also provides bindings to fela-dom.</p>
 sheetList <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token class-name">Belt</span><span class="token punctuation">.</span><span class="token class-name">Array</span><span class="token punctuation">.</span>forEach<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span>type_<span class="token punctuation">,</span> css<span class="token punctuation">,</span> media<span class="token punctuation">,</span> support<span class="token punctuation">,</span> rehydration<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token comment">/* render your style nodes here */</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="using-bs-css-core">Using bs-css-core</h2>
+<p>You can also opt-in <a href="https://github.com/astrada/bs-css-core" _target="blank">bs-css-core</a> module which was forked from <a href="https://github.com/SentiaAnalytics/bs-css" _target="blank">bs-css</a> for a more convenient, type-safe API.</p>
+<pre class="language-"><code class="lang-sh">yarn add @astrada/bs-css-core
+</code></pre>
+<p>In your <code>bsconfig.json</code>, include <code>&quot;@astrada/bs-css-core&quot;</code> in the <code>bs-dependencies</code>.</p>
+<p>Now the only thing we need is a type converter which can be done using the <code>&quot;%identity&quot;</code> helper. You probably want to create a new utility mode e.g. <code>FelaUtils</code> that looks sth. like this:</p>
+<pre class="language-"><code class="lang-reason"><span class="token keyword">external</span> fromBsCssCore<span class="token punctuation">:</span> <span class="token class-name">Css</span><span class="token punctuation">.</span>style <span class="token operator">=&gt;</span> <span class="token class-name">Fela</span><span class="token punctuation">.</span>style <span class="token operator">=</span> <span class="token string">&quot;%identity&quot;</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Now we can use it in our components:</p>
+<pre class="language-"><code class="lang-reason"><span class="token keyword">open</span> <span class="token constructor variable">ReactFela</span><span class="token punctuation">;</span>
+<span class="token keyword">open</span> <span class="token constructor variable">FelaUtils</span><span class="token punctuation">;</span>
+<span class="token keyword">open</span> <span class="token constructor variable">Css</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">[</span>@react<span class="token punctuation">.</span>component<span class="token punctuation">]</span>
+<span class="token keyword">let</span> make <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">~</span>children<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> css <span class="token operator">=</span> useFela<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> theme <span class="token operator">=</span> useTheme<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> renderer <span class="token operator">=</span> useRenderer<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/* we can also do stuff we the renderer */</span>
+  renderer<span class="token operator">#</span><span class="token operator">#</span>renderStatic<span class="token punctuation">(</span>
+    fromBsCssCore<span class="token punctuation">(</span>style<span class="token punctuation">(</span><span class="token punctuation">[</span>backgroundColor<span class="token punctuation">(</span>black<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;body&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span>div
+    className<span class="token operator">=</span><span class="token punctuation">{</span>css<span class="token punctuation">(</span><span class="token punctuation">[</span>
+      fromBsCssCore<span class="token punctuation">(</span>
+        style<span class="token punctuation">(</span><span class="token punctuation">[</span>fontSize<span class="token punctuation">(</span>pt<span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token punctuation">(</span>theme<span class="token operator">#</span><span class="token operator">#</span>colors<span class="token operator">#</span><span class="token operator">#</span>primary<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token string">&quot;I&apos;m red&quot;</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token class-name">React</span><span class="token punctuation">.</span>string
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 
                                 
@@ -1239,7 +1291,7 @@ sheetList <span class="token operator">-</span><span class="token operator">&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.5. Usage with ReasonML","level":"1.5.5","depth":2,"next":{"title":"4.6. Usage with Angular 2","level":"1.5.6","depth":2,"path":"docs/guides/UsageWithAngular2.md","ref":"docs/guides/UsageWithAngular2.md","articles":[]},"previous":{"title":"4.4. Usage with Inferno","level":"1.5.4","depth":2,"path":"docs/guides/UsageWithInferno.md","ref":"docs/guides/UsageWithInferno.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/guides/UsageWithReasonML.md","mtime":"2019-10-11T09:13:46.342Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-11T09:13:50.710Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.5. Usage with ReasonML","level":"1.5.5","depth":2,"next":{"title":"4.6. Usage with Angular 2","level":"1.5.6","depth":2,"path":"docs/guides/UsageWithAngular2.md","ref":"docs/guides/UsageWithAngular2.md","articles":[]},"previous":{"title":"4.4. Usage with Inferno","level":"1.5.4","depth":2,"path":"docs/guides/UsageWithInferno.md","ref":"docs/guides/UsageWithInferno.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/guides/UsageWithReasonML.md","mtime":"2019-10-30T14:05:00.194Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-30T14:11:13.054Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

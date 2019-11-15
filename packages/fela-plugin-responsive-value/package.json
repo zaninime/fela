@@ -1,7 +1,7 @@
 {
-  "name": "fela-sort-media-query-order",
-  "version": "10.8.2",
-  "description": "Fela enhancer to sort mediaQueryOrder in mobile-first mode",
+  "name": "fela-plugin-responsive-value",
+  "version": "11.0.0",
+  "description": "Fela plugin to resolve responsive array values",
   "main": "lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
@@ -12,20 +12,20 @@
     "lib/**",
     "es/**"
   ],
-  "repository": "https://github.com/rofrischmann/fela/",
+  "repository": "https://github.com/robinweser/fela/",
   "keywords": [
     "fela",
-    "fela-enhancer",
-    "mobile-first",
+    "fela-plugin",
+    "media query",
+    "supports",
     "cssinjs"
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "sort-css-media-queries": "^1.4.3"
-  },
-  "devDependencies": {
-    "fela": "^10.8.2"
+    "css-in-js-utils": "^3.0.0",
+    "fast-loops": "^1.0.0",
+    "isobject": "^3.0.1"
   },
   "gitHead": "4edeeffc5be2e05473a52c24523dbebcd9e0ef0d"
 }

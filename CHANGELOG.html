@@ -8,7 +8,7 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.1.0">
-        <meta name="author" content="Robin Frischmann <robin@rofrischmann.de>">
+        <meta name="author" content="Robin Frischmann <robin@weser.io>">
         
         
     
@@ -1116,7 +1116,35 @@
                                 
                                 <h1 id="changelog">Changelog</h1>
 <p>With version 10, we introduced synced package versions, which means the Changelog no longer needs to sorted by dates but rather versions again.<br>
-If you&apos;re searching for older logs, please check the <a href="https://github.com/rofrischmann/fela/blob/8b61fc1845dba982956df0ed4d28eaa39b3c5d1c/CHANGELOG.md" _target="blank">old changelog</a>.</p>
+If you&apos;re searching for older logs, please check the <a href="https://github.com/robinweser/fela/blob/8b61fc1845dba982956df0ed4d28eaa39b3c5d1c/CHANGELOG.md" _target="blank">old changelog</a>.</p>
+<h2 id="110">11.0</h2>
+<h3 id="1100">11.0.0</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fela<br>fela-dom</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/750" _target="blank">#750</a>) Added the <code>sortMediaQuery</code> config option for more flexible and dynamic media query sorting. It is backwards compatible and respects <code>mediaQueryOrder</code>, but we decided to do a major release nevertheless.</td>
+</tr>
+<tr>
+<td>fela-plugin-responsive-value</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/748" _target="blank">#748</a>) Introducing a plugin to resolve responsive media query values.</td>
+</tr>
+<tr>
+<td>fela-plugin-named-keys</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/749" _target="blank">#749</a>) The plugin now merges resolve key values with existing key values.</td>
+</tr>
+<tr>
+<td>fela-dom</td>
+<td>(<a href="https://github.com/robinweser/fela/issues/741" _target="blank">#741</a>) Fixed a bug where in devMode <code>@supports</code> rules weren&apos;t rendered correctly.<br>Fixed a big where static styles, keyframes and fonts were rendered twice.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="100">10.0</h2>
 <h3 id="1082">10.8.2</h3>
 <table>
@@ -1174,22 +1202,22 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-sort-media-query-order</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/737" _target="blank">#737</a>) Introducing a new enhancer that sorts a provided <code>mediaQueryOrder</code> using a mobile-first approach.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/737" _target="blank">#737</a>) Introducing a new enhancer that sorts a provided <code>mediaQueryOrder</code> using a mobile-first approach.</td>
 </tr>
 <tr>
 <td>fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/734" _target="blank">#734</a>) Improved the way <code>_className</code> special keys are resolved in <code>combineRules</code>.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/734" _target="blank">#734</a>) Improved the way <code>_className</code> special keys are resolved in <code>combineRules</code>.</td>
 </tr>
 <tr>
 <td>fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/issues/736" _target="blank">#736</a>) Improved the <code>hasDOM</code> helper to ensure non-browser environments render correctly.</td>
+<td>(<a href="https://github.com/robinweser/fela/issues/736" _target="blank">#736</a>) Improved the <code>hasDOM</code> helper to ensure non-browser environments render correctly.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="1061">10.6.1</h3>
-<p>| fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela | (<a href="https://github.com/rofrischmann/fela/pull/728" _target="blank">#728</a>) Hotfix that broke SSR with the new <code>targetDocument</code> option. |</p>
+<p>| fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela | (<a href="https://github.com/robinweser/fela/pull/728" _target="blank">#728</a>) Hotfix that broke SSR with the new <code>targetDocument</code> option. |</p>
 <h3 id="1060">10.6.0</h3>
-<p>| fela-dom<br>fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela | (<a href="https://github.com/rofrischmann/fela/pull/722" _target="blank">#722</a>) Added the ability to pass a <code>targetDocument</code> for DOM rendering. Defaults to <code>window.document</code>. |</p>
+<p>| fela-dom<br>fela-bindings<br>react-fela<br>inferno-fela<br>preact-fela | (<a href="https://github.com/robinweser/fela/pull/722" _target="blank">#722</a>) Added the ability to pass a <code>targetDocument</code> for DOM rendering. Defaults to <code>window.document</code>. |</p>
 <h3 id="1050">10.5.0</h3>
 <table>
 <thead>
@@ -1201,11 +1229,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-plugin-expand-shorthand</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/711" _target="blank">#711</a>) Introducing a new plugin to expand (and optionally merge) shorthand properties.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/711" _target="blank">#711</a>) Introducing a new plugin to expand (and optionally merge) shorthand properties.</td>
 </tr>
 <tr>
 <td>fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/710" _target="blank">#710</a>) Fixed a bug where font rendering returned invalid font faces.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/710" _target="blank">#710</a>) Fixed a bug where font rendering returned invalid font faces.</td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1256,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 </tr>
 <tr>
 <td>fela-dom<br>fela</td>
-<td>Reverted the <code>rendererId</code> option that was introduced in (<a href="https://github.com/rofrischmann/fela/pull/667" _target="blank">#667</a>) as it caused a couple of issues and is no longer neccessary with above changes.</td>
+<td>Reverted the <code>rendererId</code> option that was introduced in (<a href="https://github.com/robinweser/fela/pull/667" _target="blank">#667</a>) as it caused a couple of issues and is no longer neccessary with above changes.</td>
 </tr>
 </tbody>
 </table>
@@ -1262,11 +1290,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela<br>fela-utils<br>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/707" _target="blank">#707</a>) Fixed a bug that caused rehydration mismatches when using dash-cased CSS property names.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/707" _target="blank">#707</a>) Fixed a bug that caused rehydration mismatches when using dash-cased CSS property names.</td>
 </tr>
 <tr>
 <td>fela-plugin-typescript</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/701" _target="blank">#701</a>) Introducing the new TypeScript plugin that adds type-safety for CSS properties and provides auto-completion.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/701" _target="blank">#701</a>) Introducing the new TypeScript plugin that adds type-safety for CSS properties and provides auto-completion.</td>
 </tr>
 </tbody>
 </table>
@@ -1281,15 +1309,15 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/697" _target="blank">#697</a>) Improved TypeScript typins for the <code>useFela</code> hook API.<br>(<a href="https://github.com/rofrischmann/fela/pull/692" _target="blank">#692</a>) Improved TypeScript typings for the <code>FelaRenderer</code> component.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/697" _target="blank">#697</a>) Improved TypeScript typins for the <code>useFela</code> hook API.<br>(<a href="https://github.com/robinweser/fela/pull/692" _target="blank">#692</a>) Improved TypeScript typings for the <code>FelaRenderer</code> component.</td>
 </tr>
 <tr>
 <td>react-fela<br>preact-fela<br>inferno-fela<br>fela-bindings</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/695" _target="blank">#695</a>) Improved TypeScript typins for the <code>connect</code> API.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/695" _target="blank">#695</a>) Improved TypeScript typins for the <code>connect</code> API.</td>
 </tr>
 <tr>
 <td>fela-codemods</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/691" _target="blank">#691</a>) Fix <code>render</code> -&gt; <code>as</code> conversion edge cases. Don&apos;t convert args of callbacks <em>inside</em> an inline <code>style</code> function, only the args to the <code>style</code> callback itself.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/691" _target="blank">#691</a>) Fix <code>render</code> -&gt; <code>as</code> conversion edge cases. Don&apos;t convert args of callbacks <em>inside</em> an inline <code>style</code> function, only the args to the <code>style</code> callback itself.</td>
 </tr>
 </tbody>
 </table>
@@ -1304,19 +1332,19 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-plugin-extend</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/685" _target="blank">#685</a>) Added style extension for edge cases that weren&apos;t respected before.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/685" _target="blank">#685</a>) Added style extension for edge cases that weren&apos;t respected before.</td>
 </tr>
 <tr>
 <td>fela-bindings<br>react-fela<br>preact-fela<br>inferno-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/686" _target="blank">#686</a>) Refactored the <code>ThemeProvider</code> component to match the old behaviour with auto-merging themes.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/686" _target="blank">#686</a>) Refactored the <code>ThemeProvider</code> component to match the old behaviour with auto-merging themes.</td>
 </tr>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/683" _target="blank">#683</a>) Added TypeScript typings for the new <code>useFela</code> hook API.<br>(<a href="https://github.com/rofrischmann/fela/pull/677" _target="blank">#677</a>) Added TypeScript typings for the <code>FelaRenderer</code> component.<br>(<a href="https://github.com/rofrischmann/fela/pull/678" _target="blank">#678</a>) Added a warning when <code>FelaComponent</code> is used without passing the <code>style</code> prop.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/683" _target="blank">#683</a>) Added TypeScript typings for the new <code>useFela</code> hook API.<br>(<a href="https://github.com/robinweser/fela/pull/677" _target="blank">#677</a>) Added TypeScript typings for the <code>FelaRenderer</code> component.<br>(<a href="https://github.com/robinweser/fela/pull/678" _target="blank">#678</a>) Added a warning when <code>FelaComponent</code> is used without passing the <code>style</code> prop.</td>
 </tr>
 <tr>
 <td>all</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/680" _target="blank">#680</a>) Added sideEffects property to all packages in order to support Tree-Shaking in Webpack.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/680" _target="blank">#680</a>) Added sideEffects property to all packages in order to support Tree-Shaking in Webpack.</td>
 </tr>
 </tbody>
 </table>
@@ -1331,15 +1359,15 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-plugin-rtl</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/673" _target="blank">#673</a>) Added the ability to pass a default direction in order to support full theme-based rtl transformation.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/673" _target="blank">#673</a>) Added the ability to pass a default direction in order to support full theme-based rtl transformation.</td>
 </tr>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/674" _target="blank">#674</a>) Performance optimisations for <code>useFela</code>.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/674" _target="blank">#674</a>) Performance optimisations for <code>useFela</code>.</td>
 </tr>
 <tr>
 <td>fela-bindings<br>react-fela<br>preact-fela<br>inferno-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/675" _target="blank">#675</a>) Allowing <code>undefined</code> and <code>null</code> as valid values for style on <code>FelaRenderer</code> that used to throw.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/675" _target="blank">#675</a>) Allowing <code>undefined</code> and <code>null</code> as valid values for style on <code>FelaRenderer</code> that used to throw.</td>
 </tr>
 </tbody>
 </table>
@@ -1354,19 +1382,19 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/671" _target="blank">#671</a>) Updated Typings to use union types instead of enums.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/671" _target="blank">#671</a>) Updated Typings to use union types instead of enums.</td>
 </tr>
 <tr>
 <td>fela<br>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/667" _target="blank">#667</a>) Added the <code>rendererId</code> option to the renderer configuration which allows using multiple renderers with each maintaining their own set of style nodes.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/667" _target="blank">#667</a>) Added the <code>rendererId</code> option to the renderer configuration which allows using multiple renderers with each maintaining their own set of style nodes.</td>
 </tr>
 <tr>
 <td>fela-plugin-rtl<br>fela-plugin-bidi</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/670" _target="blank">#670</a>) Added the ability to switch the transformation direction dynamically using a special theme property.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/670" _target="blank">#670</a>) Added the ability to switch the transformation direction dynamically using a special theme property.</td>
 </tr>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/669" _target="blank">#669</a>) Now correctly pass the theme to <code>useFela</code>&apos;s props as well.<br>Now correctly pass <code>key</code> and <code>ref</code> to the <code>FelaComponent</code> directly instead of piping them to its rendered children.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/669" _target="blank">#669</a>) Now correctly pass the theme to <code>useFela</code>&apos;s props as well.<br>Now correctly pass <code>key</code> and <code>ref</code> to the <code>FelaComponent</code> directly instead of piping them to its rendered children.</td>
 </tr>
 <tr>
 <td>fela-plugin-named-keys</td>
@@ -1385,7 +1413,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/662" _target="blank">#662</a>) Updates TypeScript typings for FelaTheme.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/662" _target="blank">#662</a>) Updates TypeScript typings for FelaTheme.</td>
 </tr>
 </tbody>
 </table>
@@ -1400,11 +1428,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-plugin-extend<br>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/658" _target="blank">#658</a>) Fix handling of <code>undefined</code> items in <code>extend</code> arrays.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/658" _target="blank">#658</a>) Fix handling of <code>undefined</code> items in <code>extend</code> arrays.</td>
 </tr>
 <tr>
 <td>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/660" _target="blank">#600</a>) Fixes <code>scoreIndex</code> mismatches with vendor-specific pseudo elements and selectors.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/660" _target="blank">#600</a>) Fixes <code>scoreIndex</code> mismatches with vendor-specific pseudo elements and selectors.</td>
 </tr>
 </tbody>
 </table>
@@ -1419,11 +1447,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela<br>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/656" _target="blank">#656</a>) Improve DOM Rendering performance by caching the default sorting score.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/656" _target="blank">#656</a>) Improve DOM Rendering performance by caching the default sorting score.</td>
 </tr>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/652" _target="blank">#652</a>) Adds TypeScript typings for FelaComponent.<br>(<a href="https://github.com/rofrischmann/fela/pull/655" _target="blank">#655</a>) Adds TypeScript typings for RendererContext.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/652" _target="blank">#652</a>) Adds TypeScript typings for FelaComponent.<br>(<a href="https://github.com/robinweser/fela/pull/655" _target="blank">#655</a>) Adds TypeScript typings for RendererContext.</td>
 </tr>
 </tbody>
 </table>
@@ -1438,7 +1466,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>react-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/648" _target="blank">#648</a>) Adds the new useFela hook API.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/648" _target="blank">#648</a>) Adds the new useFela hook API.</td>
 </tr>
 </tbody>
 </table>
@@ -1453,7 +1481,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-bindings<br>react-fela<br>preact-fela<br>inferno-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/645" _target="blank">#645</a>) Removed unnecessary shouldComponentUpdate in ThemeProvider due to the new Context API.<br>(<a href="https://github.com/rofrischmann/fela/pull/646" _target="blank">#646</a>) Fixed false-positive Provider deprecation warnings.<br>(<a href="https://github.com/rofrischmann/fela/pull/647" _target="blank">#647</a>) Now exposing both RendererContext and ThemeContext to be used with useContext.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/645" _target="blank">#645</a>) Removed unnecessary shouldComponentUpdate in ThemeProvider due to the new Context API.<br>(<a href="https://github.com/robinweser/fela/pull/646" _target="blank">#646</a>) Fixed false-positive Provider deprecation warnings.<br>(<a href="https://github.com/robinweser/fela/pull/647" _target="blank">#647</a>) Now exposing both RendererContext and ThemeContext to be used with useContext.</td>
 </tr>
 </tbody>
 </table>
@@ -1468,11 +1496,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>fela-plugin-custom-property<br>fela-plugin-embedded<br>fela-plugin-extend<br>fela-plugin-native-media-query<br>fela-plugin-simulate<br>fela-tools</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/644" _target="blank">#644</a>) Fixed some old peerDependecies.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/644" _target="blank">#644</a>) Fixed some old peerDependecies.</td>
 </tr>
 <tr>
 <td>fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/644" _target="blank">#644</a>) Improved TypeScript typings.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/644" _target="blank">#644</a>) Improved TypeScript typings.</td>
 </tr>
 </tbody>
 </table>
@@ -1487,11 +1515,11 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
 <tbody>
 <tr>
 <td>react-fela<br>inferno-fela<br>preact-fela</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/637" _target="blank">#637</a>) Migrated to the new Context API.<br>(<a href="https://github.com/rofrischmann/fela/pull/636" _target="blank">#636</a>) FelaComponent and FelaTheme introduced some major changes. Please check the migration guide for information.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/637" _target="blank">#637</a>) Migrated to the new Context API.<br>(<a href="https://github.com/robinweser/fela/pull/636" _target="blank">#636</a>) FelaComponent and FelaTheme introduced some major changes. Please check the migration guide for information.</td>
 </tr>
 <tr>
 <td>fela-dom</td>
-<td>(<a href="https://github.com/rofrischmann/fela/pull/633" _target="blank">#633</a>) Style nodes are now correctly selected.</td>
+<td>(<a href="https://github.com/robinweser/fela/pull/633" _target="blank">#633</a>) Style nodes are now correctly selected.</td>
 </tr>
 </tbody>
 </table>
@@ -1538,7 +1566,7 @@ If you&apos;re searching for older logs, please check the <a href="https://githu
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"8. Changelog","level":"1.9","depth":1,"next":{"title":"9. FAQ","level":"1.10","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"7. Migration Guide","level":"1.8","depth":1,"path":"MIGRATION.md","ref":"MIGRATION.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"CHANGELOG.md","mtime":"2019-10-30T15:50:25.234Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-30T15:54:45.831Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"8. Changelog","level":"1.9","depth":1,"next":{"title":"9. FAQ","level":"1.10","depth":1,"path":"docs/FAQ.md","ref":"docs/FAQ.md","articles":[]},"previous":{"title":"7. Migration Guide","level":"1.8","depth":1,"path":"MIGRATION.md","ref":"MIGRATION.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/robinweser/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/robinweser/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@weser.io>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"CHANGELOG.md","mtime":"2019-11-15T19:36:52.110Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-11-15T19:50:06.214Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

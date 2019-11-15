@@ -8,7 +8,7 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.1.0">
-        <meta name="author" content="Robin Frischmann <robin@rofrischmann.de>">
+        <meta name="author" content="Robin Frischmann <robin@weser.io>">
         
         
     
@@ -1118,19 +1118,20 @@
 <p>We decided to keep Fela as small and simple as possible. It only includes the renderer and two simple helpers. Yet it is designed to be highly extendable with both plugins and middleware.
 Plugins are used to process your styles, enhancers to enhance your renderer. <br>
 With this approach everyone is able to create a custom version of Fela fitting their particular needs.</p>
-<p>Many plugins and enhancers are already included in the <a href="https://github.com/rofrischmann/fela/tree/master/packages" _target="blank">main repository</a>.</p>
+<p>Many plugins and enhancers are already included in the <a href="https://github.com/robinweser/fela/tree/master/packages" _target="blank">main repository</a>.</p>
 <h3 id="renderers">Renderers</h3>
 <ul>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela" _target="blank">fela</a> - Web <em>(universal)</em></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-dom" _target="blank">fela-dom</a> - Web <em>(DOM bindings)</em></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-native" _target="blank">fela-native</a> - React Native</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela" _target="blank">fela</a> - Web <em>(universal)</em></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-dom" _target="blank">fela-dom</a> - Web <em>(DOM bindings)</em></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-native" _target="blank">fela-native</a> - React Native</li>
 </ul>
 <h3 id="bindings">Bindings</h3>
 <ul>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela" _target="blank">react-fela</a> - React &amp; React Native</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/preact-fela" _target="blank">preact-fela</a> - Preact</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/react-fela" _target="blank">react-fela</a> - React &amp; React Native</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/preact-fela" _target="blank">preact-fela</a> - Preact</li>
 <li><a href="https://github.com/pshev/preact-fela-simple" _target="blank">preact-fela-simple</a> - Preact <em>(alternative)</em></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/inferno-fela" _target="blank">inferno-fela</a> - Inferno</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/inferno-fela" _target="blank">inferno-fela</a> - Inferno</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/reason-fela" _target="blank">reason-fela</a> - ReasonML</li>
 <li><a href="https://github.com/astrada/bs-react-fela" _target="blank">bs-react-fela</a> - BuckleScript / ReasonReact</li>
 <li><a href="https://github.com/ahdinosaur/hyper-fela" _target="blank">hyper-fela</a> - HyperScript</li>
 <li><a href="https://github.com/derHowie/vashet" _target="blank">vashet</a> - ClojureScript</li>
@@ -1144,39 +1145,41 @@ With this approach everyone is able to create a custom version of Fela fitting t
 </ul>
 <h3 id="plugins">Plugins</h3>
 <ul>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-bidi" _target="blank">fela-plugin-bidi</a> - Enable direction-independent style authoring</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-custom-property" _target="blank">fela-plugin-custom-property</a> - Resolves custom properties</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-embedded" _target="blank">fela-plugin-embedded</a> - Automatically resolves embedded font faces and keyframes within rules</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-expand-shorthand" _target="blank">fela-plugin-expand-shorthand</a> - Expand shorthand properties and optionally merge them</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-extend" _target="blank">fela-plugin-extend</a> - Extend style objects based on conditions</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-fallback-value" _target="blank">fela-plugin-fallback-value</a> - Resolves arrays of fallback values</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-friendly-pseudo-class" _target="blank">fela-plugin-friendly-pseudo-class</a> - Transforms javascript-friendly pseudo class into valid syntax</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-important" _target="blank">fela-plugin-important</a> - Adds <code>!important</code> to every value</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-isolation" _target="blank">fela-plugin-isolation</a> - Adds style isolation to every rule</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-logger" _target="blank">fela-plugin-logger*</a> - Logs processed style objects</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-named-keys" _target="blank">fela-plugin-named-keys</a> - Replaces named keys with valid syntax</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-placeholder-prefixer" _target="blank">fela-plugin-placeholder-prefixer</a> - Adds all <code>::placeholder</code> prefixes</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a> - Adds all vendor prefixes to the styles</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-rtl" _target="blank">fela-plugin-rtl</a> - Converts styles to their right-to-left counterpart</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-unit" _target="blank">fela-plugin-unit</a> - Automatically adds units to values if needed</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-validator" _target="blank">fela-plugin-validator*</a> - Validates, logs &amp; optionally deletes invalid properties for keyframes and rules</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-typescript" _target="blank">fela-plugin-typescript</a> - Allows to write type-safe style rules and provides some autocomplete</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-bidi" _target="blank">fela-plugin-bidi</a> - Enable direction-independent style authoring</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-custom-property" _target="blank">fela-plugin-custom-property</a> - Resolves custom properties</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-embedded" _target="blank">fela-plugin-embedded</a> - Automatically resolves embedded font faces and keyframes within rules</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-expand-shorthand" _target="blank">fela-plugin-expand-shorthand</a> - Expand shorthand properties and optionally merge them</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-extend" _target="blank">fela-plugin-extend</a> - Extend style objects based on conditions</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-fallback-value" _target="blank">fela-plugin-fallback-value</a> - Resolves arrays of fallback values</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-friendly-pseudo-class" _target="blank">fela-plugin-friendly-pseudo-class</a> - Transforms javascript-friendly pseudo class into valid syntax</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-important" _target="blank">fela-plugin-important</a> - Adds <code>!important</code> to every value</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-isolation" _target="blank">fela-plugin-isolation</a> - Adds style isolation to every rule</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-logger" _target="blank">fela-plugin-logger*</a> - Logs processed style objects</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-named-keys" _target="blank">fela-plugin-named-keys</a> - Replaces named keys with valid syntax</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-placeholder-prefixer" _target="blank">fela-plugin-placeholder-prefixer</a> - Adds all <code>::placeholder</code> prefixes</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a> - Adds all vendor prefixes to the styles</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-responsive-value" _target="blank">fela-plugin-responsive-value</a> - Resolves responsive array values to media query rules</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-rtl" _target="blank">fela-plugin-rtl</a> - Converts styles to their right-to-left counterpart</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-unit" _target="blank">fela-plugin-unit</a> - Automatically adds units to values if needed</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-validator" _target="blank">fela-plugin-validator*</a> - Validates, logs &amp; optionally deletes invalid properties for keyframes and rules</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-typescript" _target="blank">fela-plugin-typescript</a> - Allows to write type-safe style rules and provides some autocomplete</li>
 </ul>
 <h4 id="plugin-presets">Plugin-Presets</h4>
 <ul>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-preset-web" _target="blank">fela-preset-web</a> - Preset for cross-browser web applications</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-preset-dev" _target="blank">fela-preset-dev</a> - Preset for development mode</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-preset-web" _target="blank">fela-preset-web</a> - Preset for cross-browser web applications</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-preset-dev" _target="blank">fela-preset-dev</a> - Preset for development mode</li>
 </ul>
 <h3 id="enhancers">Enhancers</h3>
 <ul>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-beautifier" _target="blank">fela-beautifier*</a> - Beautifies the rendered CSS markup</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-layout-debugger" _target="blank">fela-layout-debugger*</a> - Adds colored outlines or backgroundColors to debug layouts</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-logger" _target="blank">fela-logger*</a> - Logs every rendered change output</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-monolithic" _target="blank">fela-monolithic</a> - Render component-based (monolithic) CSS classes (rather than atomic)</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-identifier" _target="blank">fela-identifier</a> - Allows to create rules for which the renderer will generate unique class names (useful for nested selectors)</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-perf" _target="blank">fela-perf*</a> - Logs performance information (time elapsed while rendering)</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-sort-classnames" _target="blank">fela-sort-classnames</a> - Deterministically sort rendered class names to prevent browser incompatibilities</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-statistics" _target="blank">fela-statistics*</a> - Collects different metrics to analyze your styles</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-beautifier" _target="blank">fela-beautifier*</a> - Beautifies the rendered CSS markup</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-layout-debugger" _target="blank">fela-layout-debugger*</a> - Adds colored outlines or backgroundColors to debug layouts</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-logger" _target="blank">fela-logger*</a> - Logs every rendered change output</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-monolithic" _target="blank">fela-monolithic</a> - Render component-based (monolithic) CSS classes (rather than atomic)</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-identifier" _target="blank">fela-identifier</a> - Allows to create rules for which the renderer will generate unique class names (useful for nested selectors)</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-perf" _target="blank">fela-perf*</a> - Logs performance information (time elapsed while rendering)</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-sort-classnames" _target="blank">fela-sort-classnames</a> - Deterministically sort rendered class names to prevent browser incompatibilities</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-sort-media-query-mobile-first" _target="blank">fela-sort-media-query-mobile-first</a> - Implements a mobile-first sortMediaQuery function</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-statistics" _target="blank">fela-statistics*</a> - Collects different metrics to analyze your styles</li>
 </ul>
 <h3 id="components">Components</h3>
 <ul>
@@ -1185,7 +1188,7 @@ With this approach everyone is able to create a custom version of Fela fitting t
 <li><a href="https://github.com/Mercateo/counter-component-with-react-mobx-fela" _target="blank">counter-component-with-react-mobx-fela</a> - Counter Component using Fela</li>
 <li><a href="https://github.com/Haaretz/htz-frontend" _target="blank">htz-frontend</a> - Source for Haaretz frontend app(s)</li>
 <li><a href="https://github.com/RafalFilipek/just-box" _target="blank">just-box</a> - Create universal layouts in React and React-Native</li>
-<li><a href="https://github.com/rofrischmann/kilvin" _target="blank">kilvin</a> - Primitive React Layout Components</li>
+<li><a href="https://github.com/robinweser/kilvin" _target="blank">kilvin</a> - Primitive React Layout Components</li>
 <li><a href="https://github.com/olymp/olymp/tree/master/packages/fela" _target="blank">olymp-fela</a> - Simple collection of Fela Components for <a href="https://github.com/olymp/olymp" _target="blank">olymp</a></li>
 <li><a href="https://github.com/degroote22/refelaxbox/blob/master/package.json" _target="blank">refelaxbox</a> - <a href="https://github.com/jxnblk/reflexbox" _target="blank">reflexbox</a> fork using Fela</li>
 <li><a href="https://github.com/Kilix/selectless" _target="blank">selectless</a> - Select in React with Context</li>
@@ -1215,7 +1218,7 @@ With this approach everyone is able to create a custom version of Fela fitting t
 <li><a href="https://github.com/vlad-zhukov/fela-react-helpers" _target="blank">fela-react-helpers</a> - A set of useful helpers for Fela</li>
 <li><a href="https://github.com/codepunkt/fela-react-prop" _target="blank">fela-react-prop</a> - Generate class names for fela style rule and apply them as property on a wrapped component</li>
 <li><a href="https://github.com/dustin-H/fela-styles-connector" _target="blank">fela-styles-connector</a> - Simplified react-fela <code>connect</code> with auto-bound styles</li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-tools" _target="blank">fela-tools</a> - Useful tools for working with Fela</li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-tools" _target="blank">fela-tools</a> - Useful tools for working with Fela</li>
 <li><a href="https://github.com/benoneal/freyja" _target="blank">frejya</a> - Pass styles as props to components</li>
 <li><a href="https://github.com/mmintel/gatsby-plugin-fela" _target="blank">gatsby-plugin-fela</a> - Integrates fela with <a href="http://gatsbyjs.org" _target="blank">Gatsby</a></li>
 <li><a href="https://github.com/Kilix/jest-fela-react" _target="blank">jest-fela-react</a> - Nicer snapshots when using Jest and Fela</li>
@@ -1273,7 +1276,7 @@ With this approach everyone is able to create a custom version of Fela fitting t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.5. Ecosystem","level":"1.2.5","depth":2,"next":{"title":"1.6. Examples","level":"1.2.6","depth":2,"path":"docs/introduction/Examples.md","ref":"docs/introduction/Examples.md","articles":[]},"previous":{"title":"1.4. Caveats","level":"1.2.4","depth":2,"path":"docs/introduction/Caveats.md","ref":"docs/introduction/Caveats.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/introduction/Ecosystem.md","mtime":"2019-06-06T09:14:24.558Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-30T15:54:45.831Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.5. Ecosystem","level":"1.2.5","depth":2,"next":{"title":"1.6. Examples","level":"1.2.6","depth":2,"path":"docs/introduction/Examples.md","ref":"docs/introduction/Examples.md","articles":[]},"previous":{"title":"1.4. Caveats","level":"1.2.4","depth":2,"path":"docs/introduction/Caveats.md","ref":"docs/introduction/Caveats.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/robinweser/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/robinweser/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@weser.io>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/introduction/Ecosystem.md","mtime":"2019-11-15T18:50:57.987Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-11-15T19:50:06.214Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -8,7 +8,7 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.1.0">
-        <meta name="author" content="Robin Frischmann <robin@rofrischmann.de>">
+        <meta name="author" content="Robin Frischmann <robin@weser.io>">
         
         
     
@@ -1135,25 +1135,26 @@ Before the resolved style object gets cached and transformed to CSS, it is piped
 <p>Fela already ships with tons of plugins. Check out <a href="../introduction/Ecosystem.html#plugins">Introduction - Ecosystem</a> for more information. Every plugin is published as a separate package and includes documentation on what it does and how it is used.</p>
 <h4 id="presets">Presets</h4>
 <p>In additional to each single plugin, we also provide plugin presets which should simplify the configuration process.<br>
-Right now there are two different presets available, a basic web preset <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-preset-web" _target="blank">fela-preset-web</a> and one development-only preset <a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-preset-dev" _target="blank">fela-preset-dev</a>.</p>
+Right now there are two different presets available, a basic web preset <a href="https://github.com/robinweser/fela/tree/master/packages/fela-preset-web" _target="blank">fela-preset-web</a> and one development-only preset <a href="https://github.com/robinweser/fela/tree/master/packages/fela-preset-dev" _target="blank">fela-preset-dev</a>.</p>
 <h3 id="order-matters">Order Matters</h3>
 <p>Plugins are executed in the exact same order as provided. The output of the first plugin is passed to the second plugin and so on. Keep in mind that some plugins need to be executed before or after another. To be safe, stick to the following order:</p>
 <ol>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-extend" _target="blank">fela-plugin-extend</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-custom-property" _target="blank">fela-plugin-custom-property</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-embedded" _target="blank">fela-plugin-embedded</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-friendly-pseudo-class" _target="blank">fela-plugin-friendly-pseudo-class</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-named-keys" _target="blank">fela-plugin-named-keys</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-placeholder-prefixer" _target="blank">fela-plugin-placeholder-prefixer</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-fallback-value" _target="blank">fela-plugin-fallback-value</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-bidi" _target="blank">fela-plugin-bidi</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-rtl" _target="blank">fela-plugin-rtl</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-unit" _target="blank">fela-plugin-unit</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-important" _target="blank">fela-plugin-important</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-isolation" _target="blank">fela-plugin-isolation</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-validator" _target="blank">fela-plugin-validator</a></li>
-<li><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-plugin-logger" _target="blank">fela-plugin-logger</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-extend" _target="blank">fela-plugin-extend</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-custom-property" _target="blank">fela-plugin-custom-property</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-embedded" _target="blank">fela-plugin-embedded</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-friendly-pseudo-class" _target="blank">fela-plugin-friendly-pseudo-class</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-named-keys" _target="blank">fela-plugin-named-keys</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-placeholder-prefixer" _target="blank">fela-plugin-placeholder-prefixer</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-responsive-value" _target="blank">fela-plugin-responsive-value</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-prefixer" _target="blank">fela-plugin-prefixer</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-fallback-value" _target="blank">fela-plugin-fallback-value</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-bidi" _target="blank">fela-plugin-bidi</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-rtl" _target="blank">fela-plugin-rtl</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-unit" _target="blank">fela-plugin-unit</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-important" _target="blank">fela-plugin-important</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-isolation" _target="blank">fela-plugin-isolation</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-validator" _target="blank">fela-plugin-validator</a></li>
+<li><a href="https://github.com/robinweser/fela/tree/master/packages/fela-plugin-logger" _target="blank">fela-plugin-logger</a></li>
 </ol>
 <h2 id="custom-plugins">Custom Plugins</h2>
 <p>In order to learn how to write custom plugins, we first need to learn te exact API. A plugin is basically just a pure function that takes a style object and returns a (transformed) style object.</p>
@@ -1248,7 +1249,7 @@ Let&apos;s say we want to configure the prop that adds <code>display:none</code>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"next":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"path":"docs/advanced/RendererConfiguration.md","ref":"docs/advanced/RendererConfiguration.md","articles":[]},"previous":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"path":"docs/advanced/ServerRendering.md","ref":"docs/advanced/ServerRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/Plugins.md","mtime":"2019-06-04T08:02:08.938Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-30T15:54:45.831Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.3. Plugins","level":"1.4.3","depth":2,"next":{"title":"3.4. Renderer Configuration","level":"1.4.4","depth":2,"path":"docs/advanced/RendererConfiguration.md","ref":"docs/advanced/RendererConfiguration.md","articles":[]},"previous":{"title":"3.2. Server Rendering","level":"1.4.2","depth":2,"path":"docs/advanced/ServerRendering.md","ref":"docs/advanced/ServerRendering.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/robinweser/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/robinweser/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@weser.io>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"docs/advanced/Plugins.md","mtime":"2019-11-15T18:55:07.639Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-11-15T19:50:06.214Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

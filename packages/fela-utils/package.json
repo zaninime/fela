@@ -1,6 +1,6 @@
 {
   "name": "fela-utils",
-  "version": "10.8.2",
+  "version": "11.0.0",
   "description": "Internal utilities for Fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -12,7 +12,7 @@
     "lib/**",
     "es/**"
   ],
-  "repository": "https://github.com/rofrischmann/fela/",
+  "repository": "https://github.com/robinweser/fela/",
   "keywords": [
     "fela",
     "fela-utils",

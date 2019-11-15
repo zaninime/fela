@@ -4,7 +4,6 @@ import { RULE_TYPE, getRuleScore } from 'fela-utils'
 
 import rehydrateSupportRules from './rehydration/rehydrateSupportRules'
 import rehydrateRules from './rehydration/rehydrateRules'
-import calculateNodeScore from './connection/calculateNodeScore'
 
 import render from './render'
 
@@ -37,13 +36,7 @@ export default function rehydrate(
       renderer.uniqueRuleIdentifier = rehydrationIndex
 
       const reference = type + media + support
-      renderer.nodes[reference] = {
-        score: calculateNodeScore(
-          { type, media, support },
-          renderer.mediaQueryOrder
-        ),
-        node,
-      }
+      renderer.nodes[reference] = node
 
       if (type === RULE_TYPE) {
         if (support) {
@@ -54,7 +47,7 @@ export default function rehydrate(
 
         // On Safari, style sheets with IE-specific media queries
         // can yield null for node.sheet
-        // https://github.com/rofrischmann/fela/issues/431#issuecomment-423239591
+        // https://github.com/robinweser/fela/issues/431#issuecomment-423239591
         if (node.sheet && node.sheet.cssRules) {
           const nodeReference = media + support
 

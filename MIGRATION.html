@@ -8,7 +8,7 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.1.0">
-        <meta name="author" content="Robin Frischmann <robin@rofrischmann.de>">
+        <meta name="author" content="Robin Frischmann <robin@weser.io>">
         
         
     
@@ -1116,7 +1116,7 @@
                                 
                                 <h1 id="migration">Migration</h1>
 <blockquote>
-<p>With the new synced version release process, we no longer have package-based migration guides, but version-based. Therefore, we removed all old migration guides. Check <a href="https://github.com/rofrischmann/fela/blob/a08ea4fff080d8df1edf76909dea58ac49e9e536/MIGRATION.md" _target="blank">the old migration guide</a> for older guidelines.</p>
+<p>With the new synced version release process, we no longer have package-based migration guides, but version-based. Therefore, we removed all old migration guides. Check <a href="https://github.com/robinweser/fela/blob/a08ea4fff080d8df1edf76909dea58ac49e9e536/MIGRATION.md" _target="blank">the old migration guide</a> for older guidelines.</p>
 </blockquote>
 <p>This guide should help migrating your Fela codebase to newer versions.</p>
 <h2 id="1000">10.0.0</h2>
@@ -1133,14 +1133,14 @@ All older APIs should still work, but will now render a deprecation warning with
 </ul>
 <hr>
 <h3 id="felatheme">FelaTheme</h3>
-<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#felatheme" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/FelaTheme.html" _target="blank">API Reference</a></p>
+<p><a href="https://github.com/robinweser/fela/tree/master/packages/fela-codemods#felatheme" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/FelaTheme.html" _target="blank">API Reference</a></p>
 <p>The FelaTheme component now no longer uses the special <code>render</code> prop to pass a render function, but uses <code>children</code> instead.<br></p>
 <h3 id="felacomponent">FelaComponent</h3>
-<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#felacomponent" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/FelaComponent.html" _target="blank">API Reference</a></p>
+<p><a href="https://github.com/robinweser/fela/tree/master/packages/fela-codemods#felacomponent" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/FelaComponent.html" _target="blank">API Reference</a></p>
 <p>The same goes for FelaComponent. We now use <code>children</code> directly rather than <code>render</code>. In order to pass a primitive render type, one may now use the <code>as</code> prop.</p>
 <p>Instead of accepting both <code>style</code> and <code>rule</code> it now only accepts <code>style</code> but allows style objects, rule functions and even an array of both.</p>
 <h3 id="rendererprovider">RendererProvider</h3>
-<p><a href="https://github.com/rofrischmann/fela/tree/master/packages/fela-codemods#rendererprovider" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/RendererProvider.html" _target="blank">API Reference</a></p>
+<p><a href="https://github.com/robinweser/fela/tree/master/packages/fela-codemods#rendererprovider" _target="blank">Codemod</a> | <a href="http://fela.js.org/docs/api/bindings/RendererProvider.html" _target="blank">API Reference</a></p>
 <p>The old <code>Provider</code> component has been renamed to <code>RendererProvider</code> for more clarity and specificity.</p>
 
                                 
@@ -1185,7 +1185,7 @@ All older APIs should still work, but will now render a deprecation warning with
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. Changelog","level":"1.9","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"6.5.1. createSnapshot","level":"1.7.5.1","depth":3,"path":"docs/api/jest-bindings/createSnapshot.md","ref":"docs/api/jest-bindings/createSnapshot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/rofrischmann/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/rofrischmann/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@rofrischmann.de>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2019-06-04T08:02:08.886Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-10-30T15:54:45.831Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7. Migration Guide","level":"1.8","depth":1,"next":{"title":"8. Changelog","level":"1.9","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"6.5.1. createSnapshot","level":"1.7.5.1","depth":3,"path":"docs/api/jest-bindings/createSnapshot.md","ref":"docs/api/jest-bindings/createSnapshot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anker-enable","advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/robinweser/fela/"},"anker-enable":{},"search":{},"lunr":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/robinweser/fela/tree/master","label":"Edit This Page"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Robin Frischmann <robin@weser.io>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Fela","language":"en","gitbook":"3.1.0","description":"Official documentation for Fela"},"file":{"path":"MIGRATION.md","mtime":"2019-11-15T18:49:58.068Z","type":"markdown"},"gitbook":{"version":"3.1.0","time":"2019-11-15T19:50:06.214Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -3,7 +3,7 @@ import { ConsumerProps } from "preact-context";
 import { IRenderer, TRule, IStyle } from "fela";
 import { TMultiRule, TPartialMultiRule } from "fela-tools";
 
-declare module "preact-fela" {
+declare module "@fela-next/preact-fela" {
   interface ThemeProviderProps {
     theme: object;
     overwrite?: boolean;

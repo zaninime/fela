@@ -1,5 +1,5 @@
 /* @flow */
-import customProperty from 'fela-plugin-custom-property'
+import customProperty from '@zaninime/fela-plugin-custom-property'
 import arrayReduce from 'fast-loops/lib/arrayReduce'
 
 const placeholderPrefixes = [

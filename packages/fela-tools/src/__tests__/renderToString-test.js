@@ -1,5 +1,5 @@
 import { css as beautify } from 'js-beautify'
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 import renderToString from '../renderToString'
 

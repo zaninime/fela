@@ -3,7 +3,7 @@ import { prefix } from 'inline-style-prefixer'
 import cssifyObject from 'css-in-js-utils/lib/cssifyObject'
 import objectReduce from 'fast-loops/lib/objectReduce'
 
-import fallbackValue from 'fela-plugin-fallback-value'
+import fallbackValue from '@zaninime/fela-plugin-fallback-value'
 import isPlainObject from 'isobject'
 
 const resolveFallbackValues = fallbackValue()

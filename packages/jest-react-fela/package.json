@@ -1,5 +1,5 @@
 {
-  "name": "jest-react-fela",
+  "name": "@zaninime/jest-react-fela",
   "version": "11.0.2",
   "description": "Jest helpers for react-fela",
   "main": "lib/index.js",
@@ -14,8 +14,8 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
-    "react-fela",
+    "@zaninime/fela",
+    "@zaninime/react-fela",
     "testing",
     "react",
     "jest",
@@ -24,18 +24,18 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "fela": "*",
+    "@zaninime/fela": "*",
     "react": "*",
     "react-dom": "*",
-    "react-fela": "*"
+    "@zaninime/react-fela": "*"
   },
   "dependencies": {
-    "jest-fela-bindings": "^11.0.2"
+    "@zaninime/jest-fela-bindings": "^11.0.2"
   },
   "devDependencies": {
-    "fela": "^11.0.2",
-    "fela-preset-web": "^11.0.2",
-    "react-fela": "^11.0.2"
+    "@zaninime/fela": "^11.0.2",
+    "@zaninime/fela-preset-web": "^11.0.2",
+    "@zaninime/react-fela": "^11.0.2"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

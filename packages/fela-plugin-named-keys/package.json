@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-named-keys",
+  "name": "@zaninime/fela-plugin-named-keys",
   "version": "11.0.2",
   "description": "Fela plugin to replace named keys",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "media query",
     "supports",

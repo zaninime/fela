@@ -24,7 +24,7 @@ Renders a `rule` using the `props` to resolve it.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -103,7 +103,7 @@ Adds a change `listener` to get notified when changes happen.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 

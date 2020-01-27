@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-expand-shorthand",
+  "name": "@zaninime/fela-plugin-expand-shorthand",
   "version": "11.0.2",
   "description": "Fela plugin to expand shorthand properties in style objects",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "shorthands",
     "css-shorthands",

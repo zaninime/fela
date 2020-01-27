@@ -15,8 +15,8 @@ You may alternatively use `npm i --save fela-plugin-important`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import important from 'fela-plugin-important'
+import { createRenderer } from '@zaninime/fela'
+import important from '@zaninime/fela-plugin-important'
 
 const renderer = createRenderer({
   plugins: [ important() ]

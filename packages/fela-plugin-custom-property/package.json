@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-custom-property",
+  "name": "@zaninime/fela-plugin-custom-property",
   "version": "11.0.2",
   "description": "Fela plugin to use custom properties",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "custom property",
     "mixin",
@@ -27,7 +27,7 @@
     "isobject": "^3.0.1"
   },
   "peerDependencies": {
-    "fela": "^10.0.0"
+    "@zaninime/fela": "^10.0.0"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

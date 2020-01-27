@@ -1,5 +1,5 @@
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
+import { createRenderer } from '@zaninime/fela'
+import { renderToString } from '@zaninime/fela-tools'
 
 describe('Fela with Fela Tools integration', () => {
   describe('Rendering rules', () => {

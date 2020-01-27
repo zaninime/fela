@@ -16,7 +16,7 @@ Using Fela with React Native basically works the same as using with React itself
 As mentioned above, the only difference to Fela for Web is the renderer itself. It is directly imported from the [fela-native](https://github.com/robinweser/fela/tree/master/packages/fela-native) package.
 
 ```javascript
-import { createRenderer } from 'fela-native'
+import { createRenderer } from '@zaninime/fela-native'
 ```
 
 > **Note**: Other APIs such as [combineRules](../api/fela/combineRules.md) and [enhance](../api/bindings/enhance.md) are still imported from [fela](https://github.com/robinweser/fela/tree/master/packages/fela) directly. The [fela-native](https://github.com/robinweser/fela/tree/master/packages/fela-native)  package **only** ships the [createRenderer](../api/fela/createRenderer.md) method.
@@ -26,8 +26,8 @@ We can use the [Provider](../api/bindings/Provider.md) Component shipped with [r
 ```javascript
 import React from 'react'
 import { AppRegistry } from 'react-native'
-import { createRenderer } from 'fela-native'
-import { Provider } from 'react-fela'
+import { createRenderer } from '@zaninime/fela-native'
+import { Provider } from '@zaninime/react-fela'
 import App from './App'
 
 const renderer = createRenderer()

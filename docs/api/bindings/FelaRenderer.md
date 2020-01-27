@@ -10,9 +10,9 @@ FelaRenderer is a consumer component leveraging the render-props pattern. It can
 
 ## Imports
 ```javascript
-import { FelaRenderer } from 'react-fela'
-import { FelaRenderer } from 'preact-fela'
-import { FelaRenderer } from 'inferno-fela'
+import { FelaRenderer } from '@zaninime/react-fela'
+import { FelaRenderer } from '@zaninime/preact-fela'
+import { FelaRenderer } from '@zaninime/inferno-fela'
 ```
 
 ## Example

@@ -1,5 +1,5 @@
 {
-  "name": "react-fela",
+  "name": "@zaninime/react-fela",
   "version": "11.0.2",
   "description": "React bindings for Fela",
   "typings": "index.d.ts",
@@ -16,7 +16,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "dynamic styling",
     "react",
     "css",
@@ -29,8 +29,8 @@
     "react": "^16.3.0"
   },
   "dependencies": {
-    "fela-bindings": "^11.0.2",
-    "fela-dom": "^11.0.2",
+    "@zaninime/fela-bindings": "^11.0.2",
+    "@zaninime/fela-dom": "^11.0.2",
     "prop-types": "^15.5.8"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"

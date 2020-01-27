@@ -1,7 +1,7 @@
 /* @flow */
 // $FlowFixMe
 import { useContext } from 'react'
-import { combineRules } from 'fela'
+import { combineRules } from '@zaninime/fela'
 
 import { RendererContext, ThemeContext } from './context'
 

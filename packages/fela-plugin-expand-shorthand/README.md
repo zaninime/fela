@@ -18,8 +18,8 @@ You may alternatively use `npm i --save fela-plugin-expand-shorthand`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import expandShorthand from 'fela-plugin-expand-shorthand'
+import { createRenderer } from '@zaninime/fela'
+import expandShorthand from '@zaninime/fela-plugin-expand-shorthand'
 
 const renderer = createRenderer({
   plugins: [ expandShorthand() ]
@@ -30,8 +30,8 @@ const renderer = createRenderer({
 In order to get enable auto-merging of longhands, one needs to pass a configuration flag.
 
 ```javascript
-import { createRenderer } from 'fela'
-import expandShorthand from 'fela-plugin-expand-shorthand'
+import { createRenderer } from '@zaninime/fela'
+import expandShorthand from '@zaninime/fela-plugin-expand-shorthand'
 
 const renderer = createRenderer({
   plugins: [ expandShorthand(true) ]

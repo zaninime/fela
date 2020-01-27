@@ -1,5 +1,5 @@
 {
-  "name": "fela-bindings",
+  "name": "@zaninime/fela-bindings",
   "version": "11.0.2",
   "description": "Abstract binding factories for Fela",
   "main": "lib/index.js",
@@ -13,7 +13,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "dynamic styling",
     "stylesheet",
     "css",
@@ -23,12 +23,12 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "fela": "*"
+    "@zaninime/fela": "*"
   },
   "dependencies": {
     "fast-loops": "^1.0.0",
-    "fela-dom": "^11.0.2",
-    "fela-tools": "^11.0.2",
+    "@zaninime/fela-dom": "^11.0.2",
+    "@zaninime/fela-tools": "^11.0.2",
     "react-addons-shallow-compare": "^15.6.2",
     "shallow-equal": "^1.0.0"
   },

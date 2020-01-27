@@ -1,8 +1,8 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createSnapshot } from 'jest-react-fela'
-import { useFela } from 'react-fela'
+import { createSnapshot } from '@zaninime/jest-react-fela'
+import { useFela } from '@zaninime/react-fela'
 
 describe('Using the useFela hook', () => {
   it('should correctly render styles', () => {

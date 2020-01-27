@@ -1,8 +1,8 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createSnapshot } from 'jest-react-fela'
-import { createComponentWithProxy } from 'react-fela'
+import { createSnapshot } from '@zaninime/jest-react-fela'
+import { createComponentWithProxy } from '@zaninime/react-fela'
 
 describe('Creating Components with a Proxy for props from Fela rules', () => {
   it('should not pass props used in rules to the element', () => {

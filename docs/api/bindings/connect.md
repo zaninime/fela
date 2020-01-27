@@ -28,9 +28,9 @@ A HoC ([Higher-order Component](https://medium.com/@dan_abramov/mixins-are-dead-
 
 ## Imports
 ```javascript
-import { connect } from 'react-fela'
-import { connect } from 'preact-fela'
-import { connect } from 'inferno-fela'
+import { connect } from '@zaninime/react-fela'
+import { connect } from '@zaninime/preact-fela'
+import { connect } from '@zaninime/inferno-fela'
 ```
 
 ## Example

@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-logger",
+  "name": "@zaninime/fela-plugin-logger",
   "version": "11.0.2",
   "description": "Fela plugin to log processed style objects",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "logger",
     "logging",

@@ -1,9 +1,9 @@
 import { createElement } from 'react'
 import { render } from 'react-dom'
-import { createRenderer } from 'fela'
-import { RendererProvider, ThemeProvider } from 'react-fela'
+import { createRenderer } from '@zaninime/fela'
+import { RendererProvider, ThemeProvider } from '@zaninime/react-fela'
 
-import { createSnapshotFactory } from 'jest-fela-bindings'
+import { createSnapshotFactory } from '@zaninime/jest-fela-bindings'
 
 export default createSnapshotFactory(
   createElement,

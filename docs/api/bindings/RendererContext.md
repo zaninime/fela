@@ -6,15 +6,15 @@ RendererContext is the internal instance of `React.createContext` that is provid
 
 ## Imports
 ```javascript
-import { RendererContext } from 'react-fela'
-import { RendererContext } from 'preact-fela'
-import { RendererContext } from 'inferno-fela'
+import { RendererContext } from '@zaninime/react-fela'
+import { RendererContext } from '@zaninime/preact-fela'
+import { RendererContext } from '@zaninime/inferno-fela'
 ```
 
 ## Example
 ```javascript
 import { useContext } from 'react'
-import { RendererContext } from 'react-fela'
+import { RendererContext } from '@zaninime/react-fela'
 
 function Button() {
   const renderer = useContext(RendererContext)

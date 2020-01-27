@@ -1,10 +1,10 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createRenderer } from 'fela'
-import { createSnapshot } from 'jest-react-fela'
-import monolithic from 'fela-monolithic'
-import { createComponent, createComponentWithProxy } from 'react-fela'
+import { createRenderer } from '@zaninime/fela'
+import { createSnapshot } from '@zaninime/jest-react-fela'
+import monolithic from '@zaninime/fela-monolithic'
+import { createComponent, createComponentWithProxy } from '@zaninime/react-fela'
 
 describe('Creating Components from Fela rules using fela-monolithic', () => {
   it('should use a dev-friendly className', () => {

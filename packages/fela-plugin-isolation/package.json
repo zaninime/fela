@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-isolation",
+  "name": "@zaninime/fela-plugin-isolation",
   "version": "11.0.2",
   "description": "Fela plugin that adds style isolation",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "cascading",
     "isolation",

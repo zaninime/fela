@@ -2,7 +2,11 @@
 import { StyleSheet } from 'react-native'
 /* @flow */
 import arrayEach from 'fast-loops/lib/arrayEach'
-import { processStyleWithPlugins, RULE_TYPE, CLEAR_TYPE } from 'fela-utils'
+import {
+  processStyleWithPlugins,
+  RULE_TYPE,
+  CLEAR_TYPE,
+} from '@zaninime/fela-utils'
 
 import type {
   NativeRenderer,

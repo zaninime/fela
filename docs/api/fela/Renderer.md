@@ -27,7 +27,7 @@ Renders a `rule` using the `props` to resolve it.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -105,7 +105,7 @@ Renders a `keyframe` using the `props` to resolve it.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -141,7 +141,7 @@ Renders a `@font-face` rule using the `family` as reference.
 (*string*) The font family reference that was passed in.
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -170,7 +170,7 @@ Renders static styles.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -192,7 +192,7 @@ renderer.renderStatic({
 You can even reuse existing formatted CSS using [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) [template strings](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/template_strings).
 
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -226,7 +226,7 @@ Adds a change `listener` to get notified when changes happen.
 
 ### Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 

@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-unit",
+  "name": "@zaninime/fela-plugin-unit",
   "version": "11.0.2",
   "description": "Fela plugin to automatically add units if required",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "cssinjs"
   ],

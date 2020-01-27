@@ -14,7 +14,7 @@ It caches all rendered styles to be able to reuse them on future rendering cycle
 ## Example
 
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const rule = props => ({
   backgroundColor: 'red',

@@ -2,18 +2,18 @@ import 'raf/polyfill'
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-import { createRenderer } from 'fela'
-import { RendererProvider } from 'react-fela'
+import { createRenderer } from '@zaninime/fela'
+import { RendererProvider } from '@zaninime/react-fela'
 
 const mockCallback = jest.fn()
 
-jest.mock('fela-dom', () => ({
+jest.mock('@zaninime/fela-dom', () => ({
   rehydrate: () => mockCallback('rehydrate'),
   render: () => mockCallback('render'),
 }))
 
 afterAll(() => {
-  jest.unmock('fela-dom')
+  jest.unmock('@zaninime/fela-dom')
 })
 
 describe('RendererProviderFactory', () => {

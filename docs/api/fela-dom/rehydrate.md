@@ -20,8 +20,8 @@ Assuming we have the following server-rendered elements:
 ```
 
 ```javascript
-import { createRenderer } from 'fela'
-import { rehydrate } from 'fela-dom'
+import { createRenderer } from '@zaninime/fela'
+import { rehydrate } from '@zaninime/fela-dom'
 
 const renderer = createRenderer()
 

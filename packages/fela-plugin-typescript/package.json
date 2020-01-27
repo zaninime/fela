@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-typescript",
+  "name": "@zaninime/fela-plugin-typescript",
   "version": "11.0.2",
   "description": "Fela plugin that helps write type-safe style rules",
   "typings": "index.d.ts",
@@ -16,7 +16,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "typescript",
     "cssinjs"
@@ -24,7 +24,7 @@
   "author": "Sergei Grishchenko <s.i.grishchenko@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "fela": "^10.0.0"
+    "@zaninime/fela": "^10.0.0"
   },
   "dependencies": {
     "isobject": "^3.0.1"

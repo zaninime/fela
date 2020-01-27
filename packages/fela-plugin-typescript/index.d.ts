@@ -1,10 +1,10 @@
-declare module "fela-plugin-typescript" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-typescript" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela" {
+declare module "@zaninime/fela" {
   import * as CSS from "csstype";
 
   export interface IStyle extends CSS.Properties<string | number> {

@@ -2,8 +2,8 @@ import { mount as enzymeMount } from 'enzyme'
 import toJson from 'enzyme-to-json'
 import cssbeautify from 'cssbeautify'
 
-import { renderToString } from 'fela-tools'
-import { createRenderer as felaCreateRenderer } from 'fela'
+import { renderToString } from '@zaninime/fela-tools'
+import { createRenderer as felaCreateRenderer } from '@zaninime/fela'
 
 import mergeOptions from './mergeOptions'
 

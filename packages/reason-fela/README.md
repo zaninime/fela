@@ -14,7 +14,7 @@ yarn add reason-fela
 # you'll also need at least fela and react-fela
 yarn add fela react-fela
 ```
-In your `bsconfig.json`, include `"reason-fela"` in the bs-dependencies.
+In your `bsconfig.json`, include `"@zaninime/reason-fela"` in the bs-dependencies.
 
 ## Usage
 For more information and best practices on how to effectively use this package, please check out the main [Fela Documention - Usage with ReasonML](http://fela.js.org/docs/guides/UsageWithReasonML.html). Also make sure the check the [Usage with React](http://fela.js.org/docs/guides/UsageWithReact.html) documentation as it's based on those APIs.

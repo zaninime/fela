@@ -1,6 +1,6 @@
 import 'raf/polyfill'
 import React from 'react'
-import { createComponent } from 'react-fela'
+import { createComponent } from '@zaninime/react-fela'
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 

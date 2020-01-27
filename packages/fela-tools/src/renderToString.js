@@ -7,7 +7,7 @@ import {
   KEYFRAME_TYPE,
   STATIC_TYPE,
   FONT_TYPE,
-} from 'fela-utils'
+} from '@zaninime/fela-utils'
 
 import cssifyMediaQueryRules from './cssifyMediaQueryRules'
 

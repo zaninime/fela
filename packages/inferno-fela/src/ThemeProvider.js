@@ -1,6 +1,6 @@
 /* @flow */
 import { createElement } from 'inferno-create-element'
-import { ThemeProviderFactory } from 'fela-bindings'
+import { ThemeProviderFactory } from '@zaninime/fela-bindings'
 
 import { ThemeContext } from './context'
 

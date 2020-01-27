@@ -1,5 +1,10 @@
 /* @flow */
-import { FONT_TYPE, STATIC_TYPE, KEYFRAME_TYPE, RULE_TYPE } from 'fela-utils'
+import {
+  FONT_TYPE,
+  STATIC_TYPE,
+  KEYFRAME_TYPE,
+  RULE_TYPE,
+} from '@zaninime/fela-utils'
 
 import type { NodeAttributes } from '../../../../../flowtypes/DOMNode'
 

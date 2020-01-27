@@ -1,8 +1,8 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createSnapshot } from 'jest-react-fela'
-import { FelaTheme } from 'react-fela'
+import { createSnapshot } from '@zaninime/jest-react-fela'
+import { FelaTheme } from '@zaninime/react-fela'
 
 describe('Using the FelaTheme component', () => {
   it('correctly pass the theme down', () => {

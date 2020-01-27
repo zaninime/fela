@@ -96,7 +96,7 @@ run(main, {
 For composition, you can use `combineRules` e.g:
 
 ```javascript
-import { combineRules } from 'fela'
+import { combineRules } from '@zaninime/fela'
 import { createComponent } from 'cycle-fela'
 
 const Red = () => ({ color: 'red' })

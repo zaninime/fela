@@ -6,7 +6,7 @@ import {
   cssifySupportRules,
   sheetMap,
   RULE_TYPE,
-} from 'fela-utils'
+} from '@zaninime/fela-utils'
 
 import createStyleTagMarkup from './createStyleTagMarkup'
 import getRehydrationIndex from './getRehydrationIndex'

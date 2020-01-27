@@ -12,7 +12,7 @@ import {
   generateCombinedMediaQuery,
   generateCSSSelector,
   RULE_TYPE,
-} from 'fela-utils'
+} from '@zaninime/fela-utils'
 
 import generateMonolithicClassName from './generateMonolithicClassName'
 

@@ -11,9 +11,9 @@ FelaTheme is an alternative component to the [withTheme](withTheme.md)-HoC lever
 
 ## Imports
 ```javascript
-import { FelaTheme } from 'react-fela'
-import { FelaTheme } from 'preact-fela'
-import { FelaTheme } from 'inferno-fela'
+import { FelaTheme } from '@zaninime/react-fela'
+import { FelaTheme } from '@zaninime/preact-fela'
+import { FelaTheme } from '@zaninime/inferno-fela'
 ```
 
 ## Example

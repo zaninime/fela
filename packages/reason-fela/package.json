@@ -1,5 +1,5 @@
 {
-  "name": "reason-fela",
+  "name": "@zaninime/reason-fela",
   "description": "Reason bindings for fela and react-fela",
   "version": "11.0.2",
   "publishConfig": {
@@ -22,8 +22,8 @@
     "url": "https://github.com/robinweser/fela"
   },
   "peerDependencies": {
-    "fela": "^10.x.x",
-    "react-fela": "^10.x.x"
+    "@zaninime/fela": "^10.x.x",
+    "@zaninime/react-fela": "^10.x.x"
   },
   "dependencies": {
     "bs-platform": "^5.0.6",

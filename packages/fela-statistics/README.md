@@ -30,8 +30,8 @@ Adding the statistics enhancer will add a new function to the renderer called `g
 You may call it at any given time, to get the current statistics object.
 
 ```javascript
-import { createRenderer } from 'fela'
-import statistics from 'fela-statistics'
+import { createRenderer } from '@zaninime/fela'
+import statistics from '@zaninime/fela-statistics'
 
 const renderer = createRenderer({
   enhancers: [ statistics() ]

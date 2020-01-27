@@ -17,8 +17,8 @@ You may alternatively use `npm i --save fela-plugin-friendly-pseudo-class`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import friendlyPseudoClass from 'fela-plugin-friendly-pseudo-class'
+import { createRenderer } from '@zaninime/fela'
+import friendlyPseudoClass from '@zaninime/fela-plugin-friendly-pseudo-class'
 
 const renderer = createRenderer({
   plugins: [ friendlyPseudoClass() ]

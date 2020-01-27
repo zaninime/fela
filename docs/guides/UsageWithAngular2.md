@@ -7,7 +7,7 @@ First of all we need to create a Renderer Service which gets injected into our c
 
 ```javascript
 import { Injectable } from '@angular/core'
-import { createRenderer, render } from 'fela'
+import { createRenderer, render } from '@zaninime/fela'
 
 @Injectable()
 export class FelaRendererService {
@@ -75,7 +75,7 @@ Fela ships TypeScript typings which are automatically referenced so you do not n
 ### Renderer Service
 ```typescript
 import { Injectable } from '@angular/core'
-import { createRenderer, render, Renderer } from 'fela'
+import { createRenderer, render, Renderer } from '@zaninime/fela'
 
 @Injectable()
 export class FelaRendererService {
@@ -137,11 +137,11 @@ Your buildchain might require some additional configuration to correctly use the
 You need to add two lines:
 ```typescript
 var map = {
-  'fela': 'node_modules/fela'
+  '@zaninime/fela': 'node_modules/fela'
 }
 
 var packages = {
-  'fela': {
+  '@zaninime/fela': {
     main: 'dist/fela.js',
     defaultExtension: 'js'
   }

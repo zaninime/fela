@@ -1,4 +1,4 @@
-[@bs.module "react-fela"] external useFela_: unit => Js.t('a) = "useFela";
+[@bs.module "@zaninime/react-fela"] external useFela_: unit => Js.t('a) = "useFela";
 
 let useFela = () => {
   let fela = useFela_();
@@ -48,18 +48,18 @@ let useRenderer = () => {
 };
 
 module RendererProvider = {
-  [@bs.module "react-fela"] [@react.component]
+  [@bs.module "@zaninime/react-fela"] [@react.component]
   external make:
     (~renderer: Fela.renderer, ~children: React.element) => React.element =
     "RendererProvider";
 };
 
 module ThemeProvider = {
-  [@bs.module "react-fela"] [@react.component]
+  [@bs.module "@zaninime/react-fela"] [@react.component]
   external make: (~theme: Js.t('a), ~children: React.element) => React.element =
     "ThemeProvider";
 };
 
-[@bs.module "react-fela"]
+[@bs.module "@zaninime/react-fela"]
 external renderToNodeList: Fela.renderer => array(React.element) =
   "renderToNodeList";

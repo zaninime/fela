@@ -1,8 +1,8 @@
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 import devPreset, { createDevPreset } from '../index'
 
-describe('fela-preset-dev', () => {
+describe('@zaninime/fela-preset-dev', () => {
   it('should work without config', () => {
     const renderer = createRenderer({
       plugins: [...devPreset],

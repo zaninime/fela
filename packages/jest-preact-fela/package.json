@@ -1,5 +1,5 @@
 {
-  "name": "jest-preact-fela",
+  "name": "@zaninime/jest-preact-fela",
   "version": "11.0.2",
   "description": "Jest helpers for preact-fela",
   "main": "lib/index.js",
@@ -14,8 +14,8 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
-    "preact-fela",
+    "@zaninime/fela",
+    "@zaninime/preact-fela",
     "testing",
     "preact",
     "jest",
@@ -24,12 +24,12 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "fela": "*",
+    "@zaninime/fela": "*",
     "preact": "*",
-    "preact-fela": "*"
+    "@zaninime/preact-fela": "*"
   },
   "dependencies": {
-    "jest-fela-bindings": "^11.0.2"
+    "@zaninime/jest-fela-bindings": "^11.0.2"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

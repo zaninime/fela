@@ -1,5 +1,5 @@
 {
-  "name": "fela",
+  "name": "@zaninime/fela",
   "version": "11.0.2",
   "description": "State-Driven Styling in JavaScript",
   "typings": "index.d.ts",
@@ -16,7 +16,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "dynamic styling",
     "stylesheet",
     "css",
@@ -35,7 +35,7 @@
     "css-in-js-utils": "^3.0.0",
     "csstype": "^2.5.5",
     "fast-loops": "^1.0.0",
-    "fela-utils": "^11.0.2",
+    "@zaninime/fela-utils": "^11.0.2",
     "isobject": "^3.0.1"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"

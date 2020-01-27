@@ -25,8 +25,8 @@ Create a rule for which the renderer will predictably generate the same unique c
 
 ## Usage
 ```javascript
-import { createRenderer } from 'fela'
-import createIdentifier from 'fela-identifier'
+import { createRenderer } from '@zaninime/fela'
+import createIdentifier from '@zaninime/fela-identifier'
 
 const identifier = createIdentifier()
 const renderer = createRenderer({
@@ -64,7 +64,7 @@ The module exports a function that creates an `identifier`. The `identifier` is 
 ##### Returns
 (*Function*): A Fela rule that can be rendered. It also has a field `className` and an overridden method `toString` that returns the same value as the field `className`. You can use it like this:
 ```js
-import createIdentifier from 'fela-identifier'
+import createIdentifier from '@zaninime/fela-identifier'
 
 const identifier = createIdentifier()
 
@@ -86,8 +86,8 @@ rule.toString()
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import createIdentifier from 'fela-identifier'
+import { createRenderer } from '@zaninime/fela'
+import createIdentifier from '@zaninime/fela-identifier'
 import uuidv4 from 'uuid/v4'
 import hash from 'object-hash'
 
@@ -108,9 +108,9 @@ Usage with `react-fela`:
 ```js
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Provider, connect } from 'react-fela'
-import { createRenderer } from 'fela'
-import createIdentifier from 'fela-identifier'
+import { Provider, connect } from '@zaninime/react-fela'
+import { createRenderer } from '@zaninime/fela'
+import createIdentifier from '@zaninime/fela-identifier'
 
 export const identifier = createIdentifier()
 export const renderer = createRenderer({
@@ -147,8 +147,8 @@ ReactDOM.render(
 You can combine identifying rules with styles and with each other:
 
 ```js
-import { createRenderer, combineRules } from 'fela'
-import createIdentifier from 'fela-identifier'
+import { createRenderer, combineRules } from '@zaninime/fela'
+import createIdentifier from '@zaninime/fela-identifier'
 
 export const identifier = createIdentifier()
 export const renderer = createRenderer({

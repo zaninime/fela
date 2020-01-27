@@ -1,6 +1,6 @@
 /* @flow */
 import arrayEach from 'fast-loops/lib/arrayEach'
-import { RULE_TYPE, getRuleScore } from 'fela-utils'
+import { RULE_TYPE, getRuleScore } from '@zaninime/fela-utils'
 
 import rehydrateSupportRules from './rehydration/rehydrateSupportRules'
 import rehydrateRules from './rehydration/rehydrateRules'

@@ -30,8 +30,8 @@ Here is what a basic test for a Fela React component looks like.
 ```javascript
 import React from 'react';
 import renderer from 'react-test-renderer'
-import { createRenderer } from 'fela'
-import { Provider, createComponent } from 'react-fela'
+import { createRenderer } from '@zaninime/fela'
+import { Provider, createComponent } from '@zaninime/react-fela'
 
 const boxRules = ({ size = 10 }) => ({
   width: size + 'px',
@@ -80,7 +80,7 @@ Fela components need a `renderer` and an optional `theme` available within their
 // test-helpers/felaSnapshot.js
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 function felaSnapshot(component) {
   const felaRenderer = createRenderer()
@@ -97,7 +97,7 @@ export default felaSnapshot
 Now, instead of declaring this function in every test, we can import it from one central location. Let's take a look at our basic test utilizing this function.
 ```javascript
 import React from 'react'
-import { createComponent } from 'react-fela'
+import { createComponent } from '@zaninime/react-fela'
 import felaSnapshot from './test-helpers/felaSnapshot.js'
 
 const boxRules = ({ size = 10 }) => ({
@@ -147,8 +147,8 @@ The snapshot does not indicate anything has actually changed. Because the `class
 // test-helpers/felaSnapshot.js
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
+import { createRenderer } from '@zaninime/fela'
+import { renderToString } from '@zaninime/fela-tools'
 
 // splits the css string into a more readable format (credit: este's source)
 const prettifyFelaString = (str) => str.replace(/\.[a-z]+/g, '\n    $&')
@@ -213,9 +213,9 @@ Here is the full example.
 // Box.test.js
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
-import { Provider, createComponent } from 'react-fela'
+import { createRenderer } from '@zaninime/fela'
+import { renderToString } from '@zaninime/fela-tools'
+import { Provider, createComponent } from '@zaninime/react-fela'
 
 const boxRules = ({ size = 10 }) => ({
   width: size + 'px',
@@ -260,8 +260,8 @@ You may also consider [Enzyme](http://airbnb.io/enzyme/) as your React renderer 
 // test-helpers/felaShallow.js
 import React from 'react'
 import { shallow as enzymeShallow } from 'enzyme'
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
+import { createRenderer } from '@zaninime/fela'
+import { renderToString } from '@zaninime/fela-tools'
 import toJson from 'enzyme-to-json'
 
 const shallow = (node, options = {}) => {
@@ -302,9 +302,9 @@ console.log(shallow(<Box>hello</Box>).snapshot())
 import React from 'react'
 import PropTypes from 'prop-types'
 import { mount as enzymeMount } from 'enzyme'
-import { createRenderer } from 'fela'
-import { renderToString } from 'fela-tools'
-import { createTheme } from 'fela-bindings'
+import { createRenderer } from '@zaninime/fela'
+import { renderToString } from '@zaninime/fela-tools'
+import { createTheme } from '@zaninime/fela-bindings'
 import toJson from 'enzyme-to-json'
 import myTheme from './my-theme'
 

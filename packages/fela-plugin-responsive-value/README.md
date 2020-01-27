@@ -17,8 +17,8 @@ You may alternatively use `npm i --save fela-plugin-responsive-value`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import responsiveValue from 'fela-plugin-responsive-value'
+import { createRenderer } from '@zaninime/fela'
+import responsiveValue from '@zaninime/fela-plugin-responsive-value'
 
 const renderer = createRenderer({
   plugins: [ responsiveValue() ]
@@ -34,8 +34,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import responsiveValue from 'fela-plugin-responsive-value'
+import { createRenderer } from '@zaninime/fela'
+import responsiveValue from '@zaninime/fela-plugin-responsive-value'
 
 // if we have 2 values, use default and large media query
 // if we get 3, also use a tablet media query in between

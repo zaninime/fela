@@ -1,9 +1,9 @@
 import { render } from 'inferno'
 import { createElement } from 'inferno-create-element'
-import { createRenderer } from 'fela'
-import { RendererProvider, ThemeProvider } from 'inferno-fela'
+import { createRenderer } from '@zaninime/fela'
+import { RendererProvider, ThemeProvider } from '@zaninime/inferno-fela'
 
-import { createSnapshotFactory } from 'jest-fela-bindings'
+import { createSnapshotFactory } from '@zaninime/jest-fela-bindings'
 
 export default createSnapshotFactory(
   createElement,

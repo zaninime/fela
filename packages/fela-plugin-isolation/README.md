@@ -17,8 +17,8 @@ You may alternatively use `npm i --save fela-plugin-isolation`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import isolation from 'fela-plugin-isolation'
+import { createRenderer } from '@zaninime/fela'
+import isolation from '@zaninime/fela-plugin-isolation'
 
 const renderer = createRenderer({
   plugins: [ isolation() ]
@@ -33,8 +33,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import isolation from 'fela-plugin-isolation'
+import { createRenderer } from '@zaninime/fela'
+import isolation from '@zaninime/fela-plugin-isolation'
 
 const isolationPlugin = isolation({
   exclude: [

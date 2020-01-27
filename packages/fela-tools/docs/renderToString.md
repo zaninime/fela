@@ -14,7 +14,7 @@ Renders all cached styles into a single CSS string. Styles are grouped in the fo
 ### Example
 ```javascript
 import { renderToString } from 'fela-dom/server'
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 

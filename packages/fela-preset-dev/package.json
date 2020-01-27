@@ -1,5 +1,5 @@
 {
-  "name": "fela-preset-dev",
+  "name": "@zaninime/fela-preset-dev",
   "version": "11.0.2",
   "description": "Fela plugin preset for web applications",
   "main": "lib/index.js",
@@ -14,15 +14,15 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "cssinjs"
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "fela-plugin-logger": "^11.0.2",
-    "fela-plugin-validator": "^11.0.2"
+    "@zaninime/fela-plugin-logger": "^11.0.2",
+    "@zaninime/fela-plugin-validator": "^11.0.2"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

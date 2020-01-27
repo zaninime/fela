@@ -10,9 +10,9 @@ Accepts a list of [enhancers](../../advanced/Enhancers.md).
 
 ## Example
 ```javascript
-import { createRenderer, enhance } from 'fela'
-import perf from 'fela-perf'
-import beautifier from 'fela-beautifier'
+import { createRenderer, enhance } from '@zaninime/fela'
+import perf from '@zaninime/fela-perf'
+import beautifier from '@zaninime/fela-beautifier'
 
 const enhancer = enhance(
   perf(),

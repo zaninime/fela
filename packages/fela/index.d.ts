@@ -1,6 +1,6 @@
-declare module "fela" {
+declare module "@zaninime/fela" {
   import * as CSS from 'csstype';
-  import { TRuleType, TKeyframeType, TFontType, TStaticType, TClearType } from 'fela-utils';
+  import { TRuleType, TKeyframeType, TFontType, TStaticType, TClearType } from '@zaninime/fela-utils';
 
   export type TRuleProps = {};
   export type TRule<T = TRuleProps> = (props: T, renderer: IRenderer) => IStyle
@@ -65,8 +65,8 @@ declare module "fela" {
   function enhance(...enhancers: Array<TEnhancer>): (rendererCreator: TRendererCreator) => TRendererCreator;
 }
 
-declare module "fela-dom" {
-  import { IRenderer } from 'fela';
+declare module "@zaninime/fela-dom" {
+  import { IRenderer } from '@zaninime/fela';
 
   function render(renderer: IRenderer): void;
   function rehydrate(renderer: IRenderer): void;
@@ -79,8 +79,8 @@ declare module "fela-dom" {
   }[];
 }
 
-declare module "fela-tools" {
-  import { TRule, TRuleProps, IStyle, IRenderer } from "fela";
+declare module "@zaninime/fela-tools" {
+  import { TRule, TRuleProps, IStyle, IRenderer } from "@zaninime/fela";
 
   export type TMultiRuleObject<Props = TRuleProps, Styles = {}> = {[key in keyof Styles]: TRule<Props> | IStyle}
   export type TMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props, renderer: IRenderer) => TMultiRuleObject<Props, Styles>
@@ -121,14 +121,14 @@ declare module "fela-tools" {
 /**
  * ENHANCERS
  */
-declare module "fela-beautifier" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-beautifier" {
+  import { TEnhancer } from "@zaninime/fela";
 
   export default function(options?: object): TEnhancer;
 }
 
-declare module "fela-identifier" {
-  import { TRule, TEnhancer } from "fela";
+declare module "@zaninime/fela-identifier" {
+  import { TRule, TEnhancer } from "@zaninime/fela";
 
   interface Configs {
     prefix?: string;
@@ -143,8 +143,8 @@ declare module "fela-identifier" {
   export default function(configs?: Configs): TEnhancer & Identifier;
 }
 
-declare module "fela-layout-debugger" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-layout-debugger" {
+  import { TEnhancer } from "@zaninime/fela";
 
   interface DebuggerOptions {
     mode?: "outline" | "backgroundColor";
@@ -154,8 +154,8 @@ declare module "fela-layout-debugger" {
   export default function(options?: DebuggerOptions): TEnhancer;
 }
 
-declare module "fela-logger" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-logger" {
+  import { TEnhancer } from "@zaninime/fela";
 
   interface LoggerOptions {
     logCSS?: boolean;
@@ -165,8 +165,8 @@ declare module "fela-logger" {
   export default function(options?: LoggerOptions): TEnhancer;
 }
 
-declare module "fela-monolithic" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-monolithic" {
+  import { TEnhancer } from "@zaninime/fela";
 
   interface MonolithicOptions {
     prettySelectors?: boolean;
@@ -175,19 +175,19 @@ declare module "fela-monolithic" {
   export default function(options?: MonolithicOptions): TEnhancer;
 }
 
-declare module "fela-perf" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-perf" {
+  import { TEnhancer } from "@zaninime/fela";
 
   export default function(): TEnhancer;
 }
 
-declare module "fela-statistics" {
-  import { TEnhancer } from "fela";
+declare module "@zaninime/fela-statistics" {
+  import { TEnhancer } from "@zaninime/fela";
 
   export default function(): TEnhancer;
 }
 
-declare module "fela-utils" {
+declare module "@zaninime/fela-utils" {
   export type TRuleType = "RULE"
   export type TKeyframeType = "KEYFRAME"
   export type TFontType = "FONT"
@@ -204,14 +204,14 @@ declare module "fela-utils" {
 /**
  * PLUGINS
  */
-declare module "fela-plugin-bidi" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-bidi" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(flowDirection: 'ltr' | 'rtl'): TPlugin;
 }
 
-declare module "fela-plugin-custom-property" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-custom-property" {
+  import { TPlugin } from "@zaninime/fela";
 
   interface CustomProperties {
     [property: string]: (value: any) => any,
@@ -220,38 +220,38 @@ declare module "fela-plugin-custom-property" {
   export default function(properties: CustomProperties): TPlugin;
 }
 
-declare module "fela-plugin-embedded" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-embedded" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-extend" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-extend" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-fallback-value" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-fallback-value" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-friendly-pseudo-class" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-friendly-pseudo-class" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-important" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-important" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-isolation" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-isolation" {
+  import { TPlugin } from "@zaninime/fela";
 
   interface IsolationOptions {
     exclude?: string[];
@@ -260,14 +260,14 @@ declare module "fela-plugin-isolation" {
   export default function(options?: IsolationOptions): TPlugin;
 }
 
-declare module "fela-plugin-logger" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-logger" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-named-keys" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-named-keys" {
+  import { TPlugin } from "@zaninime/fela";
 
   interface MediaQueryMap {
     [key: string]: string;
@@ -276,38 +276,38 @@ declare module "fela-plugin-named-keys" {
   export default function(mediaQueryMap: MediaQueryMap): TPlugin;
 }
 
-declare module "fela-plugin-native-media-query" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-native-media-query" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-placeholder-prefixer" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-placeholder-prefixer" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-prefixer" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-prefixer" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-rtl" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-rtl" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-simulate" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-simulate" {
+  import { TPlugin } from "@zaninime/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "fela-plugin-unit" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-unit" {
+  import { TPlugin } from "@zaninime/fela";
 
   type Unit = "ch" | "em" | "ex" | "rem" | "vh" | "vw" | "vmin" | "vmax" | "px" | "cm" | "mm" | "in" | "pc" | "pt" | "mozmm";
 
@@ -322,8 +322,8 @@ declare module "fela-plugin-unit" {
   ): TPlugin;
 }
 
-declare module "fela-plugin-validator" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-plugin-validator" {
+  import { TPlugin } from "@zaninime/fela";
 
   interface Configs {
     logInvalid?: boolean;
@@ -337,15 +337,15 @@ declare module "fela-plugin-validator" {
 /**
  * PRESETS
  */
-declare module "fela-preset-web" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-preset-web" {
+  import { TPlugin } from "@zaninime/fela";
 
   const presets: TPlugin[];
   export default presets;
 }
 
-declare module "fela-preset-dev" {
-  import { TPlugin } from "fela";
+declare module "@zaninime/fela-preset-dev" {
+  import { TPlugin } from "@zaninime/fela";
 
   const presets: TPlugin[];
   export default presets;

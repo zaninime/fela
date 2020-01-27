@@ -159,7 +159,7 @@ Renames all usages of `Provider` to `RendererProvider`. Also works for named imp
 <summary>Before</summary>
 
 ```javascript
-import { Provider } from 'react-fela'
+import { Provider } from '@zaninime/react-fela'
 
 const Usage = (
   <Provider renderer={renderer}>
@@ -168,7 +168,7 @@ const Usage = (
 )
 ```
 ```javascript
-import { Provider as FelaProvider } from 'react-fela'
+import { Provider as FelaProvider } from '@zaninime/react-fela'
 
 const Usage = (
   <FelaProvider renderer={renderer}>
@@ -182,7 +182,7 @@ const Usage = (
 <summary>After</summary>
 
 ```javascript
-import { RendererProvider } from 'react-fela'
+import { RendererProvider } from '@zaninime/react-fela'
 
 const Usage = (
   <RendererProvider renderer={renderer}>
@@ -191,7 +191,7 @@ const Usage = (
 )
 ```
 ```javascript
-import { RendererProvider as FelaProvider } from 'react-fela'
+import { RendererProvider as FelaProvider } from '@zaninime/react-fela'
 
 const Usage = (
   <FelaProvider renderer={renderer}>

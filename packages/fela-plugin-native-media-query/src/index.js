@@ -4,7 +4,7 @@ import { Dimensions } from 'react-native'
 /* @flow */
 import isPlainObject from 'isobject'
 import { match } from 'css-mediaquery'
-import { isMediaQuery } from 'fela-utils'
+import { isMediaQuery } from '@zaninime/fela-utils'
 import assignStyle from 'css-in-js-utils/lib/assignStyle'
 
 import DimensionProvider from './components/DimensionProvider'

@@ -16,7 +16,7 @@ In order to create styled presentational components, react-fela provides the [Fe
 It accepts a single property *style* that accepts a style object, style function or array of both.
 
 ```javascript
-import { FelaComponent } from 'react-fela'
+import { FelaComponent } from '@zaninime/react-fela'
 
 const style = {
   padding: '25px',
@@ -85,7 +85,7 @@ const Header = props => (
 By leveraging the array-format for style, we can even achieve composition pretty straight-forward.
 
 ```javascript
-import { createComponent } from 'react-fela'
+import { createComponent } from '@zaninime/react-fela'
 
 const title = ({ color }) => ({
   fontSize: '20px',
@@ -113,7 +113,7 @@ It leverages React's [context](https://facebook.github.io/react/docs/context.htm
 As shown in the example above, the theme can be accessed via `props.theme` within your style function.
 
 ```javascript
-import { FelaComponent, ThemeProvider } from 'react-fela'
+import { FelaComponent, ThemeProvider } from '@zaninime/react-fela'
 
 const theme = {
   spacing: {

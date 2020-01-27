@@ -9,7 +9,7 @@ If you prefer using style objects, do not forget to provide a selector as well.
 > **Note**: Style objects will also be processed with all applied plugins.
 
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -27,7 +27,7 @@ Rendering CSS strings is especially helpful if you want to use third-party or le
 This method is **not recommended as no further processing with plugins** is done. It should only be used to insert large third-party CSS files.
 
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -36,7 +36,7 @@ renderer.renderStatic('*{margin:0;padding:0}')
 
 Using [ECMAScript 2015 template strings](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/template_strings) we can even write multi-line CSS styles. <br>This is helpful if we want to copy large CSS files directly into our JavaScript file.
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 
@@ -68,7 +68,7 @@ We can even directly import and use existing CSS files.<br>
 // directly import CSS files into your JavaScript files
 import css from 'react-aspect-ratio/aspect-ratio.css'
 
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 const renderer = createRenderer()
 

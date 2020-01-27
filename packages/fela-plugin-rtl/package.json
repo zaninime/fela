@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-rtl",
+  "name": "@zaninime/fela-plugin-rtl",
   "version": "11.0.2",
   "description": "Fela plugin to convert styles to RTL",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "rtl",
     "accessibility"

@@ -2,7 +2,7 @@
 import objectReduce from 'fast-loops/lib/objectReduce'
 import arrayReduce from 'fast-loops/lib/arrayReduce'
 
-import { combineRules } from 'fela'
+import { combineRules } from '@zaninime/fela'
 
 function safeRule(ruleOrObject: Function | Object): Function {
   return typeof ruleOrObject === 'function' ? ruleOrObject : () => ruleOrObject

@@ -1,7 +1,7 @@
 /* @flow */
 import { Component } from 'inferno'
 import { createElement } from 'inferno-create-element'
-import { connectFactory } from 'fela-bindings'
+import { connectFactory } from '@zaninime/fela-bindings'
 
 import { RendererContext, ThemeContext } from './context'
 

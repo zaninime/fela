@@ -2,7 +2,7 @@
 /* eslint-disable consistent-return, no-console */
 import cssbeautify from 'cssbeautify'
 
-import { CLEAR_TYPE } from 'fela-utils'
+import { CLEAR_TYPE } from '@zaninime/fela-utils'
 
 import type DOMRenderer from '../../../flowtypes/DOMRenderer'
 

@@ -9,7 +9,7 @@ import {
   KEYFRAME_TYPE,
   FONT_TYPE,
   STATIC_TYPE,
-} from 'fela-utils'
+} from '@zaninime/fela-utils'
 
 import getRehydrationIndex from './getRehydrationIndex'
 

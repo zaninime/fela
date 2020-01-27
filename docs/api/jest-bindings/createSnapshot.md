@@ -19,9 +19,9 @@ It formats and optimises the output for maximum readability.
 
 ## Imports
 ```javascript
-import { createSnapshot } from 'jest-react-fela'
-import { createSnapshot } from 'jest-preact-fela'
-import { createSnapshot } from 'jest-inferno-fela'
+import { createSnapshot } from '@zaninime/jest-react-fela'
+import { createSnapshot } from '@zaninime/jest-preact-fela'
+import { createSnapshot } from '@zaninime/jest-inferno-fela'
 ```
 
 ## Example

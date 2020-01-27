@@ -17,8 +17,8 @@ You may alternatively use `npm i --save fela-plugin-fallback-value`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import fallbackValue from 'fela-plugin-fallback-value'
+import { createRenderer } from '@zaninime/fela'
+import fallbackValue from '@zaninime/fela-plugin-fallback-value'
 
 const renderer = createRenderer({
   plugins: [ fallbackValue() ]

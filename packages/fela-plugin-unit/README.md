@@ -17,8 +17,8 @@ You may alternatively use `npm i --save fela-plugin-unit`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import unit from 'fela-plugin-unit'
+import { createRenderer } from '@zaninime/fela'
+import unit from '@zaninime/fela-plugin-unit'
 
 const renderer = createRenderer({
   plugins: [ unit() ]
@@ -35,8 +35,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import unit from 'fela-plugin-unit'
+import { createRenderer } from '@zaninime/fela'
+import unit from '@zaninime/fela-plugin-unit'
 
 const unitPlugin = unit('em', {
   margin: '%',

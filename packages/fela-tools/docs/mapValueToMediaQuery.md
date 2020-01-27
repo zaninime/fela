@@ -11,7 +11,7 @@ Transforms a set of mediaQuery-value pairs into valid style object media queries
 
 ## Example
 ```javascript
-import { mapValueToMediaQuery } from 'fela-tools'
+import { mapValueToMediaQuery } from '@zaninime/fela-tools'
 
 const rule = props => ({
   color: 'red',

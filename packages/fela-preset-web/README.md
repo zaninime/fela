@@ -24,8 +24,8 @@ You may alternatively use `npm i --save fela-preset-web`.
 Simply use the spread operator to add the preset.
 
 ```javascript
-import { createRenderer } from 'fela'
-import webPreset from 'fela-preset-web'
+import { createRenderer } from '@zaninime/fela'
+import webPreset from '@zaninime/fela-preset-web'
 
 const renderer = createRenderer({
   plugins: [
@@ -40,8 +40,8 @@ Some plugins also accept some configuration options.
 We can use the `createWebPreset` factory and pass the options using the plugin name as a key.
 
 ```javascript
-import { createRenderer } from 'fela'
-import { createWebPreset } from 'fela-preset-web'
+import { createRenderer } from '@zaninime/fela'
+import { createWebPreset } from '@zaninime/fela-preset-web'
 
 const renderer = createRenderer({
   plugins: [

@@ -17,8 +17,8 @@ Transforms a set of either style objects or rules into a set of valid rules.
 
 #### Example
 ```javascript
-import { createRenderer } from 'fela'
-import { StyleSheet } from 'fela-tools'
+import { createRenderer } from '@zaninime/fela'
+import { StyleSheet } from '@zaninime/fela-tools'
 
 const rules = StyleSheet.create({
   header: props => ({

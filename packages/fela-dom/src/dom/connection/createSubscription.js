@@ -8,7 +8,7 @@ import {
   STATIC_TYPE,
   CLEAR_TYPE,
   generateCSSRule,
-} from 'fela-utils'
+} from '@zaninime/fela-utils'
 
 import getNodeFromCache from './getNodeFromCache'
 import insertRule from './insertRule'

@@ -10,8 +10,8 @@ The following code shows a simple server example using [express](https://github.
 ```javascript
 import express from 'express'
 import React from 'react'
-import { createRenderer } from 'fela'
-import { renderToMarkup } from 'fela-dom'
+import { createRenderer } from '@zaninime/fela'
+import { renderToMarkup } from '@zaninime/fela-dom'
 
 const rule = props => ({
   color: props.color,

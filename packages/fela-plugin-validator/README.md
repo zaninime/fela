@@ -18,8 +18,8 @@ You may alternatively use `npm i --save fela-plugin-validator`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import validator from 'fela-plugin-validator'
+import { createRenderer } from '@zaninime/fela'
+import validator from '@zaninime/fela-plugin-validator'
 
 const renderer = createRenderer({
   plugins: [ validator() ]
@@ -40,8 +40,8 @@ Make sure that you place the validator plugin *at the end* of your plugins array
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import validator from 'fela-plugin-validator'
+import { createRenderer } from '@zaninime/fela'
+import validator from '@zaninime/fela-plugin-validator'
 
 const validatorPlugin = validator({
   logInvalid: true,

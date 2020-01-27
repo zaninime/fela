@@ -36,7 +36,7 @@ It is reactive and auto-updates once registered to the DOM.<br>
 The following example illustrates the key parts of Fela though it only shows the very basics.
 
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
 // a simple style rule is a pure function of state
 // that returns an object of style declarations
@@ -81,8 +81,8 @@ Using the [React bindings](packages/react-fela), you get powerful APIs to create
 
 ```javascript
 import React from 'react'
-import { FelaProvider, useFela } from 'react-fela'
-import { createRenderer } from 'fela';
+import { FelaProvider, useFela } from '@zaninime/react-fela'
+import { createRenderer } from '@zaninime/fela';
 import { render } from 'react-dom'
 
 const rule = state => ({

@@ -1,5 +1,5 @@
 {
-  "name": "fela-plugin-fallback-value",
+  "name": "@zaninime/fela-plugin-fallback-value",
   "version": "11.0.2",
   "description": "Fela plugin to resolve fallback values",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "fela-plugin",
     "fallback value",
     "cssinjs"

@@ -2,9 +2,9 @@ import { shallow as enzymeShallow } from 'enzyme'
 import cssbeautify from 'cssbeautify'
 import toJson from 'enzyme-to-json'
 
-import { ThemeProvider } from 'react-fela' // eslint-disable-line behance/no-deprecated
-import { renderToString } from 'fela-tools'
-import { createRenderer as felaCreateRenderer } from 'fela'
+import { ThemeProvider } from '@zaninime/react-fela' // eslint-disable-line behance/no-deprecated
+import { renderToString } from '@zaninime/fela-tools'
+import { createRenderer as felaCreateRenderer } from '@zaninime/fela'
 
 import mergeOptions from './mergeOptions'
 

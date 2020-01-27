@@ -19,15 +19,15 @@ We might introduce more configuration options with future releases, so be sure t
 
 ## Example
 ```javascript
-import { createRenderer } from 'fela'
+import { createRenderer } from '@zaninime/fela'
 
-import prefixer from 'fela-plugin-prefixer'
-import unit from 'fela-plugin-unit'
-import fallbackValue from 'fela-plugin-fallback-value'
+import prefixer from '@zaninime/fela-plugin-prefixer'
+import unit from '@zaninime/fela-plugin-unit'
+import fallbackValue from '@zaninime/fela-plugin-fallback-value'
 
-import beautifier from 'fela-beautifier'
+import beautifier from '@zaninime/fela-beautifier'
 
-import { renderToString } from 'fela-dom'
+import { renderToString } from '@zaninime/fela-dom'
 
 const config = {
   plugins: [ unit('em'), prefixer(), fallbackValue() ],

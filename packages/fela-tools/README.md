@@ -15,7 +15,7 @@ You may alternatively use `npm i --save fela-tools`.
 The API is exported by the `fela-tools` package by default e.g.
 
 ```javascript
-import { StyleSheet } from 'fela-tools'
+import { StyleSheet } from '@zaninime/fela-tools'
 ```
 
 ## API Reference

@@ -16,8 +16,8 @@ You may alternatively use `npm i --save fela-plugin-native-media-query`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from 'fela'
-import namedMediaQuery from 'fela-plugin-native-media-query'
+import { createRenderer } from '@zaninime/fela'
+import namedMediaQuery from '@zaninime/fela-plugin-native-media-query'
 
 const renderer = createRenderer({
   plugins: [ namedMediaQuery() ]
@@ -32,8 +32,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from 'fela'
-import namedMediaQuery from 'fela-plugin-native-media-query'
+import { createRenderer } from '@zaninime/fela'
+import namedMediaQuery from '@zaninime/fela-plugin-native-media-query'
 
 const namedMediaQueryPlugin = namedMediaQuery({
   desktop: '@media (min-width: 1024px)',

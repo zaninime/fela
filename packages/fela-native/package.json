@@ -1,5 +1,5 @@
 {
-  "name": "fela-native",
+  "name": "@zaninime/fela-native",
   "version": "11.0.2",
   "description": "Fela Renderer for React Native",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "fela",
+    "@zaninime/fela",
     "react-native",
     "dynamic styling",
     "stylesheet",
@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "fast-loops": "^1.0.0",
-    "fela-utils": "^11.0.2"
+    "@zaninime/fela-utils": "^11.0.2"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

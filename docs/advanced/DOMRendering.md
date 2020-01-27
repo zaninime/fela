@@ -18,8 +18,8 @@ In order to enable the development mode, add a `devMode: true` flag to your [ren
 ## Example
 
 ```javascript
-import { createRenderer } from 'fela'
-import { render } from 'fela-dom'
+import { createRenderer } from '@zaninime/fela'
+import { render } from '@zaninime/fela-dom'
 
 const rule = props => ({
   backgroundColor: 'red',

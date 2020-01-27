@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/fela-statistics",
-  "version": "12.0.2",
+  "version": "12.0.3",
   "description": "Statistic generation tool for Fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -25,8 +25,8 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@fela-next/fela-tools": "^12.0.2",
-    "@fela-next/fela-utils": "^12.0.2",
+    "@fela-next/fela-tools": "^12.0.3",
+    "@fela-next/fela-utils": "^12.0.3",
     "gzip-size": "^3.0.0"
   },
   "gitHead": "ed7959ce75ebc37199141d2c3c2201715ae54078",

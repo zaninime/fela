@@ -20,5 +20,8 @@
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
-  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5",
+  "publishConfig": {
+    "access": "public"
+  }
 }

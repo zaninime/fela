@@ -14,5 +14,8 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-test-renderer": "^16.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

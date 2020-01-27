@@ -24,7 +24,7 @@
     "css-in-js-utils": "^3.0.0",
     "fast-loops": "^1.0.0"
   },
-  "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",
+  "gitHead": "ed7959ce75ebc37199141d2c3c2201715ae54078",
   "publishConfig": {
     "access": "public"
   }

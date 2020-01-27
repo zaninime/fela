@@ -12,8 +12,8 @@ You may alternatively use `npm i --save fela-logger`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import logger from '@zaninime/fela-logger'
+import { createRenderer } from '@fela-next/fela'
+import logger from '@fela-next/fela-logger'
 
 const renderer = createRenderer({
   enhancers: [ logger() ]
@@ -28,8 +28,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import logger from '@zaninime/fela-logger'
+import { createRenderer } from '@fela-next/fela'
+import logger from '@fela-next/fela-logger'
 
 const loggerEnhancer = logger({
   logCSS: true,

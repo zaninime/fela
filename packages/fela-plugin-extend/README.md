@@ -15,8 +15,8 @@ You may alternatively use `npm i --save fela-plugin-extend`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import extend from '@zaninime/fela-plugin-extend'
+import { createRenderer } from '@fela-next/fela'
+import extend from '@fela-next/fela-plugin-extend'
 
 const renderer = createRenderer({
   plugins: [ extend() ]

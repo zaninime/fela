@@ -1,8 +1,8 @@
 import React from 'react'
-import { FelaComponent } from '@zaninime/react-fela'
+import { FelaComponent } from '@fela-next/react-fela'
 
-import { createRenderer } from '@zaninime/fela'
-import plugins from '@zaninime/fela-preset-web'
+import { createRenderer } from '@fela-next/fela'
+import plugins from '@fela-next/fela-preset-web'
 
 import createSnapshot from '../createSnapshot'
 

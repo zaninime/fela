@@ -1,4 +1,4 @@
-import { RULE_TYPE, KEYFRAME_TYPE } from '@zaninime/fela-utils'
+import { RULE_TYPE, KEYFRAME_TYPE } from '@fela-next/fela-utils'
 import validator from '../index'
 
 describe('Validator plugin', () => {

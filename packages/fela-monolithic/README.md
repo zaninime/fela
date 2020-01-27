@@ -15,8 +15,8 @@ You may alternatively use `npm i --save fela-monolithic`.
 ## Usage
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import monolithic from '@zaninime/fela-monolithic'
+import { createRenderer } from '@fela-next/fela'
+import monolithic from '@fela-next/fela-monolithic'
 
 const renderer = createRenderer({
   enhancers: [ monolithic() ]
@@ -59,8 +59,8 @@ If you are using `prettySelectors` with plain Fela rules it will add the `rule.n
 > Note: anonymous functions will still only use the hash!
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import monolithic from '@zaninime/fela-monolithic'
+import { createRenderer } from '@fela-next/fela'
+import monolithic from '@fela-next/fela-monolithic'
 
 const renderer = createRenderer({
   enhancers: [ monolithic({ prettySelectors: true }) ]
@@ -81,7 +81,7 @@ renderer.renderRule(redText) // => redText_137u7ef
 If you use it together with `createComponent` or `connect` from `react-fela`, `preact-fela` or `inferno-fela`, it will also add the component type or displayName to the rule. e.g.
 
 ```javascript
-import { createComponent } from '@zaninime/react-fela'
+import { createComponent } from '@fela-next/react-fela'
 
 const Button = () => ({
   color: 'red'

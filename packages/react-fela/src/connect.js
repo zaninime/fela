@@ -1,6 +1,6 @@
 /* @flow */
 import { Component, createElement } from 'react'
-import { connectFactory } from '@zaninime/fela-bindings'
+import { connectFactory } from '@fela-next/fela-bindings'
 
 import { RendererContext, ThemeContext } from './context'
 

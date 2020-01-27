@@ -45,11 +45,11 @@ module RendererConfig = {
 };
 
 module Renderer = {
-  [@bs.module "@zaninime/fela"]
+  [@bs.module "@fela-next/fela"]
   external make: RendererConfig.t => Js.t('a) = "createRenderer";
 };
 
-[@bs.module "@zaninime/fela"] [@bs.variadic]
+[@bs.module "@fela-next/fela"] [@bs.variadic]
 external combineRules_: array(style) => style = "combineRules";
 let combineRules = (rules: list(style)) =>
   combineRules_(Array.of_list(rules));
@@ -63,58 +63,58 @@ module Dom = {
     rehydration: int,
   };
 
-  [@bs.module "@zaninime/fela-dom"]
+  [@bs.module "@fela-next/fela-dom"]
   external renderToMarkup: renderer => string = "renderToMarkup";
 
-  [@bs.module "@zaninime/fela-dom"] external render: renderer => unit = "render";
+  [@bs.module "@fela-next/fela-dom"] external render: renderer => unit = "render";
 
-  [@bs.module "@zaninime/fela-dom"] external rehydrate: renderer => unit = "rehydrate";
+  [@bs.module "@fela-next/fela-dom"] external rehydrate: renderer => unit = "rehydrate";
 
-  [@bs.module "@zaninime/fela-dom"]
+  [@bs.module "@fela-next/fela-dom"]
   external renderToSheetList: renderer => array(sheet) = "renderToSheetList";
 };
 
 module Plugins = {
   // TODO: more type-safe input (rtl and ltr)
-  [@bs.module "@zaninime/fela-plugin-bidi"] external bidi: string => plugin = "default";
+  [@bs.module "@fela-next/fela-plugin-bidi"] external bidi: string => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-custom-property"]
+  [@bs.module "@fela-next/fela-plugin-custom-property"]
   external customProperty: Js.t('a) => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-embedded"]
+  [@bs.module "@fela-next/fela-plugin-embedded"]
   external embedded: unit => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-expand-shorthand"]
+  [@bs.module "@fela-next/fela-plugin-expand-shorthand"]
   external expandShorthand: bool => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-extend"]
+  [@bs.module "@fela-next/fela-plugin-extend"]
   external extend: unit => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-fallback-value"]
+  [@bs.module "@fela-next/fela-plugin-fallback-value"]
   external fallbackValue: unit => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-named-keys"]
+  [@bs.module "@fela-next/fela-plugin-named-keys"]
   external namedKeys: Js.t('a) => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-named-keys"]
+  [@bs.module "@fela-next/fela-plugin-named-keys"]
   external namedKeysWithProps: (Js.t('a) => Js.t('a)) => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-responsive-value"]
+  [@bs.module "@fela-next/fela-plugin-responsive-value"]
   external responsiveValue:
     ((array(string), Js.t('a)) => array(string), Js.t('a)) => plugin =
     "default";
 
-  [@bs.module "@zaninime/fela-plugin-placeholder-prefixer"]
+  [@bs.module "@fela-next/fela-plugin-placeholder-prefixer"]
   external placeholderPrefixer: unit => plugin = "default";
 
-  [@bs.module "@zaninime/fela-plugin-prefixer"]
+  [@bs.module "@fela-next/fela-plugin-prefixer"]
   external prefixer: unit => plugin = "default";
 
   // TODO: more type-safe input (rtl and ltr)
-  [@bs.module "@zaninime/fela-plugin-rtl"]
+  [@bs.module "@fela-next/fela-plugin-rtl"]
   external rtl: option(string) => plugin = "default";
   // TODO: how to improve that?
-  [@bs.module "@zaninime/fela-plugin-unit"]
+  [@bs.module "@fela-next/fela-plugin-unit"]
   external unit:
     (
       ~unit: string=?,
@@ -124,7 +124,7 @@ module Plugins = {
     plugin =
     "default";
 
-  [@bs.module "@zaninime/fela-plugin-validator"]
+  [@bs.module "@fela-next/fela-plugin-validator"]
   external validator:
     (~logInvalid: bool=?, ~deleteInvalid: bool=?, ~useCSSLint: bool=?) =>
     plugin =
@@ -132,33 +132,33 @@ module Plugins = {
 };
 
 module Enhancers = {
-  [@bs.module "@zaninime/fela-beautifier"]
+  [@bs.module "@fela-next/fela-beautifier"]
   external beautifier: unit => enhancer = "default";
 
   // TODO: improve input
-  [@bs.module "@zaninime/fela-layout-debugger"]
+  [@bs.module "@fela-next/fela-layout-debugger"]
   external layoutDebugger: Js.t('a) => enhancer = "default";
 
   // TODO: improve input
-  [@bs.module "@zaninime/fela-logger"]
+  [@bs.module "@fela-next/fela-logger"]
   external logger: Js.t('a) => enhancer = "default";
 
-  [@bs.module "@zaninime/fela-monolithic"]
+  [@bs.module "@fela-next/fela-monolithic"]
   external monolithic: unit => enhancer = "default";
 
-  [@bs.module "@zaninime/fela-sort-media-query-mobile-first"]
+  [@bs.module "@fela-next/fela-sort-media-query-mobile-first"]
   external sortMediaQueryMobileFirst: unit => enhancer = "default";
 
-  [@bs.module "@zaninime/fela-perf"] external perf: unit => enhancer = "default";
+  [@bs.module "@fela-next/fela-perf"] external perf: unit => enhancer = "default";
 
-  [@bs.module "@zaninime/fela-sort-classnames"]
+  [@bs.module "@fela-next/fela-sort-classnames"]
   external sortClassnames: unit => enhancer = "default";
 
-  [@bs.module "@zaninime/fela-statistics"]
+  [@bs.module "@fela-next/fela-statistics"]
   external statistics: unit => enhancer = "default";
 };
 
 module Presets = {
-  [@bs.module "@zaninime/fela-preset-web"] external web: array(plugin) = "default";
-  [@bs.module "@zaninime/fela-preset-dev"] external dev: array(plugin) = "default";
+  [@bs.module "@fela-next/fela-preset-web"] external web: array(plugin) = "default";
+  [@bs.module "@fela-next/fela-preset-dev"] external dev: array(plugin) = "default";
 };

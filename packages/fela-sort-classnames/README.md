@@ -12,8 +12,8 @@ You may alternatively use `npm i --save fela-sort-classnames`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import sortClassNames from '@zaninime/fela-sort-classnames'
+import { createRenderer } from '@fela-next/fela'
+import sortClassNames from '@fela-next/fela-sort-classnames'
 
 const renderer = createRenderer({
   enhancers: [ sortClassNames() ]

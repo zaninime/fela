@@ -14,8 +14,8 @@ You may alternatively use `npm i --save fela-layout-debugger`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import layoutDebugger from '@zaninime/fela-layout-debugger'
+import { createRenderer } from '@fela-next/fela'
+import layoutDebugger from '@fela-next/fela-layout-debugger'
 
 const renderer = createRenderer({
   enhancers: [ layoutDebugger() ]
@@ -28,8 +28,8 @@ const renderer = createRenderer({
 It takes an options object with the shape of the official [styles-debugger configuration options](https://github.com/kitze/styles-debugger#configuration-options).
 ##### Example
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import layoutDebugger from '@zaninime/fela-layout-debugger'
+import { createRenderer } from '@fela-next/fela'
+import layoutDebugger from '@fela-next/fela-layout-debugger'
 
 const layoutDebuggerEnhancer = layoutDebugger({
 	pseudoElement: 'before',

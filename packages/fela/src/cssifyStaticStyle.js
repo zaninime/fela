@@ -1,6 +1,6 @@
 /* @flow */
 import cssifyObject from 'css-in-js-utils/lib/cssifyObject'
-import { processStyleWithPlugins, STATIC_TYPE } from '@zaninime/fela-utils'
+import { processStyleWithPlugins, STATIC_TYPE } from '@fela-next/fela-utils'
 
 import minifyCSSString from './minifyCSSString'
 

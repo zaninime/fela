@@ -1,9 +1,9 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createRenderer } from '@zaninime/fela'
-import { createSnapshot } from '@zaninime/jest-react-fela'
-import { connect } from '@zaninime/react-fela'
+import { createRenderer } from '@fela-next/fela'
+import { createSnapshot } from '@fela-next/jest-react-fela'
+import { connect } from '@fela-next/react-fela'
 
 describe('Connect Factory for bindings', () => {
   it('should process rules and create classNames', () => {

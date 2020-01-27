@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/reason-fela",
+  "name": "@fela-next/reason-fela",
   "sources": [
     {
       "dir": "src"

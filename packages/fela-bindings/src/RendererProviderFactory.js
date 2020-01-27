@@ -1,5 +1,5 @@
 /* @flow */
-import { render, rehydrate } from '@zaninime/fela-dom'
+import { render, rehydrate } from '@fela-next/fela-dom'
 import objectEach from 'fast-loops/lib/objectEach'
 
 function hasDOM(renderer, targetDocument) {

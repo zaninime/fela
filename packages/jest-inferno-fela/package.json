@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/jest-inferno-fela",
+  "name": "@fela-next/jest-inferno-fela",
   "version": "12.0.0",
   "description": "Jest helpers for inferno-fela",
   "main": "lib/index.js",
@@ -14,8 +14,8 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
-    "@zaninime/inferno-fela",
+    "@fela-next/fela",
+    "@fela-next/inferno-fela",
     "testing",
     "inferno",
     "jest",
@@ -24,13 +24,13 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "@zaninime/fela": "*",
-    "@zaninime/inferno-fela": "*",
+    "@fela-next/fela": "*",
+    "@fela-next/inferno-fela": "*",
     "inferno": "^4.0.0",
     "inferno-create-element": "^4.0.0"
   },
   "dependencies": {
-    "@zaninime/jest-fela-bindings": "^12.0.0"
+    "@fela-next/jest-fela-bindings": "^12.0.0"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

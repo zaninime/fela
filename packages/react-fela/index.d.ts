@@ -3,13 +3,13 @@ import {
   IRenderer,
   TRule,
   IStyle
-} from "@zaninime/fela";
+} from "@fela-next/fela";
 import {
   TMultiRule,
   TPartialMultiRule,
-} from "@zaninime/fela-tools";
+} from "@fela-next/fela-tools";
 
-declare module "@zaninime/react-fela" {
+declare module "@fela-next/react-fela" {
   interface ThemeProviderProps {
     theme: object;
     overwrite?: boolean;

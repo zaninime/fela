@@ -12,8 +12,8 @@ You may alternatively use `npm i --save fela-sort-media-query-mobile-first`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import sortMediaQueryMobileFirst from '@zaninime/fela-sort-media-query-mobile-first'
+import { createRenderer } from '@fela-next/fela'
+import sortMediaQueryMobileFirst from '@fela-next/fela-sort-media-query-mobile-first'
 
 const renderer = createRenderer({
   enhancers: [ sortMediaQueryMobileFirst() ]

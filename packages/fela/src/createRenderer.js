@@ -18,7 +18,7 @@ import {
   KEYFRAME_TYPE,
   FONT_TYPE,
   CLEAR_TYPE,
-} from '@zaninime/fela-utils'
+} from '@fela-next/fela-utils'
 
 import cssifyFontFace from './cssifyFontFace'
 import cssifyKeyframe from './cssifyKeyframe'

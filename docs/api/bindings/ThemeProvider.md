@@ -16,9 +16,9 @@ Nested themes automatically get combined if not explicitly prevented. This helps
 
 ## Imports
 ```javascript
-import { ThemeProvider } from '@zaninime/react-fela'
-import { ThemeProvider } from '@zaninime/preact-fela'
-import { ThemeProvider } from '@zaninime/inferno-fela'
+import { ThemeProvider } from '@fela-next/react-fela'
+import { ThemeProvider } from '@fela-next/preact-fela'
+import { ThemeProvider } from '@fela-next/inferno-fela'
 ```
 
 ## Example

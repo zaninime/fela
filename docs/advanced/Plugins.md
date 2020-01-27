@@ -11,7 +11,7 @@ They are especially helpful to automate certain aspects of styling such as auto-
 To use plugins we need to add them to the renderer configuration directly. You can do this by passing a configuration object using the `plugins` key while creating your renderer.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const config = {
   plugins: [

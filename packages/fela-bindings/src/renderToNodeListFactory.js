@@ -1,5 +1,5 @@
 /* @flow */
-import { renderToSheetList } from '@zaninime/fela-dom'
+import { renderToSheetList } from '@fela-next/fela-dom'
 import type { DOMRenderer } from '../../../flowtypes/DOMRenderer'
 
 export function renderToNodeListFactory(createElement: Function) {

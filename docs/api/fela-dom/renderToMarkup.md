@@ -24,8 +24,8 @@ The DOM renderer is able to rehydrate its cache from the markup in order to skip
 
 ### Example
 ```javascript
-import { renderToMarkup } from '@zaninime/fela-dom'
-import { createRenderer } from '@zaninime/fela'
+import { renderToMarkup } from '@fela-next/fela-dom'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

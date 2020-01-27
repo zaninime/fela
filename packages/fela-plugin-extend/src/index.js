@@ -4,7 +4,7 @@ import arrayEach from 'fast-loops/lib/arrayEach'
 import assignStyle from 'css-in-js-utils/lib/assignStyle'
 import isPlainObject from 'isobject'
 
-import { isUndefinedValue } from '@zaninime/fela-utils'
+import { isUndefinedValue } from '@fela-next/fela-utils'
 
 function removeUndefined(style: Object): Object {
   objectEach(style, (value, property) => {

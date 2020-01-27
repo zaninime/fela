@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { combineRules, createRenderer } from '@zaninime/fela'
-import { renderToString } from '@zaninime/fela-tools'
-import { connect } from '@zaninime/react-fela'
-import monolithic from '@zaninime/fela-monolithic'
+import { combineRules, createRenderer } from '@fela-next/fela'
+import { renderToString } from '@fela-next/fela-tools'
+import { connect } from '@fela-next/react-fela'
+import monolithic from '@fela-next/fela-monolithic'
 
-import { createSnapshot } from '@zaninime/jest-react-fela'
+import { createSnapshot } from '@fela-next/jest-react-fela'
 
 import createIdentifier from '../index'
 

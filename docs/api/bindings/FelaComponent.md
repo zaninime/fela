@@ -21,9 +21,9 @@ FelaComponent is an alternative component to the [createComponent](createCompone
 
 ## Imports
 ```javascript
-import { FelaComponent } from '@zaninime/react-fela'
-import { FelaComponent } from '@zaninime/preact-fela'
-import { FelaComponent } from '@zaninime/inferno-fela'
+import { FelaComponent } from '@fela-next/react-fela'
+import { FelaComponent } from '@fela-next/preact-fela'
+import { FelaComponent } from '@fela-next/inferno-fela'
 ```
 
 ## Example

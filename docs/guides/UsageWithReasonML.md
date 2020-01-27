@@ -11,7 +11,7 @@ yarn add reason-fela
 # you'll also need at least fela and react-fela
 yarn add fela react-fela
 ```
-In your `bsconfig.json`, include `"@zaninime/reason-fela"` in the `bs-dependencies`.
+In your `bsconfig.json`, include `"@fela-next/reason-fela"` in the `bs-dependencies`.
 
 ## Creating a Fela renderer
 

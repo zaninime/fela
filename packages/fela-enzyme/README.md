@@ -39,8 +39,8 @@ It returns:
 ```js
 import React from 'react';
 import PropTypes from 'prop-types';
-import { felaShallow}  from '@zaninime/fela-enzyme';
-import { createComponent } from '@zaninime/react-fela';
+import { felaShallow}  from '@fela-next/fela-enzyme';
+import { createComponent } from '@fela-next/react-fela';
 
 const theme = {
   fontSizes: [10, 12, 14, 16, 20, 24, 32, 48, 64, 80],
@@ -232,8 +232,8 @@ specified, it uses the default frontend theme. You can also pass your own `creat
 
 ```js
 import React from 'react';
-import { felaMount } from '@zaninime/fela-enzyme';
-import { createComponent } from '@zaninime/react-fela';
+import { felaMount } from '@fela-next/fela-enzyme';
+import { createComponent } from '@fela-next/react-fela';
 
 export const boxRules = ({ size = 10, theme }) => {
   return {

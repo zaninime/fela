@@ -1,6 +1,6 @@
 /* @flow */
 import { JavascriptStylesDebugger as createStyleDebugger } from 'styles-debugger'
-import { combineRules } from '@zaninime/fela'
+import { combineRules } from '@fela-next/fela'
 
 import type DOMRenderer from '../../../flowtypes/DOMRenderer'
 

@@ -21,7 +21,7 @@ useFela is React [hook](https://reactjs.org/docs/hooks-intro.html) that provides
 ## Imports
 > **Note**: Due to lack of support for hooks, useFela is currently only available for react-fela.
 ```javascript
-import { useFela } from '@zaninime/react-fela'
+import { useFela } from '@fela-next/react-fela'
 ```
 
 ## Example

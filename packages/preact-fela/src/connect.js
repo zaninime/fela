@@ -1,7 +1,7 @@
 /* @flow */
 // $FlowFixMe
 import { h as createElement, Component } from 'preact'
-import { connectFactory } from '@zaninime/fela-bindings'
+import { connectFactory } from '@fela-next/fela-bindings'
 
 import { RendererContext, ThemeContext } from './context'
 

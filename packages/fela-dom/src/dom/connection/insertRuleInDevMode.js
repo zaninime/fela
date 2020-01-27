@@ -1,5 +1,5 @@
 /* @flow */
-import { RULE_TYPE } from '@zaninime/fela-utils'
+import { RULE_TYPE } from '@fela-next/fela-utils'
 
 import renderToSheetList from '../../server/renderToSheetList'
 

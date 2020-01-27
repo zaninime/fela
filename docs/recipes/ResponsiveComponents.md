@@ -9,7 +9,7 @@ To achieve responsive styling, media queries were introduced, to style elements 
 Using Fela, a primitive component with e.g. responsive width could look like this:
 
 ```javascript
-import { createComponent } from '@zaninime/react-fela'
+import { createComponent } from '@fela-next/react-fela'
 
 const Responsive = () => ({
   width: '100%',
@@ -57,8 +57,8 @@ It takes an object with mediaQuery-value pairs and maps them to media queries. P
 The above example could look something like this:
 
 ```javascript
-import { createComponent } from '@zaninime/react-fela'
-import { mapValueToMediaQuery } from '@zaninime/fela-tools'
+import { createComponent } from '@fela-next/react-fela'
+import { mapValueToMediaQuery } from '@fela-next/fela-tools'
 
 const Responsive = ({ width, widths }) => ({
   height: '100%',

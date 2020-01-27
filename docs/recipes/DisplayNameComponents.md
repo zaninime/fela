@@ -12,7 +12,7 @@ If you aren't using Babel, another way to handle this problem is by using a HoC.
 When you export your components, just use the HoC [setDisplayName](https://github.com/acdlite/recompose/blob/master/docs/API.md#setdisplayname).
 
 ```javascript
-import { createComponent } from '@zaninime/react-fela'
+import { createComponent } from '@fela-next/react-fela'
 import { setDisplayName } from 'recompose'
 
 const container = ({ padding }) => ({

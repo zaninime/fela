@@ -22,8 +22,8 @@ For details on what the plugin can and cannot do, please see the documentation i
 note about four-directional shorthand properties, as there was a breaking change in version `2.0.0`.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import bidi from '@zaninime/fela-plugin-bidi'
+import { createRenderer } from '@fela-next/fela'
+import bidi from '@fela-next/fela-plugin-bidi'
 
 const renderer = createRenderer({
   plugins: [ bidi('rtl') ]
@@ -32,9 +32,9 @@ const renderer = createRenderer({
 
 With `fela-plugin-fallback-value`:
 ```js
-import { createRenderer } from '@zaninime/fela'
-import fallbackValue from '@zaninime/fela-plugin-fallback-value'
-import bidi from '@zaninime/fela-plugin-bidi'
+import { createRenderer } from '@fela-next/fela'
+import fallbackValue from '@fela-next/fela-plugin-fallback-value'
+import bidi from '@fela-next/fela-plugin-bidi'
 
 const renderer = createRenderer({
   plugins:[fallbackValue(), bidi('rtl')] // Order matters.

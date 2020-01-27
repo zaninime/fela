@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-statistics",
+  "name": "@fela-next/fela-statistics",
   "version": "12.0.0",
   "description": "Statistic generation tool for Fela",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "fela-devtools",
     "statistics",
     "stats",
@@ -25,9 +25,9 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@zaninime/fela-tools": "^12.0.0",
-    "@zaninime/fela-utils": "^12.0.0",
+    "@fela-next/fela-tools": "^12.0.0",
+    "@fela-next/fela-utils": "^12.0.0",
     "gzip-size": "^3.0.0"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

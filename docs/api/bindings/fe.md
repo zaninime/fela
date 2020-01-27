@@ -11,13 +11,13 @@ The best way to achieve that, is to use the `/* @jsx fe */` override.
 
 ```javascript
 /* @jsx fe */
-import { fe } from '@zaninime/react-fela'
+import { fe } from '@fela-next/react-fela'
 
 /* @jsx fe */
-import { fe } from '@zaninime/preact-fela'
+import { fe } from '@fela-next/preact-fela'
 
 /* @jsx fe */
-import { fe } from '@zaninime/inferno-fela'
+import { fe } from '@fela-next/inferno-fela'
 ```
 
 ## Example

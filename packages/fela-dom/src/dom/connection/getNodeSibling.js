@@ -4,7 +4,7 @@ import {
   STATIC_TYPE,
   KEYFRAME_TYPE,
   RULE_TYPE,
-} from '@zaninime/fela-utils'
+} from '@fela-next/fela-utils'
 
 import type { NodeAttributes } from '../../../../../flowtypes/DOMNode'
 

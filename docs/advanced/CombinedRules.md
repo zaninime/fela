@@ -5,7 +5,7 @@ Until now, we only saw simple examples, each using only one rule per element. In
 Basically you can do the same with Fela too as you could just concatenate multiple rendered rules.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 
@@ -39,7 +39,7 @@ Fela already simplifies the problem a lot, because it only renders flat CSS clas
 So, if we render two rules, both setting a CSS `color`, the last rendered one always wins. Consider the following use-case:
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 
@@ -62,7 +62,7 @@ To combine rules, Fela provides the [`combineRules`](../api/fela/combineRules.md
 
 ### Example
 ```javascript
-import { createRenderer, combineRules } from '@zaninime/fela'
+import { createRenderer, combineRules } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

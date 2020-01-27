@@ -1,6 +1,6 @@
 /* @flow */
-import logger from '@zaninime/fela-plugin-logger'
-import validator from '@zaninime/fela-plugin-validator'
+import logger from '@fela-next/fela-plugin-logger'
+import validator from '@fela-next/fela-plugin-validator'
 
 type Config = {
   validator?: Array<any>,

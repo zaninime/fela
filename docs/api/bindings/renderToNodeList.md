@@ -13,8 +13,8 @@ This method returns a NodeList with `<style>` objects with the rendered CSS. Thi
 
 ### Example
 ```javascript
-import { renderToNodeList } from '@zaninime/react-fela'
-import { createRenderer } from '@zaninime/fela'
+import { renderToNodeList } from '@fela-next/react-fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 const Head = () => {

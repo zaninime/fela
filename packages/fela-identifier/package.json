@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-identifier",
+  "name": "@fela-next/fela-identifier",
   "version": "12.0.0",
   "description": "Fela enhancer to creation identifying rules",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "fela-enhancer",
     "cssinjs",
     "identifier"
@@ -25,11 +25,11 @@
     "fast-loops": "^1.0.0"
   },
   "devDependencies": {
-    "@zaninime/fela": "^12.0.0",
-    "@zaninime/fela-monolithic": "^12.0.0",
-    "@zaninime/fela-tools": "^12.0.0",
-    "@zaninime/jest-react-fela": "^12.0.0",
-    "@zaninime/react-fela": "^12.0.0"
+    "@fela-next/fela": "^12.0.0",
+    "@fela-next/fela-monolithic": "^12.0.0",
+    "@fela-next/fela-tools": "^12.0.0",
+    "@fela-next/jest-react-fela": "^12.0.0",
+    "@fela-next/react-fela": "^12.0.0"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

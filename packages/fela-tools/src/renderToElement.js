@@ -1,5 +1,5 @@
 /* @flow */
-import { isValidHTMLElement } from '@zaninime/fela-utils'
+import { isValidHTMLElement } from '@fela-next/fela-utils'
 
 import renderToString from './renderToString'
 

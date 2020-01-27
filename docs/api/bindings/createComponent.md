@@ -16,9 +16,9 @@ It automatically composes rules and passed props for nested Fela components.
 
 ## Imports
 ```javascript
-import { createComponent } from '@zaninime/react-fela'
-import { createComponent } from '@zaninime/preact-fela'
-import  { createComponent } from '@zaninime/inferno-fela'
+import { createComponent } from '@fela-next/react-fela'
+import { createComponent } from '@fela-next/preact-fela'
+import  { createComponent } from '@fela-next/inferno-fela'
 ```
 
 ## Example

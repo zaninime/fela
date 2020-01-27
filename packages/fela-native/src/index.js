@@ -6,7 +6,7 @@ import {
   processStyleWithPlugins,
   RULE_TYPE,
   CLEAR_TYPE,
-} from '@zaninime/fela-utils'
+} from '@fela-next/fela-utils'
 
 import type {
   NativeRenderer,

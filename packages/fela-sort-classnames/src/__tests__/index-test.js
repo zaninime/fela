@@ -1,4 +1,4 @@
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 import sortClassNames from '../index'
 
 describe('Using the sortClassNames enhancer', () => {

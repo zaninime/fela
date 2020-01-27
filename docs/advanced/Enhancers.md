@@ -9,7 +9,7 @@ They are used to add, remove or modify functionality. They can also be used as a
 To use plugins we need to add them to the renderer configuration directly. You can do this by passing a configuration object using the `enhancers` key while creating your renderer.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const config = {
   // It must be an array to be able

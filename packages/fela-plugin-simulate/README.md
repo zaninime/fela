@@ -15,8 +15,8 @@ You may alternatively use `npm i --save fela-plugin-simulate`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import simulate from '@zaninime/fela-plugin-simulate'
+import { createRenderer } from '@fela-next/fela'
+import simulate from '@fela-next/fela-plugin-simulate'
 
 const renderer = createRenderer({
   plugins: [ simulate() ]

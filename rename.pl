@@ -50,13 +50,14 @@ my @replacements = (
   "react-fela",
   "reason-fela"
 );
-my $prefix = "\@zaninime/";
+my $oldprefix = "\@zaninime/";
+my $newprefix = "\@fela-next/";
 my @delimiters = ("\"", "'");
 
 while (<>) {
   for my $replacement (@replacements) {
     for my $delimiter (@delimiters) {
-      s/$delimiter$replacement$delimiter/$delimiter$prefix$replacement$delimiter/g;
+      s/$delimiter$oldprefix$replacement$delimiter/$delimiter$newprefix$replacement$delimiter/g;
     }
   }
 

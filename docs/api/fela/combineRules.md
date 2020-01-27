@@ -13,7 +13,7 @@ Accepts a list of [Rules](../../advanced/Rules.md).
 
 ## Example
 ```javascript
-import { combineRules } from '@zaninime/fela'
+import { combineRules } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

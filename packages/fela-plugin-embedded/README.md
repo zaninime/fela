@@ -14,8 +14,8 @@ You may alternatively use `npm i --save fela-plugin-embedded`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import embedded from '@zaninime/fela-plugin-embedded'
+import { createRenderer } from '@fela-next/fela'
+import embedded from '@fela-next/fela-plugin-embedded'
 
 const renderer = createRenderer({
   plugins: [ embedded() ]

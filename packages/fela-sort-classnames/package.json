@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-sort-classnames",
+  "name": "@fela-next/fela-sort-classnames",
   "version": "12.0.0",
   "description": "Fela enhancer to sort classnames in alphabetic order",
   "main": "lib/index.js",
@@ -14,11 +14,11 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "fela-enhancer",
     "sorting"
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

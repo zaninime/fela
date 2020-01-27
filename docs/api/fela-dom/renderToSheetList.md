@@ -28,8 +28,8 @@ type Sheet = {
 
 ### Example
 ```javascript
-import { renderToSheetList } from '@zaninime/fela-dom'
-import { createRenderer } from '@zaninime/fela'
+import { renderToSheetList } from '@fela-next/fela-dom'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

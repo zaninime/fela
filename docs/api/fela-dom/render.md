@@ -14,8 +14,8 @@ It also adds a change listener to automatically add newly rendered styles.
 ## Example
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import { render } from '@zaninime/fela-dom'
+import { createRenderer } from '@fela-next/fela'
+import { render } from '@fela-next/fela-dom'
 
 const rule = props => ({
   backgroundColor: 'red',

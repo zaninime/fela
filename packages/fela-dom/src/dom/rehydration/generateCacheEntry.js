@@ -1,5 +1,5 @@
 /* @flow */
-import { generateCSSSelector } from '@zaninime/fela-utils'
+import { generateCSSSelector } from '@fela-next/fela-utils'
 
 import type { StyleType } from '../../../../../flowtypes/StyleType'
 

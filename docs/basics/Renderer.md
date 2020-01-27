@@ -7,7 +7,7 @@ The renderer is a single object that coordinates the whole rendering workflow. I
 To create a new renderer, Fela provides the [`createRenderer`](../api/fela/createRenderer.md) function.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 ```
@@ -27,7 +27,7 @@ Takes a [rule](Rules.md) and some `props` to resolve the rule. If no `props` are
 It maps each declaration to unique atomic CSS classes and returns them combined.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 
@@ -55,7 +55,7 @@ It returns the rendered animation name.
 It also adds the keyframe with both `@-webkit-` and `@-moz-` prefixes, but we will ignore them here for brevity.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 
@@ -91,7 +91,7 @@ renderer.renderKeyframe(keyframe, { toColor: 'blue' }) // => k2
 Rendering [fonts](Fonts.md) is a bit different. `renderFont` takes the font family and an array of font source files as mandatory arguments and an optional object containing additional font properties.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

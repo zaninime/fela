@@ -1,7 +1,11 @@
 import 'raf/polyfill'
 import React from 'react'
 import PropTypes from 'prop-types'
-import { createComponent, ThemeProvider, withTheme } from '@zaninime/react-fela'
+import {
+  createComponent,
+  ThemeProvider,
+  withTheme,
+} from '@fela-next/react-fela'
 import Enzyme from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 

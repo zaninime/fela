@@ -1,8 +1,8 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createSnapshot } from '@zaninime/jest-react-fela'
-import { FelaComponent } from '@zaninime/react-fela'
+import { createSnapshot } from '@fela-next/jest-react-fela'
+import { FelaComponent } from '@fela-next/react-fela'
 
 describe('Using the FelaComponent component', () => {
   it('should correctly render a fela rule', () => {

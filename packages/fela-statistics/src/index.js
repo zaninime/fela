@@ -1,8 +1,8 @@
 /* @flow */
 /* eslint-disable prefer-rest-params */
 import gzipSize from 'gzip-size'
-import { RULE_TYPE } from '@zaninime/fela-utils'
-import { renderToString } from '@zaninime/fela-tools'
+import { RULE_TYPE } from '@fela-next/fela-utils'
+import { renderToString } from '@fela-next/fela-tools'
 
 import type DOMRenderer from '../../../flowtypes/DOMRenderer'
 

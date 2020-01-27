@@ -1,9 +1,9 @@
 /* @flow */
-import extend from '@zaninime/fela-plugin-extend'
-import embedded from '@zaninime/fela-plugin-embedded'
-import prefixer from '@zaninime/fela-plugin-prefixer'
-import fallbackValue from '@zaninime/fela-plugin-fallback-value'
-import unit from '@zaninime/fela-plugin-unit'
+import extend from '@fela-next/fela-plugin-extend'
+import embedded from '@fela-next/fela-plugin-embedded'
+import prefixer from '@fela-next/fela-plugin-prefixer'
+import fallbackValue from '@fela-next/fela-plugin-fallback-value'
+import unit from '@fela-next/fela-plugin-unit'
 
 type Config = {
   extend?: Array<any>,

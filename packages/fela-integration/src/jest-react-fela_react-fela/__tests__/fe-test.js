@@ -1,8 +1,8 @@
 import 'raf/polyfill'
 import React from 'react'
 
-import { createSnapshot } from '@zaninime/jest-react-fela'
-import { fe } from '@zaninime/react-fela'
+import { createSnapshot } from '@fela-next/jest-react-fela'
+import { fe } from '@fela-next/react-fela'
 
 describe('Using fe', () => {
   it('should render inline style as CSS', () => {

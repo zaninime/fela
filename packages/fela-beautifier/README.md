@@ -12,8 +12,8 @@ You may alternatively use `npm i --save fela-beautifier`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import beautifier from '@zaninime/fela-beautifier'
+import { createRenderer } from '@fela-next/fela'
+import beautifier from '@fela-next/fela-beautifier'
 
 const renderer = createRenderer({
   enhancers: [ beautifier() ]
@@ -33,8 +33,8 @@ Uses the same options as [cssbeautify](https://github.com/senchalabs/cssbeautify
 
 ##### Example
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import beautifier from '@zaninime/fela-beautifier'
+import { createRenderer } from '@fela-next/fela'
+import beautifier from '@fela-next/fela-beautifier'
 
 const beautifyEnhancer = beautifier({
   openbrace: 'separate-line',

@@ -12,8 +12,8 @@ You may alternatively use `npm i --save fela-perf`.
 
 ## Usage
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import perf from '@zaninime/fela-perf'
+import { createRenderer } from '@fela-next/fela'
+import perf from '@fela-next/fela-perf'
 
 const renderer = createRenderer({
   enhancers: [ perf() ]

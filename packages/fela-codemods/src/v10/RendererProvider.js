@@ -1,6 +1,6 @@
 import getImportName from '../utils/getImportName'
 
-const pkg = '@zaninime/react-fela'
+const pkg = '@fela-next/react-fela'
 const component = 'Provider'
 
 export default function transformer(file, api) {

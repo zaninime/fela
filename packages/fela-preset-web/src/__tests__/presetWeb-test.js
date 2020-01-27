@@ -1,5 +1,5 @@
-import { createRenderer } from '@zaninime/fela'
-import { renderToString } from '@zaninime/fela-tools'
+import { createRenderer } from '@fela-next/fela'
+import { renderToString } from '@fela-next/fela-tools'
 
 import webPreset, { createWebPreset } from '../index'
 

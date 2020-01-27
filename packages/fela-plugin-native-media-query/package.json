@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-plugin-native-media-query",
+  "name": "@fela-next/fela-plugin-native-media-query",
   "version": "12.0.0",
   "description": "Fela plugin to resolve media queries in React Native",
   "main": "lib/index.js",
@@ -14,8 +14,8 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
-    "@zaninime/fela-native",
+    "@fela-next/fela",
+    "@fela-next/fela-native",
     "react-native",
     "media query",
     "cssinjs"
@@ -23,15 +23,15 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "@zaninime/fela-native": "^10.0.0",
+    "@fela-next/fela-native": "^10.0.0",
     "react": "*",
     "react-native": "*"
   },
   "dependencies": {
-    "@zaninime/fela-utils": "^12.0.0",
+    "@fela-next/fela-utils": "^12.0.0",
     "css-in-js-utils": "^3.0.0",
     "css-mediaquery": "^0.1.2",
     "isobject": "^3.0.1"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

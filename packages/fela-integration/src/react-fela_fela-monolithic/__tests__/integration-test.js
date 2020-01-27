@@ -1,14 +1,14 @@
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 import React from 'react'
 import ReactTestRenderer from 'react-test-renderer'
 
-import { renderToString } from '@zaninime/fela-tools'
+import { renderToString } from '@fela-next/fela-tools'
 import {
   createComponent,
   connect,
   RendererProvider,
-} from '@zaninime/react-fela'
-import monolithic from '@zaninime/fela-monolithic'
+} from '@fela-next/react-fela'
+import monolithic from '@fela-next/fela-monolithic'
 
 describe('Monolithic enhancer React integration', () => {
   it('should render a single class', () => {

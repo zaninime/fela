@@ -2,8 +2,8 @@ import 'raf/polyfill'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { createSnapshot } from '@zaninime/jest-react-fela'
-import { ThemeProvider, FelaTheme } from '@zaninime/react-fela'
+import { createSnapshot } from '@fela-next/jest-react-fela'
+import { ThemeProvider, FelaTheme } from '@fela-next/react-fela'
 
 describe('Using the ThemeProvider', () => {
   it('should pass the theme to rule props', () => {

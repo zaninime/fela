@@ -1,4 +1,4 @@
-import { RULE_TYPE } from '@zaninime/fela-utils'
+import { RULE_TYPE } from '@fela-next/fela-utils'
 
 import queryNode from '../queryNode'
 

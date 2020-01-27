@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-plugin-simulate",
+  "name": "@fela-next/fela-plugin-simulate",
   "version": "12.0.0",
   "description": "Fela plugin to simulate pseudo classes and media queries",
   "main": "lib/index.js",
@@ -14,8 +14,8 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
-    "@zaninime/fela-native",
+    "@fela-next/fela",
+    "@fela-next/fela-native",
     "react-native",
     "media query",
     "cssinjs"
@@ -23,11 +23,11 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "peerDependencies": {
-    "@zaninime/fela": "^10.0.0"
+    "@fela-next/fela": "^10.0.0"
   },
   "dependencies": {
     "css-in-js-utils": "^3.0.0",
     "isobject": "^3.0.1"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

@@ -13,7 +13,7 @@ Creates a Fela renderer which renders your React Native styles utilizing `StyleS
 ## Example
 
 ```javascript
-import { createRenderer } from '@zaninime/fela-native'
+import { createRenderer } from '@fela-next/fela-native'
 
 const rule = props => ({
   backgroundColor: 'red',

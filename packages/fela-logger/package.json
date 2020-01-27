@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-logger",
+  "name": "@fela-next/fela-logger",
   "version": "12.0.0",
   "description": "Logging tool for Fela",
   "main": "lib/index.js",
@@ -14,9 +14,9 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "fela-devtools",
-    "@zaninime/fela-logger",
+    "@fela-next/fela-logger",
     "dx",
     "devtools",
     "cssinjs",
@@ -25,8 +25,8 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@zaninime/fela-utils": "^12.0.0",
+    "@fela-next/fela-utils": "^12.0.0",
     "cssbeautify": "^0.3.1"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

@@ -3,7 +3,7 @@ import {
   generateCSSRule,
   generateCSSSupportRule,
   getRuleScore,
-} from '@zaninime/fela-utils'
+} from '@fela-next/fela-utils'
 
 import insertRuleInDevMode from './insertRuleInDevMode'
 

@@ -1,4 +1,4 @@
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 import renderToSheetList from '../renderToSheetList'
 
 describe('Rendering to a sheet list', () => {

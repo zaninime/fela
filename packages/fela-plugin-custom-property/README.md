@@ -16,8 +16,8 @@ You may alternatively use `npm i --save fela-plugin-custom-property`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import customProperty from '@zaninime/fela-plugin-custom-property'
+import { createRenderer } from '@fela-next/fela'
+import customProperty from '@fela-next/fela-plugin-custom-property'
 
 const renderer = createRenderer({
   plugins: [ customProperty() ]
@@ -28,8 +28,8 @@ const renderer = createRenderer({
 In order to get custom properties resolved, you need to configure the plugin with all custom properties once.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import customProperty from '@zaninime/fela-plugin-custom-property'
+import { createRenderer } from '@fela-next/fela'
+import customProperty from '@fela-next/fela-plugin-custom-property'
 
 const sizeProperty = size => ({
   width: size + 'px',

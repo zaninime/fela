@@ -5,7 +5,7 @@ import {
   isNestedSelector,
   isMediaQuery,
   isSupport,
-} from '@zaninime/fela-utils'
+} from '@fela-next/fela-utils'
 import cssifyDeclaration from 'css-in-js-utils/lib/cssifyDeclaration'
 import isPlainObject from 'isobject'
 import { CSSLint } from 'csslint'

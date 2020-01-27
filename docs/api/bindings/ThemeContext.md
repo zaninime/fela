@@ -6,15 +6,15 @@ ThemeContext is the internal instance of `React.createContext` that is provided 
 
 ## Imports
 ```javascript
-import { ThemeContext } from '@zaninime/react-fela'
-import { ThemeContext } from '@zaninime/preact-fela'
-import { ThemeContext } from '@zaninime/inferno-fela'
+import { ThemeContext } from '@fela-next/react-fela'
+import { ThemeContext } from '@fela-next/preact-fela'
+import { ThemeContext } from '@fela-next/inferno-fela'
 ```
 
 ## Example
 ```javascript
 import { useContext } from 'react'
-import { ThemeContext } from '@zaninime/react-fela'
+import { ThemeContext } from '@fela-next/react-fela'
 
 function Button() {
   const theme = useContext(ThemeContext)

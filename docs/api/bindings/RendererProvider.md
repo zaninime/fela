@@ -10,14 +10,14 @@ RendererProvider is used to pass the Fela renderer down to all your child compon
 
 ## Imports
 ```javascript
-import { RendererProvider } from '@zaninime/react-fela'
-import { RendererProvider } from '@zaninime/preact-fela'
-import { RendererProvider } from '@zaninime/inferno-fela'
+import { RendererProvider } from '@fela-next/react-fela'
+import { RendererProvider } from '@fela-next/preact-fela'
+import { RendererProvider } from '@fela-next/inferno-fela'
 ```
 
 ## Example
 ```javascript
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 
 const renderer = createRenderer()
 

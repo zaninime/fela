@@ -1,4 +1,4 @@
-import { createRenderer } from '@zaninime/fela'
+import { createRenderer } from '@fela-next/fela'
 import { html as beautify } from 'js-beautify'
 
 import renderToMarkup from '../renderToMarkup'

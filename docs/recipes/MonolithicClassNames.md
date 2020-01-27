@@ -6,7 +6,7 @@ Atomic class names will give you `n` number of classes when you `renderer.render
 Simply include the [Fela Monolithic Enhancer](https://github.com/robinweser/fela/tree/master/packages/fela-monolithic).
 
 ```javascript
-import monolithic from '@zaninime/fela-monolithic'
+import monolithic from '@fela-next/fela-monolithic'
 
 const config = {
   enhancers: [ monolithic() ]

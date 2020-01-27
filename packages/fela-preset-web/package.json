@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-preset-web",
+  "name": "@fela-next/fela-preset-web",
   "version": "12.0.0",
   "description": "Fela plugin preset for web applications",
   "main": "lib/index.js",
@@ -14,22 +14,22 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "fela-plugin",
     "cssinjs"
   ],
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@zaninime/fela-plugin-embedded": "^12.0.0",
-    "@zaninime/fela-plugin-extend": "^12.0.0",
-    "@zaninime/fela-plugin-fallback-value": "^12.0.0",
-    "@zaninime/fela-plugin-prefixer": "^12.0.0",
-    "@zaninime/fela-plugin-unit": "^12.0.0"
+    "@fela-next/fela-plugin-embedded": "^12.0.0",
+    "@fela-next/fela-plugin-extend": "^12.0.0",
+    "@fela-next/fela-plugin-fallback-value": "^12.0.0",
+    "@fela-next/fela-plugin-prefixer": "^12.0.0",
+    "@fela-next/fela-plugin-unit": "^12.0.0"
   },
   "devDependencies": {
-    "@zaninime/fela-tools": "^12.0.0",
+    "@fela-next/fela-tools": "^12.0.0",
     "fela-combine-arrays": "^1.0.9"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

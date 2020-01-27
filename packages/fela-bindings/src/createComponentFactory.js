@@ -1,5 +1,5 @@
 /* @flow */
-import { combineRules } from '@zaninime/fela'
+import { combineRules } from '@fela-next/fela'
 
 import hoistStatics from './hoistStatics'
 import extractPassThroughProps from './extractPassThroughProps'

@@ -1,6 +1,6 @@
 /* @flow */
 import { createElement } from 'react'
-import { FelaThemeFactory } from '@zaninime/fela-bindings'
+import { FelaThemeFactory } from '@fela-next/fela-bindings'
 
 import { ThemeContext } from './context'
 

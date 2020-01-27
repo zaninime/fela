@@ -1,7 +1,7 @@
 import { format } from 'prettier'
 import HTMLtoJSX from 'htmltojsx'
 
-import { renderToString } from '@zaninime/fela-tools'
+import { renderToString } from '@fela-next/fela-tools'
 
 import type { DOMRenderer } from '../../../flowtypes/DOMRenderer'
 

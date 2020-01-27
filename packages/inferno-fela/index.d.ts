@@ -1,4 +1,4 @@
-declare module "@zaninime/inferno-fela" {
+declare module "@fela-next/inferno-fela" {
 
   import * as Inferno from "inferno";
   import {
@@ -6,12 +6,12 @@ declare module "@zaninime/inferno-fela" {
     TRule,
     TRuleProps,
     IStyle
-  } from "@zaninime/fela";
+  } from "@fela-next/fela";
   import {
     TMultiRuleObject,
     TMultiRule,
     TPartialMultiRule,
-  } from "@zaninime/fela-tools";
+  } from "@fela-next/fela-tools";
 
   type Style<Props> = TRule<Props> | IStyle;
 

@@ -18,8 +18,8 @@ You may alternatively use `npm i --save fela-plugin-logger`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import logger from '@zaninime/fela-plugin-logger'
+import { createRenderer } from '@fela-next/fela'
+import logger from '@fela-next/fela-plugin-logger'
 
 const renderer = createRenderer({
   plugins: [ logger() ]

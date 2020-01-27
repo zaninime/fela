@@ -1,5 +1,5 @@
 {
-  "name": "@zaninime/fela-enzyme",
+  "name": "@fela-next/fela-enzyme",
   "version": "12.0.0",
   "description": "Tools for working with Fela in the context of enzyme",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": "https://github.com/robinweser/fela/",
   "keywords": [
-    "@zaninime/fela",
+    "@fela-next/fela",
     "dynamic styling",
     "stylesheet",
     "css",
@@ -34,10 +34,10 @@
     "enzyme-to-json": "3.3.0"
   },
   "dependencies": {
-    "@zaninime/fela": "^12.0.0",
-    "@zaninime/fela-tools": "^12.0.0",
-    "@zaninime/react-fela": "^12.0.0",
+    "@fela-next/fela": "^12.0.0",
+    "@fela-next/fela-tools": "^12.0.0",
+    "@fela-next/react-fela": "^12.0.0",
     "cssbeautify": "^0.3.1"
   },
-  "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
+  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5"
 }

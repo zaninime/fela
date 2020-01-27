@@ -1,6 +1,6 @@
-declare module "@zaninime/fela" {
+declare module "@fela-next/fela" {
   import * as CSS from 'csstype';
-  import { TRuleType, TKeyframeType, TFontType, TStaticType, TClearType } from '@zaninime/fela-utils';
+  import { TRuleType, TKeyframeType, TFontType, TStaticType, TClearType } from '@fela-next/fela-utils';
 
   export type TRuleProps = {};
   export type TRule<T = TRuleProps> = (props: T, renderer: IRenderer) => IStyle
@@ -65,8 +65,8 @@ declare module "@zaninime/fela" {
   function enhance(...enhancers: Array<TEnhancer>): (rendererCreator: TRendererCreator) => TRendererCreator;
 }
 
-declare module "@zaninime/fela-dom" {
-  import { IRenderer } from '@zaninime/fela';
+declare module "@fela-next/fela-dom" {
+  import { IRenderer } from '@fela-next/fela';
 
   function render(renderer: IRenderer): void;
   function rehydrate(renderer: IRenderer): void;
@@ -79,8 +79,8 @@ declare module "@zaninime/fela-dom" {
   }[];
 }
 
-declare module "@zaninime/fela-tools" {
-  import { TRule, TRuleProps, IStyle, IRenderer } from "@zaninime/fela";
+declare module "@fela-next/fela-tools" {
+  import { TRule, TRuleProps, IStyle, IRenderer } from "@fela-next/fela";
 
   export type TMultiRuleObject<Props = TRuleProps, Styles = {}> = {[key in keyof Styles]: TRule<Props> | IStyle}
   export type TMultiRuleFunction<Props = TRuleProps, Styles = {}> = (props: Props, renderer: IRenderer) => TMultiRuleObject<Props, Styles>
@@ -121,14 +121,14 @@ declare module "@zaninime/fela-tools" {
 /**
  * ENHANCERS
  */
-declare module "@zaninime/fela-beautifier" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-beautifier" {
+  import { TEnhancer } from "@fela-next/fela";
 
   export default function(options?: object): TEnhancer;
 }
 
-declare module "@zaninime/fela-identifier" {
-  import { TRule, TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-identifier" {
+  import { TRule, TEnhancer } from "@fela-next/fela";
 
   interface Configs {
     prefix?: string;
@@ -143,8 +143,8 @@ declare module "@zaninime/fela-identifier" {
   export default function(configs?: Configs): TEnhancer & Identifier;
 }
 
-declare module "@zaninime/fela-layout-debugger" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-layout-debugger" {
+  import { TEnhancer } from "@fela-next/fela";
 
   interface DebuggerOptions {
     mode?: "outline" | "backgroundColor";
@@ -154,8 +154,8 @@ declare module "@zaninime/fela-layout-debugger" {
   export default function(options?: DebuggerOptions): TEnhancer;
 }
 
-declare module "@zaninime/fela-logger" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-logger" {
+  import { TEnhancer } from "@fela-next/fela";
 
   interface LoggerOptions {
     logCSS?: boolean;
@@ -165,8 +165,8 @@ declare module "@zaninime/fela-logger" {
   export default function(options?: LoggerOptions): TEnhancer;
 }
 
-declare module "@zaninime/fela-monolithic" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-monolithic" {
+  import { TEnhancer } from "@fela-next/fela";
 
   interface MonolithicOptions {
     prettySelectors?: boolean;
@@ -175,19 +175,19 @@ declare module "@zaninime/fela-monolithic" {
   export default function(options?: MonolithicOptions): TEnhancer;
 }
 
-declare module "@zaninime/fela-perf" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-perf" {
+  import { TEnhancer } from "@fela-next/fela";
 
   export default function(): TEnhancer;
 }
 
-declare module "@zaninime/fela-statistics" {
-  import { TEnhancer } from "@zaninime/fela";
+declare module "@fela-next/fela-statistics" {
+  import { TEnhancer } from "@fela-next/fela";
 
   export default function(): TEnhancer;
 }
 
-declare module "@zaninime/fela-utils" {
+declare module "@fela-next/fela-utils" {
   export type TRuleType = "RULE"
   export type TKeyframeType = "KEYFRAME"
   export type TFontType = "FONT"
@@ -204,14 +204,14 @@ declare module "@zaninime/fela-utils" {
 /**
  * PLUGINS
  */
-declare module "@zaninime/fela-plugin-bidi" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-bidi" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(flowDirection: 'ltr' | 'rtl'): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-custom-property" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-custom-property" {
+  import { TPlugin } from "@fela-next/fela";
 
   interface CustomProperties {
     [property: string]: (value: any) => any,
@@ -220,38 +220,38 @@ declare module "@zaninime/fela-plugin-custom-property" {
   export default function(properties: CustomProperties): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-embedded" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-embedded" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-extend" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-extend" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-fallback-value" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-fallback-value" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-friendly-pseudo-class" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-friendly-pseudo-class" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-important" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-important" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-isolation" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-isolation" {
+  import { TPlugin } from "@fela-next/fela";
 
   interface IsolationOptions {
     exclude?: string[];
@@ -260,14 +260,14 @@ declare module "@zaninime/fela-plugin-isolation" {
   export default function(options?: IsolationOptions): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-logger" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-logger" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-named-keys" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-named-keys" {
+  import { TPlugin } from "@fela-next/fela";
 
   interface MediaQueryMap {
     [key: string]: string;
@@ -276,38 +276,38 @@ declare module "@zaninime/fela-plugin-named-keys" {
   export default function(mediaQueryMap: MediaQueryMap): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-native-media-query" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-native-media-query" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-placeholder-prefixer" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-placeholder-prefixer" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-prefixer" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-prefixer" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-rtl" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-rtl" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-simulate" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-simulate" {
+  import { TPlugin } from "@fela-next/fela";
 
   export default function(): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-unit" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-unit" {
+  import { TPlugin } from "@fela-next/fela";
 
   type Unit = "ch" | "em" | "ex" | "rem" | "vh" | "vw" | "vmin" | "vmax" | "px" | "cm" | "mm" | "in" | "pc" | "pt" | "mozmm";
 
@@ -322,8 +322,8 @@ declare module "@zaninime/fela-plugin-unit" {
   ): TPlugin;
 }
 
-declare module "@zaninime/fela-plugin-validator" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-plugin-validator" {
+  import { TPlugin } from "@fela-next/fela";
 
   interface Configs {
     logInvalid?: boolean;
@@ -337,15 +337,15 @@ declare module "@zaninime/fela-plugin-validator" {
 /**
  * PRESETS
  */
-declare module "@zaninime/fela-preset-web" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-preset-web" {
+  import { TPlugin } from "@fela-next/fela";
 
   const presets: TPlugin[];
   export default presets;
 }
 
-declare module "@zaninime/fela-preset-dev" {
-  import { TPlugin } from "@zaninime/fela";
+declare module "@fela-next/fela-preset-dev" {
+  import { TPlugin } from "@fela-next/fela";
 
   const presets: TPlugin[];
   export default presets;

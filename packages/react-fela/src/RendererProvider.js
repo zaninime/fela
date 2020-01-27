@@ -1,6 +1,6 @@
 /* @flow */
 import { Component, Children, createElement } from 'react'
-import { RendererProviderFactory } from '@zaninime/fela-bindings'
+import { RendererProviderFactory } from '@fela-next/fela-bindings'
 import PropTypes from 'prop-types'
 
 import { RendererContext } from './context'

@@ -22,8 +22,8 @@ You may alternatively use `npm i --save fela-preset-dev`.
 Simply use the spread operator to add the preset.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import devPreset from '@zaninime/fela-preset-dev'
+import { createRenderer } from '@fela-next/fela'
+import devPreset from '@fela-next/fela-preset-dev'
 
 const renderer = createRenderer({
   plugins: [
@@ -38,8 +38,8 @@ Some plugins also accept some configuration options.
 We can use the `createDevPreset` factory and pass the options using the plugin name as a key.
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import { createDevPreset } from '@zaninime/fela-preset-dev'
+import { createRenderer } from '@fela-next/fela'
+import { createDevPreset } from '@fela-next/fela-preset-dev'
 
 const renderer = createRenderer({
   plugins: [

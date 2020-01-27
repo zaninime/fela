@@ -1,5 +1,5 @@
 /* @flow */
-import { RULE_TYPE, generateDeclarationReference } from '@zaninime/fela-utils'
+import { RULE_TYPE, generateDeclarationReference } from '@fela-next/fela-utils'
 
 import generateCacheEntry from './generateCacheEntry'
 

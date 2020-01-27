@@ -16,8 +16,8 @@ You may alternatively use `npm i --save fela-plugin-typescript`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import typescript from '@zaninime/fela-plugin-typescript'
+import { createRenderer } from '@fela-next/fela'
+import typescript from '@fela-next/fela-plugin-typescript'
 
 const renderer = createRenderer({
   plugins: [ typescript() ]

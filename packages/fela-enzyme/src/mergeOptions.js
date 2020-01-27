@@ -1,4 +1,4 @@
-import { createTheme, THEME_CHANNEL } from '@zaninime/fela-bindings'
+import { createTheme, THEME_CHANNEL } from '@fela-next/fela-bindings'
 import PropTypes from 'prop-types'
 
 export default function mergeOptions(options, renderer, theme) {

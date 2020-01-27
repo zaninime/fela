@@ -12,9 +12,9 @@ This can be used in different cases:
 
 ## Imports
 ```javascript
-import { createComponentWithProxy } from '@zaninime/react-fela'
-import { createComponentWithProxy } from '@zaninime/preact-fela'
-import  { createComponentWithProxy } from '@zaninime/inferno-fela'
+import { createComponentWithProxy } from '@fela-next/react-fela'
+import { createComponentWithProxy } from '@fela-next/preact-fela'
+import  { createComponentWithProxy } from '@fela-next/inferno-fela'
 ```
 
 ## Example

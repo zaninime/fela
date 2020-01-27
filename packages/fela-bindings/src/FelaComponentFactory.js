@@ -1,5 +1,5 @@
 /* @flow */
-import { combineRules } from '@zaninime/fela'
+import { combineRules } from '@fela-next/fela'
 
 export default function FelaComponentFactory(
   createElement: Function,

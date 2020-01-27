@@ -18,8 +18,8 @@ You may alternatively use `npm i --save fela-plugin-named-keys`.
 Make sure to read the documentation on [how to use plugins](http://fela.js.org/docs/advanced/Plugins.html).
 
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import namedKeys from '@zaninime/fela-plugin-named-keys'
+import { createRenderer } from '@fela-next/fela'
+import namedKeys from '@fela-next/fela-plugin-named-keys'
 
 const renderer = createRenderer({
   plugins: [ namedKeys() ]
@@ -34,8 +34,8 @@ const renderer = createRenderer({
 
 ##### Example
 ```javascript
-import { createRenderer } from '@zaninime/fela'
-import namedKeys from '@zaninime/fela-plugin-named-keys'
+import { createRenderer } from '@fela-next/fela'
+import namedKeys from '@fela-next/fela-plugin-named-keys'
 
 const namedKeysPlugin = namedKeys({
   desktop: '@media (min-width: 1024px)',

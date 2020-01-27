@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/fela-plugin-embedded",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Fela plugin that resolves embedded keyframes and font faces",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -26,8 +26,8 @@
     "isobject": "^3.0.1"
   },
   "devDependencies": {
-    "@fela-next/fela": "^12.0.1",
-    "@fela-next/fela-tools": "^12.0.1"
+    "@fela-next/fela": "^12.0.2",
+    "@fela-next/fela-tools": "^12.0.2"
   },
   "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",
   "publishConfig": {

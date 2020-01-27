@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/fela-plugin-validator",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Fela plugin to validate style objects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,7 +23,7 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@fela-next/fela-utils": "^12.0.1",
+    "@fela-next/fela-utils": "^12.0.2",
     "css-in-js-utils": "^3.0.0",
     "csslint": "^1.0.5",
     "isobject": "^3.0.1"

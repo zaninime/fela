@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/jest-preact-fela",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Jest helpers for preact-fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -29,7 +29,7 @@
     "preact": "*"
   },
   "dependencies": {
-    "@fela-next/jest-fela-bindings": "^12.0.1"
+    "@fela-next/jest-fela-bindings": "^12.0.2"
   },
   "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",
   "publishConfig": {

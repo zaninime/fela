@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/fela-monolithic",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Fela enhancer for having monolithic classnames",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,15 +24,15 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
-    "@fela-next/fela-utils": "^12.0.1",
+    "@fela-next/fela-utils": "^12.0.2",
     "css-in-js-utils": "^3.0.0",
     "fast-loops": "^1.0.0",
     "isobject": "^3.0.1",
     "string-hash": "^1.1.3"
   },
   "devDependencies": {
-    "@fela-next/fela": "^12.0.1",
-    "@fela-next/fela-tools": "^12.0.1"
+    "@fela-next/fela": "^12.0.2",
+    "@fela-next/fela-tools": "^12.0.2"
   },
   "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",
   "publishConfig": {

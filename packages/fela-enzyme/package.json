@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/fela-enzyme",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "description": "Tools for working with Fela in the context of enzyme",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -34,9 +34,9 @@
     "enzyme-to-json": "3.3.0"
   },
   "dependencies": {
-    "@fela-next/fela": "^12.0.1",
-    "@fela-next/fela-tools": "^12.0.1",
-    "@fela-next/react-fela": "^12.0.1",
+    "@fela-next/fela": "^12.0.2",
+    "@fela-next/fela-tools": "^12.0.2",
+    "@fela-next/react-fela": "^12.0.2",
     "cssbeautify": "^0.3.1"
   },
   "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",

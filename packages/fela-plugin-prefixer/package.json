@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-plugin-prefixer",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Fela plugin to add vendor prefixes",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,9 +24,9 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
+    "@zaninime/fela-plugin-fallback-value": "^12.0.0",
     "css-in-js-utils": "^3.0.0",
     "fast-loops": "^1.0.0",
-    "@zaninime/fela-plugin-fallback-value": "^11.0.2",
     "inline-style-prefixer": "^5.1.0",
     "isobject": "^3.0.1"
   },

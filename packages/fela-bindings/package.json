@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-bindings",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Abstract binding factories for Fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -26,9 +26,9 @@
     "@zaninime/fela": "*"
   },
   "dependencies": {
+    "@zaninime/fela-dom": "^12.0.0",
+    "@zaninime/fela-tools": "^12.0.0",
     "fast-loops": "^1.0.0",
-    "@zaninime/fela-dom": "^11.0.2",
-    "@zaninime/fela-tools": "^11.0.2",
     "react-addons-shallow-compare": "^15.6.2",
     "shallow-equal": "^1.0.0"
   },

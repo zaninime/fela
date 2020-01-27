@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-tools",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Useful tools for working with Fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,10 +24,10 @@
     "@zaninime/fela": "^10.0.0"
   },
   "dependencies": {
+    "@zaninime/fela": "^12.0.0",
+    "@zaninime/fela-utils": "^12.0.0",
     "css-in-js-utils": "^3.0.0",
-    "fast-loops": "^1.0.0",
-    "@zaninime/fela": "^11.0.2",
-    "@zaninime/fela-utils": "^11.0.2"
+    "fast-loops": "^1.0.0"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/jest-preact-fela",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Jest helpers for preact-fela",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -25,11 +25,11 @@
   "license": "MIT",
   "peerDependencies": {
     "@zaninime/fela": "*",
-    "preact": "*",
-    "@zaninime/preact-fela": "*"
+    "@zaninime/preact-fela": "*",
+    "preact": "*"
   },
   "dependencies": {
-    "@zaninime/jest-fela-bindings": "^11.0.2"
+    "@zaninime/jest-fela-bindings": "^12.0.0"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

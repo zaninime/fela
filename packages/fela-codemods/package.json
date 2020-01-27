@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-codemods",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Automatic codemods to upgrade Fela code to newer versions",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,14 +24,14 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
+    "@zaninime/fela-utils": "^12.0.0",
     "css-in-js-utils": "^3.0.0",
-    "fast-loops": "^1.0.1",
-    "@zaninime/fela-utils": "^11.0.2"
+    "fast-loops": "^1.0.1"
   },
   "devDependencies": {
-    "@zaninime/fela": "^11.0.2",
-    "@zaninime/fela-preset-web": "^11.0.2",
-    "@zaninime/fela-tools": "^11.0.2"
+    "@zaninime/fela": "^12.0.0",
+    "@zaninime/fela-preset-web": "^12.0.0",
+    "@zaninime/fela-tools": "^12.0.0"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"
 }

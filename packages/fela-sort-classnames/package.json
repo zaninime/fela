@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-sort-classnames",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Fela enhancer to sort classnames in alphabetic order",
   "main": "lib/index.js",
   "module": "es/index.js",

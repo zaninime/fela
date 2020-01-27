@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "State-Driven Styling in JavaScript",
   "typings": "index.d.ts",
   "main": "lib/index.js",
@@ -32,10 +32,10 @@
   "author": "Robin Frischmann",
   "license": "MIT",
   "dependencies": {
+    "@zaninime/fela-utils": "^12.0.0",
     "css-in-js-utils": "^3.0.0",
     "csstype": "^2.5.5",
     "fast-loops": "^1.0.0",
-    "@zaninime/fela-utils": "^11.0.2",
     "isobject": "^3.0.1"
   },
   "gitHead": "e1a48f5d72623a0f95084dc07998dd85aa175bd1"

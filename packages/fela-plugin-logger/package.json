@@ -1,6 +1,6 @@
 {
   "name": "@zaninime/fela-plugin-logger",
-  "version": "11.0.2",
+  "version": "12.0.0",
   "description": "Fela plugin to log processed style objects",
   "main": "lib/index.js",
   "module": "es/index.js",

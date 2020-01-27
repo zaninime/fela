@@ -1,6 +1,6 @@
 {
   "name": "@fela-next/inferno-fela",
-  "version": "12.0.0",
+  "version": "12.0.1",
   "description": "Inferno bindings for Fela",
   "typings": "index.d.ts",
   "main": "lib/index.js",
@@ -31,8 +31,8 @@
     "inferno-create-element": "^5.0.1"
   },
   "dependencies": {
-    "@fela-next/fela-bindings": "^12.0.0",
-    "@fela-next/fela-dom": "^12.0.0"
+    "@fela-next/fela-bindings": "^12.0.1",
+    "@fela-next/fela-dom": "^12.0.1"
   },
   "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5",
   "publishConfig": {

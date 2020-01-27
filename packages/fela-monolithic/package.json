@@ -34,7 +34,7 @@
     "@fela-next/fela": "^12.0.1",
     "@fela-next/fela-tools": "^12.0.1"
   },
-  "gitHead": "24576a613add17d6ec47b2cd7422e47f9af0f1b5",
+  "gitHead": "51f0a9a72a8479ea58a11ad58291f435b834590d",
   "publishConfig": {
     "access": "public"
   }
